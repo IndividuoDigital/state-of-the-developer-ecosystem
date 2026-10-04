@@ -14,6 +14,7 @@
         }
       }
     </script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"></script>
     <script type="module" src="./page.js"></script>
   </head>
   <body>
@@ -33,7 +34,7 @@
             <option value="list">All questions</option>
           </select>
         </label>
-        <button id="forget" type="button">Forget my answers</button>
+        <button id="forget" type="button">Forget my answers and key</button>
       </div>
     </header>
 
@@ -53,6 +54,7 @@
         <h2>Response</h2>
         <ul id="checks"></ul>
         <div id="sponsor" hidden>
+          <div id="turnstile"></div>
           <button id="submit" type="button"></button>
           <p id="submitted"></p>
         </div>

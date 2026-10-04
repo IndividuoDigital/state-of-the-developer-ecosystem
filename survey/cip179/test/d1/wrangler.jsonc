@@ -1,0 +1,6 @@
+// An in-memory D1 for the tests of `sponsor-store.js`.
+{
+  "name": "sponsor-store-test",
+  "compatibility_date": "2025-09-27",
+  "d1_databases": [{ "binding": "db", "database_name": "test", "database_id": "test" }]
+}

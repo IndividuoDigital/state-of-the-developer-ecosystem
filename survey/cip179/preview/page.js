@@ -15,6 +15,11 @@ const MAX_TX_BYTES = 16384;
 const WIDGET_LOCALES = ["en", "fr"];
 const STORAGE = "survey-preview.";
 const EXPLORERS = { preview: "https://preview.cardanoscan.io", mainnet: "https://cardanoscan.io" };
+// Turnstile's test site key always passes, and gives the dummy token that the
+// test secret in wrangler.jsonc accepts.
+const TURNSTILE_SITEKEY = ["[::1]", "127.0.0.1", "localhost"].includes(location.hostname)
+  ? "1x00000000000000000000AA"
+  : "0x4AAAAAAB4YSM5mX3jPwKvf";
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -60,11 +65,9 @@ widget.layout = layout.value;
 layout.addEventListener("change", () => (widget.layout = layout.value));
 
 $("#forget").addEventListener("click", () => {
-  try {
-    for (const key of Object.keys(localStorage)) {
-      if (key.startsWith(`${STORAGE}answers.`)) localStorage.removeItem(key);
-    }
-  } catch {}
+  forgetAnswers();
+  storage("removeItem", `${STORAGE}key`);
+  storage("removeItem", `${STORAGE}sponsored`);
   location.reload();
 });
 
@@ -102,7 +105,7 @@ function showResponse(payload) {
     }),
   );
   $("#sponsor").hidden = !sponsor;
-  $("#submitted").replaceChildren();
+  if (sponsor) showSponsored(storage("getItem", `${STORAGE}sponsored`));
   $("#row").textContent = JSON.stringify(row, null, 2);
   $("#payload").textContent = JSON.stringify({ 17: toDetailedJson(payload) }, null, 2);
   $("#result").hidden = false;
@@ -110,8 +113,9 @@ function showResponse(payload) {
 }
 
 /**
- * Submitting through the sponsor: the respondent's key, kept so that a later
- * response replaces this one, and the survey responses go to.
+ * Submitting through the sponsor: the respondent's key and the survey
+ * responses go to. The sponsor pays for one response per key; the key is kept
+ * so that a later response, paid by the respondent, replaces it.
  */
 function sponsoring({ network, survey }) {
   let secret = fromHex(storage("getItem", `${STORAGE}key`) ?? "");
@@ -126,35 +130,97 @@ function sponsoring({ network, survey }) {
   note.textContent = `Responses can be submitted on ${network} to ${survey}, as key ${hex(keyHash)}.`;
   note.hidden = false;
   $("#submit").textContent = `Submit on ${network}`;
-  return { network, secret, publicKey, keyHash, surveyRef: { txId: fromHex(txId), index: Number(index) } };
+  return {
+    network,
+    secret,
+    publicKey,
+    keyHash,
+    surveyRef: { txId: fromHex(txId), index: Number(index) },
+    turnstile: turnstile.render("#turnstile", {
+      sitekey: TURNSTILE_SITEKEY,
+      execution: "execute",
+      appearance: "interaction-only",
+      callback: (token) => turnstileWaiting?.resolve(token),
+      "error-callback": (code) => turnstileWaiting?.reject(new Error(`the Turnstile check failed (${code})`)),
+    }),
+  };
 }
 
-/** The sponsor builds and signs the transaction, we sign it, it submits it. */
+// When the sponsor is busy (503), its coin was refused (502) or the
+// transaction expired (410), a new attempt likely works: up to RETRIES more,
+// RETRY_MS apart.
+const RETRIES = 2;
+const RETRY_MS = 5000;
+
+/**
+ * The sponsor builds and signs the transaction, we sign it, it submits it.
+ * Once the node accepts it, the response is as good as on chain: the unsent
+ * answers are forgotten.
+ */
 async function submitResponse(payload) {
   const button = $("#submit");
   const status = $("#submitted");
   button.disabled = true;
-  status.textContent = "Submitting…";
-  try {
-    // The test Turnstile secret in wrangler.jsonc accepts this dummy token.
-    const { tx, txId } = await post("/api/sponsor", { challenge: "XXXX.DUMMY.TOKEN.XXXX", payload: hex(toCbor(payload)) });
-    const signature = ed25519.sign(fromHex(txId), sponsor.secret);
-    await post("/api/sponsor/submit", { tx, vkey: hex(sponsor.publicKey), signature: hex(signature) });
-    const link = document.createElement("a");
-    link.href = `${EXPLORERS[sponsor.network]}/transaction/${txId}`;
-    link.textContent = txId;
-    status.replaceChildren("Submitted as ", link, " (it shows up after the next block).");
-  } catch (error) {
-    status.textContent = `Not submitted: ${error.message}`;
-  } finally {
-    button.disabled = false;
+  for (let attempt = 0; ; attempt++) {
+    status.textContent = attempt === 0 ? "Submitting…" : `Submitting… (attempt ${attempt + 1})`;
+    try {
+      const challenge = await turnstileToken();
+      const { tx, txId } = await post("/api/sponsor", { challenge, payload: hex(toCbor(payload)) });
+      const signature = ed25519.sign(fromHex(txId), sponsor.secret);
+      await post("/api/sponsor/submit", { tx, vkey: hex(sponsor.publicKey), signature: hex(signature) });
+      storage("setItem", `${STORAGE}sponsored`, txId);
+      forgetAnswers();
+      return showSponsored(txId);
+    } catch (error) {
+      if (attempt < RETRIES && [410, 502, 503].includes(error.status)) {
+        await new Promise((resolve) => setTimeout(resolve, RETRY_MS));
+        continue;
+      }
+      status.textContent = `Not submitted: ${error.message}`;
+      button.disabled = false;
+      return;
+    }
   }
+}
+
+/** The submit button, or the response this device already had sponsored. */
+function showSponsored(txId) {
+  $("#submit").hidden = $("#submit").disabled = Boolean(txId);
+  if (!txId) return $("#submitted").replaceChildren();
+  const link = document.createElement("a");
+  link.href = `${EXPLORERS[sponsor.network]}/transaction/${txId}`;
+  link.textContent = txId;
+  $("#submitted").replaceChildren(
+    "Your response is submitted as ",
+    link,
+    ", and shows on chain after the next block. To change it, submit it with your own wallet.",
+  );
+}
+
+// Each Turnstile token is good for one request: the widget runs again for
+// every submission.
+let turnstileWaiting;
+
+function turnstileToken() {
+  return new Promise((resolve, reject) => {
+    turnstileWaiting = { resolve, reject };
+    turnstile.reset(sponsor.turnstile);
+    turnstile.execute(sponsor.turnstile);
+  });
+}
+
+function forgetAnswers() {
+  try {
+    for (const key of Object.keys(localStorage)) {
+      if (key.startsWith(`${STORAGE}answers.`)) localStorage.removeItem(key);
+    }
+  } catch {}
 }
 
 async function post(path, body) {
   const res = await fetch(path, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
   const json = await res.json().catch(() => ({ error: `${res.status} ${res.statusText}` }));
-  if (!res.ok) throw new Error(json.error);
+  if (!res.ok) throw Object.assign(new Error(json.error), { status: res.status });
   return json;
 }
 

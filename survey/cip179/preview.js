@@ -7,7 +7,8 @@
 //
 // With `--sponsor`, the page can also submit the response through the sponsor
 // functions (`functions/api/sponsor/`), run here with the config of
-// `wrangler.jsonc` and `.dev.vars`. They only take responses to the survey
+// `wrangler.jsonc` and `.dev.vars`, and the local D1 of `wrangler pages dev`
+// (`yarn db:migrate` creates it). They only take responses to the survey
 // published as SPONSOR_SURVEY, so use the survey it was built from.
 //
 // The survey is rebuilt on every page load, so edits to `survey.json` show
@@ -21,6 +22,7 @@ import { createServer } from "node:http";
 import { dirname, extname, join, normalize, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
+import { getPlatformProxy } from "wrangler";
 
 import { buildSurvey, cutLabels } from "./definition.js";
 import { toDetailedJson } from "./metadatum.js";
@@ -35,7 +37,7 @@ const { values: args } = parseArgs({
 
 const here = dirname(fileURLToPath(import.meta.url));
 const modules = join(here, "..", "node_modules");
-const env = args.sponsor ? await sponsorEnv() : undefined;
+const env = args.sponsor ? (await getPlatformProxy({ configPath: join(here, "..", "wrangler.jsonc") })).env : undefined;
 const API = {
   "/api/sponsor": () => import("../functions/api/sponsor/index.js"),
   "/api/sponsor/submit": () => import("../functions/api/sponsor/submit.js"),
@@ -92,15 +94,6 @@ async function preview() {
     mapping,
     problems,
   };
-}
-
-/** The sponsor's config: the vars of `wrangler.jsonc`, then `.dev.vars`. */
-async function sponsorEnv() {
-  const jsonc = await readFile(join(here, "..", "wrangler.jsonc"), "utf8");
-  const { vars } = JSON.parse(jsonc.replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, ""));
-  const devVars = await readFile(join(here, "..", ".dev.vars"), "utf8");
-  for (const [, name, value] of devVars.matchAll(/^(\w+)="?(.*?)"?$/gm)) vars[name] = value;
-  return vars;
 }
 
 /** Answers a request with a Pages Function's `onRequestPost`. */
