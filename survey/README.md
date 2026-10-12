@@ -8,8 +8,8 @@ yarn
 
 ## Configuration
 
-- Cloudflare's turnstile sitekey in [public/js/app.js](./public/js/app.js#L4)
-- Survey's questions and answers in [public/js/survey.js](./public/js/survey.js)
+- Cloudflare's turnstile sitekey in [public/js/app.js](./public/js/app.js#L6)
+- Survey's questions and answers in [public/survey.json](./public/survey.json)
 - Titles, dates, etc.. in [public/index.html](./public/index.html)
 
 ## Development
