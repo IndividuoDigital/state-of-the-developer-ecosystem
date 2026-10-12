@@ -15,11 +15,8 @@ export async function onRequestPost(context) {
       return new Response('invalid survey data', { status: 400 });
     }
 
-    console.log(context.env[TURNSTILE_SECRET_ENV_VAR]);
-    console.log(context.env);
-
     // 2. Verify the turnstile challenge
-    const ip = context.request.headers.get('CF-Connecting-IP') || request.headers.get('X-Forwarded-For') || 'unknown';
+    const ip = context.request.headers.get('CF-Connecting-IP') || context.request.headers.get('X-Forwarded-For') || 'unknown';
     const validation = await validateTurnstile(
       context.env[TURNSTILE_SECRET_ENV_VAR],
       challenge,
