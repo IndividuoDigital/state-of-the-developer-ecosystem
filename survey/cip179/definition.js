@@ -9,7 +9,7 @@
 //   SurveyJS answers format the report reads;
 // - `screening`: the answers that end the survey without recording anything
 //   (SurveyJS "complete" triggers). They are left out of the definition, and
-//   the site asks them before showing the form.
+//   the site offers them before showing the form (`screeningEntries`).
 //
 // Along the way it collects `problems`: anything that can't be expressed in
 // CIP-179 or in the widget, or that changes how the survey behaves. Problems
@@ -325,6 +325,24 @@ function resolveCondition(condition, index, entries, mainEntry) {
     options.push(option);
   }
   return condition.any ? { question: source, anyOf: options } : { question: source, noneOf: options };
+}
+
+/**
+ * The screening as JSON, for `widget.json`: the excluded values of each
+ * question, and the label of each in every language.
+ */
+export function screeningEntries(survey, screening) {
+  const elements = (survey.pages ?? []).flatMap((page) => page.elements ?? []);
+  return [...screening].map(([name, values]) => {
+    const choices = (elements.find((element) => element.name === name)?.choices ?? []).map(item);
+    const labels = [...values].map((value) => {
+      const text = choices.find((choice) => choice.value === value)?.text ?? String(value);
+      const label = { [DEFAULT_LANGUAGE]: defaultText(text) };
+      for (const locale of locales(text)) if (locale !== "default") label[locale] = localText(text, locale);
+      return label;
+    });
+    return { name, values: [...values], labels };
+  });
 }
 
 /** "complete" triggers, as the excluded values of each question. */

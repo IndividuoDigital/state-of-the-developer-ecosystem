@@ -24,7 +24,7 @@ import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
 import { getPlatformProxy } from "wrangler";
 
-import { buildSurvey, cutLabels } from "./definition.js";
+import { buildSurvey, cutLabels, screeningEntries } from "./definition.js";
 import { toDetailedJson } from "./metadatum.js";
 
 const { values: args } = parseArgs({
@@ -90,7 +90,7 @@ async function preview() {
     translations,
     maxTextBytes: JSON.parse(schemaBytes).maxUtf8Bytes,
     sponsor: env ? { network: env.SPONSOR_NETWORK, survey: env.SPONSOR_SURVEY } : null,
-    screening: [...screening].map(([name, values]) => ({ name, values: [...values] })),
+    screening: screeningEntries(survey, screening),
     mapping,
     problems,
   };

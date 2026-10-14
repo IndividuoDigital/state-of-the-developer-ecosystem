@@ -19,7 +19,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
 
-import { buildSurvey, cutLabels } from "./definition.js";
+import { buildSurvey, cutLabels, screeningEntries } from "./definition.js";
 import { toCbor, toDetailedJson } from "./metadatum.js";
 
 const SCHEMA_FILE = new URL("./free-text.schema.json", import.meta.url);
@@ -80,7 +80,7 @@ if (args.out && hasErrors) {
     conditions,
     translations,
     maxTextBytes,
-    screening: [...screening].map(([name, values]) => ({ name, values: [...values] })),
+    screening: screeningEntries(survey, screening),
   });
   write("mapping.json", mapping);
   console.log(`written to ${args.out}`);

@@ -452,6 +452,14 @@
       "name": "question1",
       "values": [
         "Item 5"
+      ],
+      "labels": [
+        {
+          "en": "I do not write software",
+          "fr": "Je ne développe pas de logiciels",
+          "ja": "ソフトウェアは書きません",
+          "vi": "Tôi không viết phần mềm"
+        }
       ]
     }
   ]

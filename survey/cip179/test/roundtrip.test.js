@@ -11,7 +11,7 @@ import { test } from "node:test";
 import { decodeMetadata, describeProblems, encodeMetadata, validateResponse } from "cip-179";
 
 import { answersToRow, rowToAnswers, withoutHiddenAnswers } from "../answers.js";
-import { buildSurvey } from "../definition.js";
+import { buildSurvey, screeningEntries } from "../definition.js";
 import { fromDetailedJson, toCbor, toDetailedJson } from "../metadatum.js";
 
 const read = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url), "utf8"));
@@ -50,6 +50,20 @@ test("the 2025 survey's problems are the known ones", () => {
 
 test("the non-developer answer is screened out of the definition", () => {
   assert.deepEqual([...built.screening], [["question2", new Set(["Item 5"])]]);
+  // The site offers it before the form, in the respondent's language.
+  assert.deepEqual(screeningEntries(survey, built.screening), [
+    {
+      name: "question2",
+      values: ["Item 5"],
+      labels: [
+        {
+          en: "I do not write or deploy software",
+          ja: "ソフトウェアの作成や展開は行いません",
+          vi: "Tôi không viết hoặc triển khai phần mềm",
+        },
+      ],
+    },
+  ]);
   const q2 = mapping.questions.findIndex((m) => m.name === "question2");
   assert.ok(!mapping.questions[q2].values.includes("Item 5"));
 });

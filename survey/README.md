@@ -55,7 +55,7 @@ The survey is being moved on chain as a [CIP-179](https://github.com/mpizenberg/
 yarn cip179
 ```
 
-With `--owner <key hash> --end-epoch <epoch> --out <dir>`, it also writes the definition as cardano-cli metadata JSON, the widget's display conditions and translations, and the mapping used to convert responses back to `answers.json` rows.
+With `--owner <key hash> --end-epoch <epoch> --out <dir>`, it also writes the definition as cardano-cli metadata JSON, the widget's display conditions and translations, the answers that end the survey before its form, and the mapping used to convert responses back to `answers.json` rows.
 
 To try the survey in the widget respondents will use:
 
