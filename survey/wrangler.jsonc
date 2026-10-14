@@ -10,12 +10,6 @@
   "observability": {
     "enabled": true
   },
-  "kv_namespaces": [
-    {
-      "binding": "kv",
-      "id": "38fca760324e46e7b6d1b082fc3fa769"
-    }
-  ],
   /* The sponsor's state (cip179/sponsor-store.js). Create it with
      `wrangler d1 create cip179-sponsor`, put its id here, then
      `yarn db:migrate --remote`. */

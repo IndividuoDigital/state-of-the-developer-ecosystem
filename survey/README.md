@@ -1,55 +1,25 @@
 # State of The Developer Ecosystem Survey
 
+Since 2026, the survey's responses are published on the Cardano chain. The 2025 site, which kept them in Cloudflare KV, is in the git history; its questions and answers are in [2025/data/](../2025/data).
+
 ## Installation
 
 ```
 yarn
 ```
 
-## Configuration
+## Files
 
-- Cloudflare's turnstile sitekey in [public/js/app.js](./public/js/app.js#L6)
-- Survey's questions and answers in [public/survey.json](./public/survey.json)
-- Titles, dates, etc.. in [public/index.html](./public/index.html)
-
-## Development
-
-```
-yarn dev
-```
-
-## Monitoring
-
-Fetch results and/or answers count via:
-
-```
-yarn count
-```
-
-or
-
-```
-yarn results
-```
-
-> [!TIP]
->
-> To run those commands against a remote deployed instance, you must first login into Cloudflare:
->
-> ```
-> yarn wrangler login
-> ```
->
-> And then, simply append `--remote` to the commands. For example:
->
-> ```
-> yarn count --remote
-> yarn results --remote
-> ```
+- `site/`: the page respondents use, built into `dist/` by `yarn site`.
+- `cip179/`: the survey builder (`build.js`, `definition.js`), the preview (`preview.js`, `preview/`), the site's build (`site.js`) and modules, the sponsor (`sponsor*.js`), and the tests (`test/`).
+- `cip179/example/`: a test survey, and the files built from it.
+- `functions/api/sponsor/`: the sponsor's endpoints, run by Cloudflare Pages.
+- `migrations/`: the sponsor's D1 database.
+- `wrangler.jsonc`: the Cloudflare config, with the sponsor's vars. Local secrets go in the gitignored `.dev.vars`.
 
 ## CIP-179
 
-The survey is being moved on chain as a [CIP-179](https://github.com/mpizenberg/Tessera/blob/main/frontend/cip-179.md) survey. `cip179/build.js` turns `public/survey.json` into the CIP-179 survey definition, and reports what doesn't fit (labels over 64 bytes, unsupported conditions, the definition size, ...):
+The survey is a [CIP-179](https://github.com/mpizenberg/Tessera/blob/main/frontend/cip-179.md) survey. `cip179/build.js` turns a SurveyJS survey (`--survey`, by default `cip179/example/survey.json`) into the CIP-179 survey definition, and reports what doesn't fit (labels over 64 bytes, unsupported conditions, the definition size, ...):
 
 ```
 yarn cip179
@@ -67,7 +37,7 @@ and open http://localhost:8179/. The survey is rebuilt from `survey.json` on eve
 
 `yarn test` runs the 2025 answers through CIP-179 responses and back, to check that mapping.
 
-`cip179/example/survey.json` is a test survey with every kind of question the builder supports (`yarn preview --survey cip179/example/survey.json`), and the files built from it. It is published on the preview testnet as `70928d2c8cca0fa616e8df54a54d5c311deeec354f5a261fa6c1009ffde89aa5#0`, ending at epoch 1530, with the sponsor key as owner.
+`cip179/example/survey.json` is a test survey with every kind of question the builder supports, and the files built from it. It is published on the preview testnet as `70928d2c8cca0fa616e8df54a54d5c311deeec354f5a261fa6c1009ffde89aa5#0`, ending at epoch 1530, with the sponsor key as owner.
 
 ### Sponsored responses
 
@@ -94,7 +64,7 @@ To try it, create the local database, then run the functions in the preview, wit
 
 ```
 yarn db:migrate
-yarn preview --survey cip179/example/survey.json --sponsor
+yarn preview --sponsor
 ```
 
 A "Submit on preview" button then appears under the response, with Turnstile's test site key on localhost, and links to the transaction once submitted. The page's key is kept in the browser, so it can submit only once, until "Forget my answers and key". The preview uses the same local database as `yarn dev`, which runs the functions in the Workers runtime. `cip179/test/sponsor-store.test.js` tests the state on an in-memory D1.
@@ -105,7 +75,7 @@ A "Submit on preview" button then appears under the response, with Turnstile's t
 
 ```
 yarn site --survey cip179/example
-yarn wrangler pages dev dist
+yarn dev
 ```
 
 and open http://localhost:8788/. `yarn site` writes `dist/`, with the survey in the page's script. The network and the survey's reference are the sponsor's, from `wrangler.jsonc`. The build stops unless the definition is the one published there, which it reads from Koios (`--offline` skips this check).
@@ -123,6 +93,6 @@ The page's texts are in `site/texts/`, one file per language: English and French
 
 ## Deployment
 
-Deploy on Cloudflare by simply pushing the repository. The workers & pages then does its magic. Note that Turnstile secret needs to be configured in the Cloudflare dashboard directly.
+Cloudflare Pages deploys the repository when it is pushed. Its build settings, in the Cloudflare dashboard, are still those of the 2025 site, which served `public/`: they must build with `yarn site --survey <dir>`, from `survey/`, serve `dist/`, and bind the D1 database as `db`. Turnstile's site key is in `cip179/respondent.js`, and its secret is set in the dashboard.
 
-The sponsor needs its D1 database: create it once with `wrangler d1 create cip179-sponsor`, put its id in `wrangler.jsonc`, and apply the migrations with `yarn db:migrate --remote` (again whenever `migrations/` changes).
+The sponsor needs its D1 database: create it once with `wrangler d1 create cip179-sponsor`, put its id in `wrangler.jsonc`, and apply the migrations with `yarn db:migrate --remote` (again whenever `migrations/` changes). Commands with `--remote` need `yarn wrangler login` first.
