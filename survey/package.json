@@ -20,7 +20,7 @@
     "@evolution-sdk/evolution": "0.5.16",
     "@noble/curves": "^2.4.0",
     "@noble/hashes": "^2.4.0",
-    "cardano-tessera-respond": "0.3.0",
+    "cardano-tessera-respond": "0.4.0",
     "cip-179": "0.6.0",
     "nanoid": "^5.1.6"
   },
