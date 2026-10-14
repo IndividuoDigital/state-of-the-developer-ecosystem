@@ -15,4 +15,9 @@ test("epochs from the time", () => {
   assert.equal(epochAt("mainnet", shelley), 208);
   assert.equal(epochAt("mainnet", shelley + 432_000_000 - 1), 208);
   assert.equal(epochAt("mainnet", shelley + 292 * 432_000_000), 500);
+
+  const preprod = Date.UTC(2022, 5, 21); // slot 86400, epoch 4
+  assert.equal(epochAt("preprod", preprod), 4);
+  assert.equal(epochAt("preprod", preprod + 432_000_000 - 1), 4);
+  assert.equal(epochAt("preprod", preprod + 246 * 432_000_000), 250);
 });

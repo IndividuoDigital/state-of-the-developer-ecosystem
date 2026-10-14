@@ -24,10 +24,10 @@
 // parameters read once per epoch. `sponsor-split.js` splits the wallet into
 // coins, so that several respondents can submit at once.
 //
-// Config (`env`): SPONSOR_MNEMONIC (a secret), SPONSOR_NETWORK (preview or
-// mainnet), SPONSOR_KOIOS (the Koios API URL), SPONSOR_SURVEY (the survey's
-// "<tx id>#<index>"), the `db` binding, and optionally SPONSOR_DAILY_CAP: the
-// most the sponsor spends in 24 hours, in lovelace.
+// Config (`env`): SPONSOR_MNEMONIC (a secret), SPONSOR_NETWORK (preview,
+// preprod or mainnet), SPONSOR_KOIOS (the Koios API URL), SPONSOR_SURVEY (the
+// survey's "<tx id>#<index>"), the `db` binding, and optionally
+// SPONSOR_DAILY_CAP: the most the sponsor spends in 24 hours, in lovelace.
 
 import { ed25519 } from "@noble/curves/ed25519.js";
 import { blake2b } from "@noble/hashes/blake2.js";
@@ -40,7 +40,7 @@ import * as TransactionHash from "@evolution-sdk/evolution/TransactionHash";
 import * as TransactionWitnessSet from "@evolution-sdk/evolution/TransactionWitnessSet";
 import * as UTxO from "@evolution-sdk/evolution/UTxO";
 import * as VKey from "@evolution-sdk/evolution/VKey";
-import { mainnet, preview } from "@evolution-sdk/evolution/sdk/client/Chain";
+import { mainnet, preprod, preview } from "@evolution-sdk/evolution/sdk/client/Chain";
 import * as Client from "@evolution-sdk/evolution/sdk/client/Client";
 import { addressFromSeed } from "@evolution-sdk/evolution/sdk/wallet/Derivation";
 import { decodeMetadata, decodePayload, describeProblems, validateResponse } from "cip-179";
@@ -81,6 +81,7 @@ const KOIOS_BATCH = 50;
 // The networks, with the first slot and epoch of fixed-length epochs.
 const NETWORKS = {
   preview: { chain: preview, shelley: { epoch: 0, slot: 0 } },
+  preprod: { chain: preprod, shelley: { epoch: 4, slot: 86_400 } },
   mainnet: { chain: mainnet, shelley: { epoch: 208, slot: 4_492_800 } },
 };
 

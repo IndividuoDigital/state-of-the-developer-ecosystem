@@ -80,7 +80,7 @@ The sponsor pays at most 0.3 ada per response (about 3 KB of transaction), and o
 
 Its state is in the D1 database `db` (`migrations/`, `cip179/sponsor-store.js`): its coins, one sponsorship per respondent key, and what it read from the chain. It tracks its coins itself: a sponsored transaction spends one coin and its change replaces it, usable 30 seconds later, once the other nodes know the transaction. So a response costs a single Koios call, its submission. Koios confirms the coins every 30 minutes, or when none is free or the node refuses one: it adds the coins the sponsor didn't know of, and forgets the transactions that never made it on chain. The transactions are built offline, with the protocol parameters read once per epoch.
 
-The logic is in `cip179/sponsor.js`, configured by the `SPONSOR_*` vars in `wrangler.jsonc`, and by the `SPONSOR_MNEMONIC` secret. `node cip179/sponsor-key.js` generates the sponsor wallet: its seed phrase goes to the gitignored `.dev.vars`, and it prints the address to fund. For a deployment, set it with `wrangler pages secret put SPONSOR_MNEMONIC` instead.
+The logic is in `cip179/sponsor.js`, configured by the `SPONSOR_*` vars in `wrangler.jsonc` (the network is `preview`, `preprod` or `mainnet`), and by the `SPONSOR_MNEMONIC` secret. `node cip179/sponsor-key.js` generates the sponsor wallet: its seed phrase goes to the gitignored `.dev.vars`, and it prints the address to fund. For a deployment, set it with `wrangler pages secret put SPONSOR_MNEMONIC` instead.
 
 Each transaction spends one sponsor coin, at random among the largest ones, so the wallet needs several coins for respondents to submit at once. Once funded, split it, before the survey opens (the sponsor learns of the new coins at its next check):
 
