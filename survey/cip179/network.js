@@ -24,9 +24,9 @@ export function epochEnd(network, epoch) {
   return (start + (epoch + 1 - first) * epochLength) * 1000;
 }
 
-/** The page of a transaction in an explorer. */
+/** A transaction's metadata in an explorer: where its response shows. */
 export function transactionUrl(network, txId) {
-  return `${networkOf(network).explorer}/transaction/${txId}`;
+  return `${networkOf(network).explorer}/transaction/${txId}?tab=metadata`;
 }
 
 function networkOf(network) {

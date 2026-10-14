@@ -30,7 +30,7 @@ test("an epoch ends where the next one starts", () => {
 });
 
 test("explorer links", () => {
-  assert.equal(transactionUrl("preview", "ab12"), "https://preview.cardanoscan.io/transaction/ab12");
-  assert.equal(transactionUrl("mainnet", "ab12"), "https://cardanoscan.io/transaction/ab12");
+  assert.equal(transactionUrl("preview", "ab12"), "https://preview.cardanoscan.io/transaction/ab12?tab=metadata");
+  assert.equal(transactionUrl("mainnet", "ab12"), "https://cardanoscan.io/transaction/ab12?tab=metadata");
   assert.throws(() => transactionUrl("testnet", "ab12"), /unknown network/);
 });
