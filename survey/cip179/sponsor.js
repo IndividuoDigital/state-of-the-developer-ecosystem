@@ -85,23 +85,32 @@ const NETWORKS = {
   mainnet: { chain: mainnet, shelley: { epoch: 208, slot: 4_492_800 } },
 };
 
-/** A request we refuse; its message is shown to the respondent. */
+/**
+ * A request we refuse. The survey site words the refusal from its code, in
+ * the respondent's language; the message is for the other clients.
+ */
 export class SponsorError extends Error {
-  constructor(message, status = 400) {
+  constructor(message, status = 400, code = "invalid") {
     super(message);
     this.status = status;
+    this.code = code;
   }
 }
 
-/** The JSON response for what `work` returns, or `{ error }`. */
+/**
+ * The JSON response for what `work` returns, or `{ error, code }`, with the
+ * `txId` of the response a key already had sponsored.
+ */
 export async function reply(work) {
   try {
     return Response.json(await work());
   } catch (error) {
-    if (error instanceof SponsorError) return Response.json({ error: error.message }, { status: error.status });
-    if (error instanceof SyntaxError) return Response.json({ error: "malformed request" }, { status: 400 });
+    if (error instanceof SponsorError) {
+      return Response.json({ error: error.message, code: error.code, txId: error.txId }, { status: error.status });
+    }
+    if (error instanceof SyntaxError) return Response.json({ error: "malformed request", code: "invalid" }, { status: 400 });
     console.error("sponsor:", error);
-    return Response.json({ error: "the sponsor failed, please try again later" }, { status: 500 });
+    return Response.json({ error: "the sponsor failed, please try again later", code: "failed" }, { status: 500 });
   }
 }
 
@@ -112,13 +121,13 @@ export async function sponsor(env, payloadHex) {
   const now = Date.now();
   const payloadBytes = fromHex(payloadHex, "payload");
   if (payloadBytes.length > MAX_PAYLOAD_BYTES) {
-    throw new SponsorError(`the response is ${payloadBytes.length} bytes, over the ${MAX_PAYLOAD_BYTES} we sponsor`);
+    throw new SponsorError(`the response is ${payloadBytes.length} bytes, over the ${MAX_PAYLOAD_BYTES} we sponsor`, 400, "too-long");
   }
   const { payload, response } = checkedResponse(payloadBytes, config);
   const key = toHex(response.credential.keyHash);
 
   const [view, previous] = await Promise.all([chainView(config, now), store.sponsorshipOf(db, key)]);
-  if (previous?.state === "submitted") throw alreadySponsored();
+  if (previous?.state === "submitted") throw alreadySponsored(previous.tx);
   const survey = surveyOf(view);
   const problems = describeProblems(validateResponse(survey.definition, response));
   if (problems.length > 0) throw new SponsorError(`invalid response: ${problems.join("; ")}`);
@@ -127,7 +136,7 @@ export async function sponsor(env, payloadHex) {
   // The survey takes responses until the end of its end epoch; a transaction
   // can't land later than that.
   const surveyEnd = slotTime(config, epochStart(config, Number(survey.definition.endEpoch) + 1));
-  if (Math.min(now + VALIDITY_MS, surveyEnd) <= now) throw new SponsorError("the survey has ended");
+  if (Math.min(now + VALIDITY_MS, surveyEnd) <= now) throw new SponsorError("the survey has ended", 400, "ended");
 
   if (now - view.checkedAt >= COINS_CHECK_MS) await checkCoins(config, view, now);
   for (let attempt = 0; attempt < LEASE_ATTEMPTS; ) {
@@ -147,7 +156,9 @@ export async function sponsor(env, payloadHex) {
       .build({ availableUtxos: [utxoOf(config, coin)], fullProtocolParameters: view.params.value });
     const unsigned = await built.toTransaction();
     const { fee } = unsigned.body;
-    if (fee > MAX_FEE) throw new SponsorError(`the response costs ${ada(fee)} ada, over the ${ada(MAX_FEE)} we sponsor`);
+    if (fee > MAX_FEE) {
+      throw new SponsorError(`the response costs ${ada(fee)} ada, over the ${ada(MAX_FEE)} we sponsor`, 400, "too-long");
+    }
     const tx = Transaction.addVKeyWitnessesHex(
       Transaction.toCBORHex(unsigned),
       TransactionWitnessSet.toCBORHex(await built.partialSign()),
@@ -157,9 +168,9 @@ export async function sponsor(env, payloadHex) {
     const leased = await store.lease(db, { key, coin: coin.ref, tx: txId, fee, validUntil }, now, config);
     if (leased === "leased") return { tx, txId };
     if (leased === "key") throw alreadySponsored();
-    if (leased === "cap") throw new SponsorError("the sponsor spent today's budget, please try again tomorrow", 503);
+    if (leased === "cap") throw new SponsorError("the sponsor spent today's budget, please try again tomorrow", 503, "budget");
   }
-  throw new SponsorError("the sponsor is busy, please try again in a few seconds", 503);
+  throw new SponsorError("the sponsor is busy, please try again in a few seconds", 503, "busy");
 }
 
 /**
@@ -200,9 +211,9 @@ export async function submit(env, txHex, { vkey, signature }) {
   const previous = await store.sponsorshipOf(db, sponsorship.key);
   if (previous?.state === "submitted") {
     if (previous.tx === sponsorship.tx) return sponsorship.tx;
-    throw alreadySponsored();
+    throw alreadySponsored(previous.tx);
   }
-  if (sponsorship.validUntil <= now) throw new SponsorError("the transaction expired, please try again", 410);
+  if (sponsorship.validUntil <= now) throw new SponsorError("the transaction expired, please try again", 410, "expired");
 
   const respondent = new TransactionWitnessSet.TransactionWitnessSet({
     vkeyWitnesses: [
@@ -226,7 +237,7 @@ export async function submit(env, txHex, { vkey, signature }) {
     await store.refused(db, sponsorship, now);
     const view = await store.chainView(db);
     if (now - view.checkedAt >= COINS_RECHECK_MS) await checkCoins(config, view, now).catch((e) => console.error("sponsor:", e));
-    throw new SponsorError("the transaction was refused, please try again", 502);
+    throw new SponsorError("the transaction was refused, please try again", 502, "refused");
   }
   await store.submitted(db, sponsorship, now);
   return sponsorship.tx;
@@ -353,8 +364,10 @@ function checkedResponse(payloadBytes, config) {
   return { payload, response };
 }
 
-function alreadySponsored() {
-  return new SponsorError("this key already had a response sponsored; to change it, submit it with your own wallet", 409);
+/** With the transaction of the sponsored response, when we know it. */
+function alreadySponsored(txId) {
+  const message = "this key already had a response sponsored; to change it, submit it with your own wallet";
+  return Object.assign(new SponsorError(message, 409, "already"), { txId });
 }
 
 /**
@@ -402,7 +415,7 @@ async function checkNotCancelled(config, view, survey, now) {
       await store.scanned(config.db, { slot: view.cancellation.scannedTo, caughtUpAt: view.cancellation.caughtUpAt });
     }
   }
-  if (view.cancellation.state === "cancelled") throw new SponsorError("the survey was cancelled");
+  if (view.cancellation.state === "cancelled") throw new SponsorError("the survey was cancelled", 400, "cancelled");
 }
 
 /** The transaction among these that cancels the survey, signed by its owner. */

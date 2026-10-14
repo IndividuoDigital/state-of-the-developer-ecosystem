@@ -13,7 +13,7 @@ export const onRequestPost = ({ request, env }) =>
     const { challenge, payload } = await request.json();
     const ip = request.headers.get("CF-Connecting-IP") ?? "";
     if (!(await validateTurnstile(env[TURNSTILE_SECRET_ENV_VAR], challenge, ip))) {
-      throw new SponsorError("invalid turnstile verification");
+      throw new SponsorError("invalid turnstile verification", 400, "turnstile");
     }
     return sponsor(env, payload);
   });

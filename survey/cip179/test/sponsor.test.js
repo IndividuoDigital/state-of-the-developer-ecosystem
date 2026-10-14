@@ -1,9 +1,10 @@
 // The sponsor's clock: epochs from the time, without reading the chain's tip.
+// And its refusals, as the page reads them.
 
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { epochAt } from "../sponsor.js";
+import { epochAt, reply, SponsorError } from "../sponsor.js";
 
 test("epochs from the time", () => {
   const preview = Date.UTC(2022, 9, 25); // slot 0
@@ -20,4 +21,22 @@ test("epochs from the time", () => {
   assert.equal(epochAt("preprod", preprod), 4);
   assert.equal(epochAt("preprod", preprod + 432_000_000 - 1), 4);
   assert.equal(epochAt("preprod", preprod + 246 * 432_000_000), 250);
+});
+
+test("a refusal has a code", async () => {
+  const refusal = async (error) => {
+    const res = await reply(async () => {
+      throw error;
+    });
+    return { status: res.status, ...(await res.json()) };
+  };
+  assert.deepEqual(await refusal(new SponsorError("not hex")), { status: 400, error: "not hex", code: "invalid" });
+  assert.deepEqual(await refusal(new SponsorError("busy", 503, "busy")), { status: 503, error: "busy", code: "busy" });
+  assert.deepEqual(await refusal(Object.assign(new SponsorError("already", 409, "already"), { txId: "ab" })), {
+    status: 409,
+    error: "already",
+    code: "already",
+    txId: "ab",
+  });
+  assert.equal((await refusal(new SyntaxError("bad JSON"))).code, "invalid");
 });
