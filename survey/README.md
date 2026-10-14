@@ -76,6 +76,8 @@ Respondents don't need a wallet: the sponsor wallet pays for their transactions.
 1. `POST /api/sponsor` (`functions/api/sponsor/index.js`) checks the Turnstile token. It also checks that the payload is one valid response to our survey, from a key. It leases a sponsor coin and builds the transaction from it, with the response key as required signer and a 5-minute validity window, signs it and returns it.
 2. The browser signs the transaction id with its key, and `POST /api/sponsor/submit` (`functions/api/sponsor/submit.js`) adds that signature and submits the transaction through Koios. It only relays transactions the sponsor signed. Once Koios accepts it, the browser shows the response as submitted and forgets the unsent answers. If the sponsor is busy or the node refuses the transaction, the browser tries again, twice at most.
 
+A refusal comes as `{ error, code }`. The survey site words it from the code, in the respondent's language.
+
 The sponsor pays at most 0.3 ada per response (about 3 KB of transaction), and once per respondent key: the browser keeps its key, and a respondent changes their answer with their own wallet. It also stops once the survey is cancelled, which it checks on chain every 10 minutes. `SPONSOR_DAILY_CAP`, in lovelace, would also cap what it spends in 24 hours.
 
 Its state is in the D1 database `db` (`migrations/`, `cip179/sponsor-store.js`): its coins, one sponsorship per respondent key, and what it read from the chain. It tracks its coins itself: a sponsored transaction spends one coin and its change replaces it, usable 30 seconds later, once the other nodes know the transaction. So a response costs a single Koios call, its submission. Koios confirms the coins every 30 minutes, or when none is free or the node refuses one: it adds the coins the sponsor didn't know of, and forgets the transactions that never made it on chain. The transactions are built offline, with the protocol parameters read once per epoch.
@@ -96,6 +98,28 @@ yarn preview --survey cip179/example/survey.json --sponsor
 ```
 
 A "Submit on preview" button then appears under the response, with Turnstile's test site key on localhost, and links to the transaction once submitted. The page's key is kept in the browser, so it can submit only once, until "Forget my answers and key". The preview uses the same local database as `yarn dev`, which runs the functions in the Workers runtime. `cip179/test/sponsor-store.test.js` tests the state on an in-memory D1.
+
+### The survey site
+
+`site/` is the page respondents will use: the widget, between a welcome screen and a submit screen. It is built for one survey, from the files written by `yarn cip179 --out`:
+
+```
+yarn site --survey cip179/example
+yarn wrangler pages dev dist
+```
+
+and open http://localhost:8788/. `yarn site` writes `dist/`, with the survey in the page's script. The network and the survey's reference are the sponsor's, from `wrangler.jsonc`. The build stops unless the definition is the one published there, which it reads from Koios (`--offline` skips this check).
+
+A respondent goes through these screens (`site/flow.js`):
+
+1. A welcome, with the notice that answers are public and permanent. It also offers the answers that end the survey before its form (SurveyJS "complete" triggers): nothing is recorded for them.
+2. The questions, one per screen.
+3. A submit screen, where Turnstile and the sponsor run. A refusal is told there, and the answers are kept.
+4. A thank-you, with a link to the transaction. Later visits from the same browser show it too.
+
+A survey past its end epoch, or cancelled, shows as closed.
+
+The page's texts are in `site/texts/`, one file per language: English and French. A survey's translations in other languages are left out. The respondent's key, unsent answers and language are kept in `localStorage`, for each survey (`cip179/respondent.js`, which the preview uses too). The page requests nothing from other sites until the submit screen, which loads Turnstile.
 
 ## Deployment
 
