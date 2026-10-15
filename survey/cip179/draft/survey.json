@@ -1,0 +1,582 @@
+{
+  "title": "Cardano Developer Survey 2026",
+  "description": "About 10 minutes. Only the first question is required: skip any other. The results tell tool builders, documentation writers and funders what to work on first.",
+  "triggers": [{ "type": "complete", "expression": "{experience} = 'not-a-developer'" }],
+  "pages": [
+    {
+      "name": "what_you_build",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "experience",
+          "title": "How long have you been writing or deploying software?",
+          "isRequired": true,
+          "choices": [
+            { "value": "not-a-developer", "text": "I don't write or deploy software" },
+            { "value": "under-2", "text": "Less than 2 years" },
+            { "value": "2-4", "text": "2 to 4 years" },
+            { "value": "5-9", "text": "5 to 9 years" },
+            { "value": "10-plus", "text": "10 years or more" }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "building",
+          "title": "What are you building on Cardano?",
+          "description": "Choose up to 4.",
+          "maxSelectedChoices": 4,
+          "choices": [
+            { "value": "ai-agents", "text": "AI agents" },
+            { "value": "bridges", "text": "Bridges and interoperability" },
+            { "value": "defi", "text": "DeFi" },
+            { "value": "dev-tools", "text": "Developer tools and infrastructure" },
+            { "value": "education", "text": "Education and community" },
+            { "value": "gaming", "text": "Gaming" },
+            { "value": "governance", "text": "Governance tools" },
+            { "value": "identity", "text": "Identity" },
+            { "value": "layer-2", "text": "Layer 2s and scaling" },
+            { "value": "nfts", "text": "NFTs" },
+            { "value": "oracles", "text": "Oracles and data" },
+            { "value": "payments", "text": "Payments and stablecoins" },
+            { "value": "privacy", "text": "Privacy and zero-knowledge" },
+            { "value": "real-world-assets", "text": "Real-world assets" },
+            { "value": "staking", "text": "Staking and SPO tools" },
+            { "value": "wallets", "text": "Wallets" },
+            { "value": "other", "text": "Other" }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "stage",
+          "title": "How far along is your main Cardano project?",
+          "choices": [
+            { "value": "learning", "text": "Learning or experimenting" },
+            { "value": "development", "text": "In development (testnet)" },
+            { "value": "released", "text": "Released (mainnet, or a published tool)" },
+            { "value": "users", "text": "Released, with regular users" }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "project_link",
+          "visibleIf": "{stage} anyof ['released', 'users']",
+          "title": "Where can we find this project (website or repository link)?",
+          "description": "This link is public and ties all your answers to this project."
+        },
+        {
+          "type": "radiogroup",
+          "name": "started",
+          "title": "When did you start building on Cardano?",
+          "choices": [
+            "2026",
+            "2025",
+            { "value": "2023-2024", "text": "2023–2024" },
+            { "value": "2021-2022", "text": "2021–2022" },
+            { "value": "2020-or-earlier", "text": "2020 or earlier" }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "weekly_hours",
+          "title": "In a typical week, how much time do you spend building on Cardano?",
+          "choices": [
+            { "value": "under-5", "text": "Less than 5 hours" },
+            { "value": "5-19", "text": "5 to 19 hours" },
+            { "value": "20-34", "text": "20 to 34 hours" },
+            { "value": "35-plus", "text": "35 hours or more" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "how_it_is_going",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "satisfaction",
+          "title": "Overall, how satisfied are you with building on Cardano?",
+          "choices": [
+            { "value": "very-satisfied", "text": "Very satisfied" },
+            { "value": "satisfied", "text": "Satisfied" },
+            { "value": "neutral", "text": "Neither satisfied nor dissatisfied" },
+            { "value": "dissatisfied", "text": "Dissatisfied" },
+            { "value": "very-dissatisfied", "text": "Very dissatisfied" }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "trend",
+          "title": "Compared with a year ago, building on Cardano is:",
+          "choices": [
+            { "value": "much-easier", "text": "Much easier" },
+            { "value": "easier", "text": "Somewhat easier" },
+            { "value": "same", "text": "About the same" },
+            { "value": "harder", "text": "Somewhat harder" },
+            { "value": "much-harder", "text": "Much harder" },
+            { "value": "new", "text": "I wasn't building on Cardano a year ago" }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "best",
+          "title": "What is the best thing about building on Cardano?"
+        },
+        {
+          "type": "comment",
+          "name": "most_painful",
+          "title": "What is the most painful thing about building on Cardano?"
+        }
+      ]
+    },
+    {
+      "name": "what_you_build_with",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "onchain_languages",
+          "title": "Which languages have you used for on-chain code in the last 12 months?",
+          "choices": [
+            "Aiken",
+            "Helios",
+            "JuLC",
+            "Marlowe",
+            "OpShin",
+            "Pebble",
+            "Plinth (Plutus-Tx)",
+            "Plu-ts",
+            "Plutarch",
+            "Scalus",
+            { "value": "other", "text": "Other" }
+          ],
+          "showNoneItem": true,
+          "noneText": "None, I don't write on-chain code"
+        },
+        {
+          "type": "checkbox",
+          "name": "onchain_libraries",
+          "title": "Which on-chain libraries have you used in the last 12 months?",
+          "description": "Not counting standard libraries.",
+          "choices": [
+            "Aicone, with Sundae multisig (Aiken)",
+            "ak-381 (Aiken)",
+            "Assist (Aiken)",
+            "Design Patterns (Aiken)",
+            "Fuzz (Aiken)",
+            "Merkle Patricia Forestry (Aiken)",
+            "Oakshield (Aiken)",
+            "Vodka (Aiken)",
+            "ZeroJ (JuLC)",
+            "plutus-script-utils (Plinth)",
+            "Plutus Simple Model (Plinth)",
+            "catalyst-onchain-libs (Plutarch)",
+            "Liqwid libs (Plutarch)",
+            "Ply (Plutarch)",
+            "Design Patterns (Scalus)",
+            { "value": "other", "text": "Other" }
+          ],
+          "showNoneItem": true
+        },
+        {
+          "type": "checkbox",
+          "name": "offchain_libraries",
+          "title": "Which off-chain libraries have you used in the last 12 months?",
+          "choices": [
+            "Chrysalis (.NET)",
+            "elm-cardano (Elm)",
+            "Apollo (Go)",
+            "gOuroboros (Go)",
+            "Atlas (Haskell)",
+            "cardano-api (Haskell)",
+            "sc-tools (Haskell)",
+            "cardano-client-lib (Java)",
+            "Yaci (Java)",
+            "cardano-transaction-lib (PureScript)",
+            "PyCardano (Python)",
+            "Pallas (Rust)",
+            "CML, cardano-multiplatform-lib (Rust, JS)",
+            "CSL, cardano-serialization-lib (Rust, JS)",
+            "Scalus (Scala)",
+            "Tx3",
+            "Blaze (TypeScript)",
+            "Cardano JS SDK (TypeScript)",
+            "Cometa (TypeScript)",
+            "Dexter (TypeScript)",
+            "Evolution SDK (TypeScript)",
+            "Lucid (TypeScript)",
+            "Mesh (TypeScript)",
+            { "value": "other", "text": "Other" }
+          ],
+          "showNoneItem": true
+        },
+        {
+          "type": "checkbox",
+          "name": "self_hosted",
+          "title": "Which of these have you run yourself in the last 12 months, locally or on your servers?",
+          "choices": [
+            "Adder",
+            "Amaru",
+            "Blockfrost",
+            "cardano-db-sync",
+            "cardano-graphql",
+            "cardano-node",
+            "cardano-wallet",
+            "Dingo",
+            "Dolos",
+            "Gummiworm",
+            "Hydra",
+            "Kupo",
+            "Mithril",
+            "Ogmios",
+            "Oura",
+            "Scrolls",
+            "Yaci DevKit",
+            "Yaci Store",
+            { "value": "other", "text": "Other" }
+          ],
+          "showNoneItem": true
+        },
+        {
+          "type": "checkbox",
+          "name": "dev_tools",
+          "title": "Which developer tools have you used in the last 12 months?",
+          "description": "Including stake pool tools.",
+          "choices": [
+            "bech32",
+            "Cardano Dev Wallet",
+            "cardano-addresses",
+            "cardano-cli",
+            "cardano-hw-cli",
+            "cardano-signer",
+            "cardano-up",
+            "cncli",
+            "Cquisitor",
+            "CShell",
+            "Gastronomy",
+            "Lace Anatomy",
+            "nview",
+            "offchain-metadata-tools",
+            "Sorbet",
+            "SPO scripts (gitmachtl)",
+            "txtop",
+            { "value": "other", "text": "Other" }
+          ],
+          "showNoneItem": true
+        },
+        {
+          "type": "checkbox",
+          "name": "hosted_apis",
+          "title": "Which hosted API services have you used in the last 12 months?",
+          "choices": [
+            "AdaStat",
+            "Blockfrost",
+            "Cardanoscan",
+            "Cexplorer",
+            "Charli3",
+            "Demeter",
+            "Dune",
+            "IAG Insight",
+            "Koios",
+            "Maestro",
+            "Nexus",
+            "NMKR",
+            "Orcfax",
+            "Pyth",
+            "SteelSwap",
+            "TapTools",
+            "Token registry",
+            { "value": "other", "text": "Other" }
+          ],
+          "showNoneItem": true
+        },
+        {
+          "type": "checkbox",
+          "name": "testing",
+          "title": "How have you tested your Cardano code in the last 12 months?",
+          "choices": [
+            { "value": "unit", "text": "Unit tests of validators" },
+            { "value": "property", "text": "Property-based tests or fuzzing" },
+            { "value": "emulator", "text": "Emulator, no node (Lucid Evolution, Scalus, sc-tools…)" },
+            { "value": "devnet", "text": "Local devnet (Yaci DevKit, cardano-testnet…)" },
+            { "value": "testnet", "text": "Public testnet (Preview, Preprod)" },
+            { "value": "mainnet", "text": "Mainnet, with small amounts" },
+            { "value": "by-hand", "text": "By hand, with a wallet or the command line" },
+            { "value": "formal-verification", "text": "Formal verification" },
+            { "value": "audit", "text": "Audit by another team" },
+            { "value": "other", "text": "Other" }
+          ],
+          "showNoneItem": true
+        },
+        {
+          "type": "text",
+          "name": "missing_tools",
+          "title": "Which tools do you use that are missing from the lists above?"
+        },
+        {
+          "type": "radiogroup",
+          "name": "ai_frequency",
+          "title": "In the past month, how often did you use AI coding tools for Cardano work?",
+          "choices": [
+            { "value": "daily", "text": "Daily or nearly so" },
+            { "value": "weekly", "text": "Weekly or nearly so" },
+            { "value": "less", "text": "Less often" },
+            { "value": "never", "text": "Never" }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "ai_worst",
+          "visibleIf": "{ai_frequency} <> 'never'",
+          "title": "Which Cardano language, library or tool does AI handle worst, and what goes wrong?"
+        }
+      ]
+    },
+    {
+      "name": "what_gets_in_the_way",
+      "elements": [
+        {
+          "type": "matrix",
+          "name": "problems",
+          "title": "How much of a problem is each of these for you?",
+          "columns": [
+            { "value": "big", "text": "Big problem for me" },
+            { "value": "could-be-better", "text": "Could be better, doesn't limit me" },
+            { "value": "good", "text": "Good for me" },
+            { "value": "not-relevant", "text": "Not relevant to me" }
+          ],
+          "rows": [
+            { "value": "first-app", "text": "Getting a first application working end to end" },
+            { "value": "choosing-tools", "text": "Knowing which tools and libraries to choose" },
+            { "value": "documentation", "text": "Finding up-to-date documentation" },
+            { "value": "examples", "text": "Finding working examples" },
+            { "value": "help", "text": "Getting help when I am stuck" },
+            { "value": "eutxo-design", "text": "Designing for eUTxO (state, concurrency)" },
+            { "value": "minimum-ada", "text": "Minimum ada in each output (micropayments, airdrops)" },
+            { "value": "building-transactions", "text": "Building transactions" },
+            { "value": "wallets", "text": "Connecting to wallets (CIP-30 issues, mobile wallets)" },
+            { "value": "testing", "text": "Testing validators" },
+            { "value": "debugging", "text": "Debugging validators" },
+            { "value": "libraries", "text": "Incomplete or unmaintained libraries" },
+            { "value": "breaking-changes", "text": "Breaking changes in tools and libraries" },
+            { "value": "chain-data", "text": "Getting chain data (indexers, APIs)" },
+            { "value": "api-limits", "text": "Limits and pricing of hosted APIs" },
+            { "value": "infrastructure", "text": "Running infrastructure (node, indexer)" },
+            { "value": "ai", "text": "Getting good results from AI tools on Cardano code" }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "answer_sources",
+          "title": "Where do you get answers to technical questions about Cardano?",
+          "description": "Choose up to 5, the ones you rely on most.",
+          "maxSelectedChoices": 5,
+          "choices": [
+            { "value": "ai", "text": "AI assistants" },
+            { "value": "blogs", "text": "Blogs and articles" },
+            "Cardano Blueprint",
+            { "value": "cardano-docs", "text": "Cardano docs (docs.cardano.org)" },
+            "Cardano Forum",
+            "CIPs",
+            { "value": "colleagues", "text": "Colleagues and friends" },
+            { "value": "developer-portal", "text": "Developer portal (developers.cardano.org)" },
+            "Discord",
+            { "value": "github", "text": "GitHub issues and discussions" },
+            { "value": "papers", "text": "Papers and specifications" },
+            { "value": "project-docs", "text": "Project documentation" },
+            "Reddit",
+            { "value": "source-code", "text": "Source code" },
+            "Stack Exchange",
+            "Telegram",
+            { "value": "videos", "text": "Videos and courses" },
+            "X (Twitter)",
+            { "value": "other", "text": "Other" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "where_it_should_go",
+      "elements": [
+        {
+          "type": "matrix",
+          "name": "roadmap",
+          "title": "How much would each of these help what you are building?",
+          "columns": [
+            { "value": "unblock", "text": "Would unblock me" },
+            { "value": "help", "text": "Would help" },
+            { "value": "not-needed", "text": "I don't need it" },
+            { "value": "unknown", "text": "I don't know what it is" }
+          ],
+          "rows": [
+            { "value": "throughput", "text": "Higher throughput" },
+            { "value": "finality", "text": "Faster finality" },
+            { "value": "layer-2", "text": "Layer 2s" },
+            { "value": "bridges", "text": "Bridges to other chains" },
+            { "value": "zero-knowledge", "text": "Zero-knowledge proof verification on chain" },
+            { "value": "nested-transactions", "text": "Nested transactions" },
+            { "value": "fee-tokens", "text": "Paying fees in other tokens" },
+            { "value": "programmable-tokens", "text": "Programmable tokens" },
+            { "value": "global-state", "text": "Global state with concurrent updates (as on EVM chains)" },
+            { "value": "light-clients", "text": "Light clients" },
+            { "value": "alternative-nodes", "text": "Alternative nodes" },
+            { "value": "formal-verification", "text": "Formal verification of smart contracts" }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "blockers",
+          "title": "Beyond technology, what holds your project back the most?",
+          "description": "Choose up to 3.",
+          "maxSelectedChoices": 3,
+          "choices": [
+            { "value": "audits", "text": "Cost of audits" },
+            { "value": "users", "text": "Finding users" },
+            { "value": "funding", "text": "Funding" },
+            { "value": "visibility", "text": "Getting noticed (visibility, marketing)" },
+            { "value": "hiring", "text": "Hiring experienced developers" },
+            { "value": "integrations", "text": "Integrations (exchanges, wallets, custodians)" },
+            { "value": "time", "text": "Lack of time" },
+            { "value": "legal", "text": "Legal and regulatory uncertainty" },
+            { "value": "liquidity", "text": "Liquidity on chain" },
+            { "value": "other", "text": "Other" }
+          ],
+          "showNoneItem": true,
+          "noneText": "Nothing significant"
+        },
+        {
+          "type": "checkbox",
+          "name": "motives",
+          "title": "Why do you build on Cardano?",
+          "description": "Choose up to 3.",
+          "maxSelectedChoices": 3,
+          "choices": [
+            { "value": "curiosity", "text": "Curiosity, learning" },
+            { "value": "values", "text": "Decentralisation and values" },
+            { "value": "funding", "text": "Funding (Catalyst, treasury, grants)" },
+            { "value": "tooling", "text": "Languages and tooling" },
+            { "value": "market", "text": "Market opportunity" },
+            { "value": "employer", "text": "My employer or client chose it" },
+            { "value": "research", "text": "Research-driven approach" },
+            { "value": "security", "text": "Security and reliability of the chain" },
+            { "value": "community", "text": "The community" },
+            { "value": "eutxo", "text": "The eUTxO model and deterministic transactions" },
+            { "value": "other", "text": "Other" }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "retention",
+          "title": "How likely are you to still be building on Cardano a year from now?",
+          "choices": [
+            { "value": "very-likely", "text": "Very likely" },
+            { "value": "likely", "text": "Likely" },
+            { "value": "not-sure", "text": "Not sure" },
+            { "value": "unlikely", "text": "Unlikely" },
+            { "value": "very-unlikely", "text": "Very unlikely" }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "wish",
+          "title": "Which tool, library or feature that doesn't exist yet would help you the most?"
+        }
+      ]
+    },
+    {
+      "name": "about_you",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "role",
+          "title": "Which best describes your role?",
+          "description": "The last questions are about you: skip any you'd rather not answer.",
+          "choices": [
+            { "value": "architect", "text": "Architect or technical lead" },
+            { "value": "data", "text": "Data scientist or analyst" },
+            { "value": "devops", "text": "DevOps or system administrator" },
+            { "value": "educator", "text": "Educator" },
+            { "value": "founder", "text": "Founder or executive" },
+            { "value": "manager", "text": "Product or project manager" },
+            { "value": "researcher", "text": "Researcher" },
+            { "value": "engineer", "text": "Software engineer" },
+            { "value": "student", "text": "Student" },
+            { "value": "other", "text": "Other" }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "other_chains",
+          "title": "Which other blockchain ecosystems have you built on?",
+          "choices": [
+            "Algorand",
+            "Avalanche",
+            "Bitcoin (incl. Lightning)",
+            "BNB",
+            "Ergo",
+            "Ethereum",
+            { "value": "evm", "text": "Ethereum L2s and other EVM chains" },
+            "Midnight",
+            "Solana",
+            "Sui",
+            { "value": "other", "text": "Other" }
+          ],
+          "showNoneItem": true,
+          "noneText": "None, only Cardano"
+        },
+        {
+          "type": "checkbox",
+          "name": "funding",
+          "title": "How is your Cardano work funded?",
+          "description": "Choose up to 3, the main sources.",
+          "maxSelectedChoices": 3,
+          "choices": [
+            { "value": "unfunded", "text": "Not funded (my own time)" },
+            { "value": "founding-entity", "text": "Salary from a founding entity (IOG, EMURGO, CF)" },
+            { "value": "company", "text": "Salary from another company" },
+            { "value": "revenue", "text": "My own product or service revenue" },
+            { "value": "clients", "text": "Client work or consulting" },
+            "Catalyst",
+            { "value": "treasury", "text": "Treasury (Intersect budget, governance action)" },
+            { "value": "grants", "text": "Other grants" },
+            { "value": "investors", "text": "Investors or token sale" },
+            { "value": "other", "text": "Other" }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "region",
+          "title": "Where are you based?",
+          "choices": [
+            { "value": "africa", "text": "Africa" },
+            { "value": "north-america", "text": "North America (USA, Canada)" },
+            { "value": "latin-america", "text": "Latin America and the Caribbean (incl. Mexico)" },
+            { "value": "east-asia", "text": "East Asia (China, Japan, Korea)" },
+            { "value": "southeast-asia", "text": "Southeast Asia (Indonesia, Philippines, Singapore, Vietnam)" },
+            { "value": "south-asia", "text": "South Asia (India, Pakistan, Bangladesh)" },
+            { "value": "middle-east", "text": "Middle East and Central Asia" },
+            { "value": "europe", "text": "Europe" },
+            { "value": "oceania", "text": "Oceania" }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "participation",
+          "title": "Which of these did you do in the last 12 months?",
+          "choices": [
+            { "value": "read-cip", "text": "Read or used a CIP" },
+            { "value": "reviewed-cip", "text": "Commented on or reviewed a CIP" },
+            { "value": "wrote-cip", "text": "Wrote or co-wrote a CIP" },
+            { "value": "open-source", "text": "Contributed to an open-source Cardano project that isn't mine" },
+            { "value": "voted", "text": "Voted on a governance action (as DRep or SPO)" },
+            { "value": "stake-pool", "text": "Ran a stake pool" },
+            { "value": "applied-funding", "text": "Applied for funding (Catalyst, treasury, grants)" },
+            { "value": "intersect", "text": "Took part in an Intersect committee or working group" },
+            { "value": "event", "text": "Attended a Cardano developer event or hackathon" },
+            { "value": "taught", "text": "Wrote a tutorial, taught or mentored" }
+          ],
+          "showNoneItem": true,
+          "noneText": "None of these"
+        }
+      ]
+    }
+  ]
+}

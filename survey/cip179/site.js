@@ -4,7 +4,7 @@
 //   node cip179/site.js [--survey <dir>] [--out <dir>] [--offline | --unpublished]
 //
 // Options:
-//   --survey <dir>   the files written by `build.js --out` (default: cip179/example)
+//   --survey <dir>   the files written by `build.js --out` (default: cip179/draft)
 //   --out <dir>      where the site is written (default: dist)
 //   --offline        don't read the published survey
 //   --unpublished    a survey not published yet, to try it locally
@@ -21,7 +21,7 @@ import * as Transaction from "@evolution-sdk/evolution/Transaction";
 import { decodeMetadata } from "cip-179";
 import { build } from "esbuild";
 import { createHash } from "node:crypto";
-import { cpSync, readdirSync, readFileSync, rmSync, statSync } from "node:fs";
+import { cpSync, existsSync, readdirSync, readFileSync, rmSync, statSync } from "node:fs";
 import { basename, dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual, parseArgs } from "node:util";
@@ -32,7 +32,7 @@ import { epochAt } from "./network.js";
 
 const { values: args } = parseArgs({
   options: {
-    survey: { type: "string", default: "cip179/example" },
+    survey: { type: "string", default: "cip179/draft" },
     out: { type: "string", default: "dist" },
     offline: { type: "boolean", default: false },
     unpublished: { type: "boolean", default: false },
@@ -41,7 +41,13 @@ const { values: args } = parseArgs({
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const site = join(root, "site");
-const read = (file) => JSON.parse(readFileSync(join(args.survey, file), "utf8"));
+const read = (file) => {
+  const path = join(args.survey, file);
+  if (!existsSync(path)) {
+    fail(`${path} is missing: yarn cip179 --survey ${join(args.survey, "survey.json")} --owner <key hash> --end-epoch <epoch> --out ${args.survey} writes it`);
+  }
+  return JSON.parse(readFileSync(path, "utf8"));
+};
 
 const { SPONSOR_NETWORK: network, SPONSOR_KOIOS: koios, SPONSOR_SURVEY: survey } = wranglerVars();
 const [, txId, index] = /^([0-9a-f]{64})#(\d+)$/.exec(survey ?? "") ?? [];

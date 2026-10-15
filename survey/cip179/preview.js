@@ -29,7 +29,7 @@ import { toDetailedJson } from "./metadatum.js";
 
 const { values: args } = parseArgs({
   options: {
-    survey: { type: "string", default: "cip179/example/survey.json" },
+    survey: { type: "string", default: "cip179/draft/survey.json" },
     port: { type: "string", default: "8179" },
     sponsor: { type: "boolean", default: false },
   },

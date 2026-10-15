@@ -12,14 +12,14 @@ yarn
 
 - `site/`: the page respondents use, built into `dist/` by `yarn site`.
 - `cip179/`: the survey builder (`build.js`, `definition.js`), the preview (`preview.js`, `preview/`), the site's build (`site.js`) and modules, the sponsor (`sponsor*.js`), and the tests (`test/`).
-- `cip179/example/`: a test survey, and the files built from it.
+- `cip179/draft/`: the 2026 survey's draft.
 - `functions/api/sponsor/`: the sponsor's endpoints, run by Cloudflare Pages.
 - `migrations/`: the sponsor's D1 database.
 - `wrangler.jsonc`: the Cloudflare config, with the sponsor's vars. Local secrets go in the gitignored `.dev.vars`.
 
 ## CIP-179
 
-The survey is a [CIP-179](https://github.com/mpizenberg/Tessera/blob/main/frontend/cip-179.md) survey. It is written in SurveyJS's format, in a `survey.json` (`--survey`, by default `cip179/example/survey.json`), and `cip179/build.js` turns it into a CIP-179 survey definition.
+The survey is a [CIP-179](https://github.com/mpizenberg/Tessera/blob/main/frontend/cip-179.md) survey. It is written in SurveyJS's format, in a `survey.json` (`--survey`, by default `cip179/draft/survey.json`), and `cip179/build.js` turns it into a CIP-179 survey definition.
 
 ### From `survey.json` to a running survey
 
@@ -46,7 +46,7 @@ A multi-select's None item (`showNoneItem` on a checkbox or tagbox) isn't an opt
 
 `yarn test` runs the 2025 answers through CIP-179 responses and back, to check that mapping.
 
-`cip179/example/survey.json` is a test survey with every kind of question the builder supports, and the files built from it, with the sponsor key as owner and ending at epoch 1452. They aren't published yet. The survey published on the preview testnet as `70928d2c8cca0fa616e8df54a54d5c311deeec354f5a261fa6c1009ffde89aa5#0`, `SPONSOR_SURVEY` in `wrangler.jsonc`, was built from it before the None box, so the site's build refuses these files until they are published and `SPONSOR_SURVEY` names them.
+`cip179/draft/survey.json` is the draft of the 2026 survey, in English. Its files aren't written yet: step 3 writes them, once the owner and the end epoch are chosen. `SPONSOR_SURVEY` in `wrangler.jsonc` still names a test survey published on the preview testnet, `70928d2c8cca0fa616e8df54a54d5c311deeec354f5a261fa6c1009ffde89aa5#0`. It was built from `cip179/example/`, a survey with every kind of question the builder supports, now in the git history.
 
 ### Sponsored responses
 
@@ -83,7 +83,7 @@ A "Submit on preview" button then appears under the response, with Turnstile's t
 `site/` is the page respondents will use: the widget, between a welcome screen and a submit screen. It is built for one survey, from the files written by `yarn cip179 --out`:
 
 ```
-yarn site --survey cip179/example
+yarn site --survey <dir>
 yarn dev
 ```
 
