@@ -38,8 +38,9 @@ The survey is a [CIP-179](https://github.com/mpizenberg/Tessera/blob/main/fronte
    - `mapping.json`: the SurveyJS question and value each CIP-179 question and option comes from, to convert responses back to `answers.json` rows.
 
    Commit the three: the site is built from them, and the export needs the mapping.
-4. **Publish the definition** in a transaction with `definition.metadata.json` as its metadata, signed by the owner key: with cardano-cli (`--metadata-json-file definition.metadata.json --json-metadata-detailed-schema --required-signer-hash <owner key hash>`), or by importing the file in Tessera's Create page and publishing it with the owner's wallet. The survey's reference is `<tx id>#0`.
-5. **Point the sponsor at it**: set `SPONSOR_SURVEY` in `wrangler.jsonc` to `<tx id>#0`. `yarn site --survey <dir>` then checks the files against the chain and builds the site to deploy (see [Deployment](#deployment)).
+4. **Try it in the site**, before publishing: `yarn site --survey <dir> --unpublished`, then `yarn dev` (see [The survey site](#the-survey-site)).
+5. **Publish the definition** in a transaction with `definition.metadata.json` as its metadata, signed by the owner key: with cardano-cli (`--metadata-json-file definition.metadata.json --json-metadata-detailed-schema --required-signer-hash <owner key hash>`), or by importing the file in Tessera's Create page and publishing it with the owner's wallet. The survey's reference is `<tx id>#0`.
+6. **Point the sponsor at it**: set `SPONSOR_SURVEY` in `wrangler.jsonc` to `<tx id>#0`. `yarn site --survey <dir>` then checks the files against the chain and builds the site to deploy (see [Deployment](#deployment)).
 
 A multi-select's None item (`showNoneItem` on a checkbox or tagbox) isn't an option on chain: the question takes 0 options, and the widget shows its None box, worded by `noneText` (SurveyJS's "None" without it). A condition on it, such as `{question3} noneof ['none']`, names it `"none"` for the widget, and the export writes it back as `["none"]`. On a single choice, None stays an option.
 
@@ -87,6 +88,8 @@ yarn dev
 ```
 
 and open http://localhost:8788/. `yarn site` writes `dist/`, with the survey in the page's script. The network and the survey's reference are the sponsor's, from `wrangler.jsonc`. The build stops unless the definition is the one published there, which it reads from Koios (`--offline` skips this check).
+
+With `--unpublished`, the site is built for a survey not published yet, to try it: the definition isn't checked, and the page doesn't send answers to the sponsor ("Publish my answers" says the survey isn't published yet). The browser keeps the answers to each unpublished definition apart.
 
 A respondent goes through these screens (`site/flow.js`):
 

@@ -45,6 +45,7 @@ export default {
       offline: "Le serveur est injoignable. Vérifiez votre connexion et réessayez.",
       check: "La vérification que vous n'êtes pas un robot a échoué. Réessayez.",
       failed: "Une erreur s'est produite, et vos réponses n'ont pas été publiées. Elles sont conservées dans ce navigateur : réessayez plus tard.",
+      unpublished: "Cette enquête n'est pas encore publiée : cette page permet seulement de l'essayer, et ne peut pas publier de réponses.",
     },
   },
 

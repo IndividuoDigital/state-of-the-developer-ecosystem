@@ -1,21 +1,26 @@
 #!/usr/bin/env node
 // Builds the survey site: the page in `site/`, with one survey baked in.
 //
-//   node cip179/site.js [--survey <dir>] [--out <dir>] [--offline]
+//   node cip179/site.js [--survey <dir>] [--out <dir>] [--offline | --unpublished]
 //
 // Options:
 //   --survey <dir>   the files written by `build.js --out` (default: cip179/example)
 //   --out <dir>      where the site is written (default: dist)
 //   --offline        don't read the published survey
+//   --unpublished    a survey not published yet, to try it locally
 //
 // The network and the survey's reference are the sponsor's, from the vars of
 // `wrangler.jsonc`: the page and the sponsor can't disagree. The definition
 // must be the one published at that reference, which is read from Koios: a
 // page showing other questions would record answers to the wrong ones.
+//
+// With `--unpublished`, the definition isn't checked, and the page doesn't
+// send answers to the sponsor: it only shows the survey.
 
 import * as Transaction from "@evolution-sdk/evolution/Transaction";
 import { decodeMetadata } from "cip-179";
 import { build } from "esbuild";
+import { createHash } from "node:crypto";
 import { cpSync, readdirSync, readFileSync, rmSync, statSync } from "node:fs";
 import { basename, dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -30,6 +35,7 @@ const { values: args } = parseArgs({
     survey: { type: "string", default: "cip179/example" },
     out: { type: "string", default: "dist" },
     offline: { type: "boolean", default: false },
+    unpublished: { type: "boolean", default: false },
   },
 });
 
@@ -45,7 +51,10 @@ const metadata = read("definition.metadata.json");
 const { definitions } = decodeMetadata(new Map([[17n, fromDetailedJson(metadata[17])]]));
 if (definitions?.length !== 1) fail(`${args.survey}/definition.metadata.json must hold one survey definition`);
 const [definition] = definitions;
-if (!args.offline) await checkPublished();
+if (!args.offline && !args.unpublished) await checkPublished();
+// A survey not published yet has no reference: one made from its definition
+// keeps the browser's respondent key and answers for it apart.
+const reference = args.unpublished ? `${createHash("sha256").update(JSON.stringify(metadata[17])).digest("hex")}#0` : survey;
 
 // The page only has texts in some languages: the survey's other translations
 // would never show.
@@ -53,7 +62,8 @@ const languages = readdirSync(join(site, "texts")).map((file) => basename(file, 
 const { conditions, translations, noneLabels, maxTextBytes, screening } = read("widget.json");
 const baked = {
   network,
-  survey,
+  survey: reference,
+  unpublished: args.unpublished,
   definition: metadata[17],
   conditions,
   noneLabels,
@@ -93,7 +103,8 @@ await build({
 });
 
 const open = Number(definition.endEpoch) - epochAt(network) + 1;
-console.log(`${definition.title}: ${definition.questions.length} questions, ${survey} on ${network}`);
+console.log(`${definition.title}: ${definition.questions.length} questions, ${args.unpublished ? "not published" : survey} on ${network}`);
+if (args.unpublished) console.log("answers can't be published from this build: it is to try the survey");
 console.log(open > 0 ? `open for ${open} more epoch${open > 1 ? "s" : ""}, to the end of epoch ${definition.endEpoch}` : `closed since epoch ${definition.endEpoch}`);
 console.log(`languages: ${[translations.defaultLanguage, ...Object.keys(baked.translations.translations)].join(", ")}`);
 console.log(`written to ${args.out}:`);

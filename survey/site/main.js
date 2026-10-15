@@ -70,6 +70,8 @@ function dispatch(event) {
 async function publish() {
   if (state.step === "sending") return;
   dispatch({ type: "publish" });
+  // A survey built before it is published (`site.js --unpublished`) is only tried.
+  if (built.unpublished) return dispatch({ type: "refused", code: "unpublished" });
   try {
     const published = await me.submit(payload, { challenge, onAttempt: (attempt) => dispatch({ type: "attempt", attempt }) });
     dispatch({ type: "published", txId: published });

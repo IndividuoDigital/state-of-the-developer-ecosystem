@@ -11,8 +11,9 @@
 // and "failed" with the problem to tell.
 
 // What the respondent is told for each of the sponsor's refusals
-// (`sponsor.js`) and of the page's own (`respondent.js`). After its retries,
-// a refused or expired transaction is a busy sponsor to them.
+// (`sponsor.js`) and of the page's own (`respondent.js`, and `unpublished` for
+// a build of a survey not published yet). After its retries, a refused or
+// expired transaction is a busy sponsor to them.
 const PROBLEMS = {
   busy: "busy",
   refused: "busy",
@@ -21,6 +22,7 @@ const PROBLEMS = {
   "too-long": "tooLong",
   offline: "offline",
   turnstile: "check",
+  unpublished: "unpublished",
 };
 
 // The screens each event applies to; elsewhere it changes nothing.

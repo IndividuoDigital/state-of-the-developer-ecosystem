@@ -45,6 +45,7 @@ export default {
       offline: "The server can't be reached. Check your connection and try again.",
       check: "The check that you aren't a robot didn't pass. Try again.",
       failed: "Something went wrong, and your answers weren't published. They are kept in this browser: try again later.",
+      unpublished: "This survey isn't published yet: this page only lets you try it, and can't publish answers.",
     },
   },
 
