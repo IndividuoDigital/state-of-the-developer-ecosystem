@@ -19,25 +19,33 @@ yarn
 
 ## CIP-179
 
-The survey is a [CIP-179](https://github.com/mpizenberg/Tessera/blob/main/frontend/cip-179.md) survey. `cip179/build.js` turns a SurveyJS survey (`--survey`, by default `cip179/example/survey.json`) into the CIP-179 survey definition, and reports what doesn't fit (labels over 64 bytes, unsupported conditions, the definition size, ...):
+The survey is a [CIP-179](https://github.com/mpizenberg/Tessera/blob/main/frontend/cip-179.md) survey. It is written in SurveyJS's format, in a `survey.json` (`--survey`, by default `cip179/example/survey.json`), and `cip179/build.js` turns it into a CIP-179 survey definition.
 
-```
-yarn cip179
-```
+### From `survey.json` to a running survey
 
-With `--owner <key hash> --end-epoch <epoch> --out <dir>`, it also writes the definition as cardano-cli metadata JSON, the widget's display conditions and translations, the answers that end the survey before its form, and the mapping used to convert responses back to `answers.json` rows.
+1. **Check it.** `yarn cip179` reports what doesn't fit CIP-179 or the widget (labels over 64 bytes, unsupported conditions, ...), and the size of the definition and of the longest response. It writes nothing.
+2. **Try it** in the widget respondents will use: `yarn preview`, and open http://localhost:8179/. The survey is rebuilt from `survey.json` on every reload, with the builder's problems listed above it (labels over 64 bytes are cut instead of stopping the build). Submitting checks the response the widget gives (size, CIP-179 validity, display conditions) and shows the `answers.json` row it converts to. Unsent answers are kept in the browser until "Forget my answers".
+3. **Write its files**, once there are no errors:
 
-To try the survey in the widget respondents will use:
+   ```
+   yarn cip179 --owner <key hash> --end-epoch <epoch> --out <dir>
+   ```
 
-```
-yarn preview
-```
+   The owner is the key that signs the definition's publication, and the only one that can cancel the survey. Responses count until the end of the end epoch. In `<dir>`:
 
-and open http://localhost:8179/. The survey is rebuilt from `survey.json` on every reload, with the builder's problems listed above it (labels over 64 bytes are cut instead of stopping the build). Submitting checks the response the widget gives (size, CIP-179 validity, display conditions) and shows the `answers.json` row it converts to. Unsent answers are kept in the browser until "Forget my answers".
+   - `definition.metadata.json`: the definition, as cardano-cli detailed metadata JSON at label 17. This is what gets published.
+   - `widget.json`: what the site gives the widget beside the definition: display conditions, translations, None labels, the free-text size limit, and the answers that end the survey before its form.
+   - `mapping.json`: the SurveyJS question and value each CIP-179 question and option comes from, to convert responses back to `answers.json` rows.
+
+   Commit the three: the site is built from them, and the export needs the mapping.
+4. **Publish the definition** in a transaction with `definition.metadata.json` as its metadata, signed by the owner key: with cardano-cli (`--metadata-json-file definition.metadata.json --json-metadata-detailed-schema --required-signer-hash <owner key hash>`), or by importing the file in Tessera's Create page and publishing it with the owner's wallet. The survey's reference is `<tx id>#0`.
+5. **Point the sponsor at it**: set `SPONSOR_SURVEY` in `wrangler.jsonc` to `<tx id>#0`. `yarn site --survey <dir>` then checks the files against the chain and builds the site to deploy (see [Deployment](#deployment)).
+
+A multi-select's None item (`showNoneItem` on a checkbox or tagbox) isn't an option on chain: the question takes 0 options, and the widget shows its None box, worded by `noneText` (SurveyJS's "None" without it). A condition on it, such as `{question3} noneof ['none']`, names it `"none"` for the widget, and the export writes it back as `["none"]`. On a single choice, None stays an option.
 
 `yarn test` runs the 2025 answers through CIP-179 responses and back, to check that mapping.
 
-`cip179/example/survey.json` is a test survey with every kind of question the builder supports, and the files built from it. It is published on the preview testnet as `70928d2c8cca0fa616e8df54a54d5c311deeec354f5a261fa6c1009ffde89aa5#0`, ending at epoch 1530, with the sponsor key as owner.
+`cip179/example/survey.json` is a test survey with every kind of question the builder supports, and the files built from it, with the sponsor key as owner and ending at epoch 1452. They aren't published yet. The survey published on the preview testnet as `70928d2c8cca0fa616e8df54a54d5c311deeec354f5a261fa6c1009ffde89aa5#0`, `SPONSOR_SURVEY` in `wrangler.jsonc`, was built from it before the None box, so the site's build refuses these files until they are published and `SPONSOR_SURVEY` names them.
 
 ### Sponsored responses
 

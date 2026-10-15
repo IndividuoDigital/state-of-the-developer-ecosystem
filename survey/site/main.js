@@ -153,6 +153,7 @@ function makeWidget() {
     showRole: false,
     tipEpoch: epochAt(built.network),
     conditions: built.conditions,
+    noneLabels: built.noneLabels,
     translations: {
       defaultLanguage,
       translations: Object.fromEntries(Object.entries(translations).map(([tag, { description, ...texts }]) => [tag, texts])),

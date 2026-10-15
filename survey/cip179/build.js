@@ -49,7 +49,7 @@ const built = buildSurvey(survey, {
   endEpoch: Number(args["end-epoch"] ?? 0),
   freeTextSchema: { uri: args["schema-uri"], hash: blake2b(schemaBytes, { dkLen: 32 }) },
 });
-const { definition, conditions, translations, mapping, screening, problems } = built;
+const { definition, conditions, translations, noneLabels, mapping, screening, problems } = built;
 
 // Report
 for (const level of ["error", "warning", "info"]) {
@@ -79,6 +79,7 @@ if (args.out && hasErrors) {
   write("widget.json", {
     conditions,
     translations,
+    noneLabels,
     maxTextBytes,
     screening: screeningEntries(survey, screening),
   });

@@ -28,7 +28,7 @@
     "8": {
       "question": 3,
       "noneOf": [
-        5
+        "none"
       ]
     },
     "14": {
@@ -78,9 +78,9 @@
               "Code hors chaîne",
               "Portefeuilles",
               "Nœud et infrastructure",
-              "Outils de gouvernance",
-              "None"
-            ]
+              "Outils de gouvernance"
+            ],
+            "noneLabel": "Aucun"
           },
           {
             "prompt": "Dans quel langage écrivez-vous principalement vos contrats ?"
@@ -221,9 +221,9 @@
               "オフチェーンコード",
               "ウォレット",
               "ノードとインフラ",
-              "ガバナンスツール",
-              "なし"
-            ]
+              "ガバナンスツール"
+            ],
+            "noneLabel": "なし"
           },
           {
             "prompt": "主にどの言語でスマートコントラクトを書いていますか？",
@@ -374,9 +374,9 @@
               "Mã ngoài chuỗi",
               "Ví",
               "Node và hạ tầng",
-              "Công cụ quản trị",
-              "Không có"
-            ]
+              "Công cụ quản trị"
+            ],
+            "noneLabel": "Không có"
           },
           {
             "options": [
@@ -445,6 +445,9 @@
         ]
       }
     }
+  },
+  "noneLabels": {
+    "3": "None"
   },
   "maxTextBytes": 1024,
   "screening": [

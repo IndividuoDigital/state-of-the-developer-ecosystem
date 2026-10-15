@@ -50,12 +50,13 @@ if (!args.offline) await checkPublished();
 // The page only has texts in some languages: the survey's other translations
 // would never show.
 const languages = readdirSync(join(site, "texts")).map((file) => basename(file, ".js"));
-const { conditions, translations, maxTextBytes, screening } = read("widget.json");
+const { conditions, translations, noneLabels, maxTextBytes, screening } = read("widget.json");
 const baked = {
   network,
   survey,
   definition: metadata[17],
   conditions,
+  noneLabels,
   translations: {
     ...translations,
     translations: Object.fromEntries(Object.entries(translations.translations).filter(([tag]) => languages.includes(tag))),

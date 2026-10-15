@@ -410,10 +410,10 @@ blake3-wasm@2.1.5:
   resolved "https://registry.yarnpkg.com/blake3-wasm/-/blake3-wasm-2.1.5.tgz#b22dbb84bc9419ed0159caa76af4b1b132e6ba52"
   integrity sha512-F1+K8EbfOZE49dtoPtmxUQrpXaBIl3ICvasLh+nJta0xkz+9kF/7uet9fLnwKqhDrmj6g+6K3Tw9yQPUg2ka5g==
 
-cardano-tessera-respond@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/cardano-tessera-respond/-/cardano-tessera-respond-0.4.0.tgz#f43b89c3eee7a86a8ecc7159b5828ab54343e198"
-  integrity sha512-ep3T6v8AIw12HVK2ctWaIQkKU7BOsqqJzoqJy67RTDHg6gLOoDvmCOkiSALTYNs0zx7ikp4puxD/635rwk1I0Q==
+cardano-tessera-respond@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/cardano-tessera-respond/-/cardano-tessera-respond-0.5.0.tgz#48010e7ef016c9638b0fb1d19ee537b902d73ce1"
+  integrity sha512-Vqcn8AC5eEx6ozA/DcTeEzhJK3rd7orfn8gFc6KpqY1ZHuMDPwX+Oe+VT9Phnx97AhKqiPDQyjTQVQfLItz5oQ==
 
 cip-179@0.6.0:
   version "0.6.0"

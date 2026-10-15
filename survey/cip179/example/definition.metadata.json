@@ -74,7 +74,7 @@
                   "int": 5
                 },
                 "v": {
-                  "int": 1530
+                  "int": 1452
                 }
               },
               {
@@ -207,14 +207,11 @@
                             },
                             {
                               "string": "Governance tools"
-                            },
-                            {
-                              "string": "None"
                             }
                           ]
                         },
                         {
-                          "int": 1
+                          "int": 0
                         },
                         {
                           "int": 3

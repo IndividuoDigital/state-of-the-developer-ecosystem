@@ -29,9 +29,9 @@
         "Item 2",
         "Item 3",
         "Item 4",
-        "Item 5",
-        "none"
-      ]
+        "Item 5"
+      ],
+      "none": "none"
     },
     {
       "name": "question4",

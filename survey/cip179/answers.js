@@ -14,9 +14,14 @@ export function rowToAnswers(row, definition, mapping) {
   const answers = [];
   const problems = [];
   definition.questions.forEach((question, questionIndex) => {
-    const { name, field, values, levels } = mapping.questions[questionIndex];
+    const { name, field, values, levels, none } = mapping.questions[questionIndex];
     const raw = field ? row[name]?.[field] : row[name];
     if (raw === undefined || raw === null || raw === "") return;
+    // A multi-select's None: no option selected.
+    if (none !== undefined && raw.length === 1 && raw[0] === none) {
+      answers.push({ type: "multiSelect", questionIndex, optionIndices: [] });
+      return;
+    }
     const option = (value) => {
       const index = values.indexOf(value);
       if (index < 0) problems.push(`${name}: unknown value ${JSON.stringify(value)}`);
@@ -70,14 +75,14 @@ export function answersToRow(answers, mapping) {
   const row = {};
   const problems = [];
   for (const answer of answers) {
-    const { name, field, values, levels } = mapping.questions[answer.questionIndex];
+    const { name, field, values, levels, none } = mapping.questions[answer.questionIndex];
     let value;
     switch (answer.type) {
       case "singleChoice":
         value = values[answer.optionIndex];
         break;
       case "multiSelect":
-        value = answer.optionIndices.map((i) => values[i]);
+        value = answer.optionIndices.length === 0 && none !== undefined ? [none] : answer.optionIndices.map((i) => values[i]);
         break;
       case "ranking":
         value = answer.ranking.map((i) => values[i]);
@@ -117,13 +122,18 @@ export function withoutHiddenAnswers(definition, conditions, answers) {
     const rule = conditions[index];
     if (!rule) return void hidden.push(false);
     const source = hidden[rule.question] ? undefined : byQuestion.get(rule.question);
-    const selected =
-      source?.type === "singleChoice" ? [source.optionIndex] : source?.type === "multiSelect" ? source.optionIndices : [];
-    const matched = selected.some((o) => (rule.anyOf ?? rule.noneOf).includes(o));
+    const matched = selectedOptions(source).some((o) => (rule.anyOf ?? rule.noneOf).includes(o));
     hidden.push(rule.anyOf ? !matched : matched);
   });
   return {
     answers: answers.filter((a) => !hidden[a.questionIndex]),
     hidden: answers.filter((a) => hidden[a.questionIndex]).map((a) => a.questionIndex),
   };
+}
+
+/** The options an answer selects, as conditions name them: a multi-select with none selected is "none". */
+function selectedOptions(answer) {
+  if (answer?.type === "singleChoice") return [answer.optionIndex];
+  if (answer?.type === "multiSelect") return answer.optionIndices.length === 0 ? ["none"] : answer.optionIndices;
+  return [];
 }

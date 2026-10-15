@@ -44,6 +44,7 @@ widget.tipEpoch = Number(definition.endEpoch) - 1;
 widget.showRole = false;
 widget.conditions = built.conditions;
 widget.translations = built.translations;
+widget.noneLabels = built.noneLabels;
 widget.maxTextBytes = built.maxTextBytes;
 widget.hiddenSchemas = definition.questions.flatMap((q) => (q.type === "custom" ? [q.methodSchema.uri] : []));
 widget.stash = me.stash;

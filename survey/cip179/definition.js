@@ -2,8 +2,9 @@
 // needs:
 //
 // - `definition`: the CIP-179 survey definition, with the English text;
-// - `conditions` and `translations`: the documents `<tessera-respond>` takes
-//   beside the definition, for conditional display and the other languages;
+// - `conditions`, `translations` and `noneLabels`: the documents
+//   `<tessera-respond>` takes beside the definition, for conditional display,
+//   the other languages and the words of each multi-select's None box;
 // - `mapping`: for each CIP-179 question, the SurveyJS question (and value of
 //   each option) it comes from, so responses can be turned back into the
 //   SurveyJS answers format the report reads;
@@ -30,7 +31,7 @@ export const DEFAULT_LANGUAGE = "en";
 // Texts SurveyJS provides itself, for the locales we use.
 const BUILT_IN_TEXTS = {
   other: { default: "Other", ja: "その他", vi: "Khác" },
-  none: { default: "None", ja: "なし", vi: "Không có" },
+  none: { default: "None", fr: "Aucun", ja: "なし", vi: "Không có" },
   otherComment: {
     default: "Other (please specify)",
     ja: "その他（具体的に記入してください）",
@@ -74,14 +75,21 @@ export function buildSurvey(survey, { owner, endEpoch, freeTextSchema }) {
     entry.question = required ? { ...entry.question, required: true } : entry.question;
   });
 
-  entries.forEach((entry) =>
+  entries.forEach((entry) => {
     [...(entry.labels ?? []), ...(entry.levels ?? [])].forEach((label) => {
       const text = defaultText(label);
       if (utf8ByteLength(text) > MAX_CHUNK_BYTES) {
         report("error", entry.name, `option label is over ${MAX_CHUNK_BYTES} bytes: "${text}"`);
       }
-    }),
-  );
+    });
+    // A None label is bounded in every language: the widget drops a
+    // translation whose None label is longer.
+    for (const text of allTexts(entry.noneLabel)) {
+      if (utf8ByteLength(text) > MAX_CHUNK_BYTES) {
+        report("error", entry.name, `None label is over ${MAX_CHUNK_BYTES} bytes: "${text}"`);
+      }
+    }
+  });
 
   const definition = {
     specVersion: SPEC_VERSION,
@@ -103,6 +111,7 @@ export function buildSurvey(survey, { owner, endEpoch, freeTextSchema }) {
     definition,
     conditions,
     translations: buildTranslations(survey, entries),
+    noneLabels: Object.fromEntries(entries.flatMap((e, i) => (e.noneLabel ? [[i, defaultText(e.noneLabel)]] : []))),
     mapping: { questions: entries.map((e) => e.mapping) },
     screening,
     problems,
@@ -127,6 +136,7 @@ function questionEntries(element, screening, freeTextSchema, report) {
     prompt: fields.prompt ?? prompt,
     labels: fields.labels,
     levels: fields.levels,
+    noneLabel: fields.noneLabel,
     condition: "condition" in fields ? fields.condition : shown,
     required: fields.required ?? false,
   });
@@ -147,10 +157,13 @@ function questionEntries(element, screening, freeTextSchema, report) {
     case "checkbox":
     case "tagbox":
     case "ranking": {
-      const choices = choiceList(element, screening.get(name));
+      // A multi-select's None is no option selected, in the widget's None
+      // box, rather than an option.
+      const noneBox = (element.type === "checkbox" || element.type === "tagbox") && hasNone(element);
+      const choices = choiceList(element, screening.get(name), !noneBox);
       const labels = choices.map((c) => c.text);
       const options = { type: "options", labels: labels.map(defaultText) };
-      const mapping = { name, values: choices.map((c) => c.value) };
+      const mapping = { name, values: choices.map((c) => c.value), ...(noneBox && { none: NONE }) };
       const count = labels.length;
       let question;
       if (element.type === "radiogroup" || element.type === "dropdown") {
@@ -165,15 +178,19 @@ function questionEntries(element, screening, freeTextSchema, report) {
           maxRanked: partial ? (element.maxSelectedChoices || count) : count,
         };
       } else {
+        if (noneBox && element.minSelectedChoices > 1) {
+          report("warning", name, `minSelectedChoices ${element.minSelectedChoices} isn't kept with None: on chain, one option is enough`);
+        }
         question = {
           type: "multiSelect",
           prompt: defaultText(prompt),
           options,
-          minSelections: element.minSelectedChoices || 1,
+          minSelections: noneBox ? 0 : element.minSelectedChoices || 1,
           maxSelections: element.maxSelectedChoices || count,
         };
       }
-      const result = [entry(question, mapping, { labels, required })];
+      const noneLabel = noneBox ? (element.noneText ?? BUILT_IN_TEXTS.none) : undefined;
+      const result = [entry(question, mapping, { labels, required, noneLabel })];
       if (hasOther(element)) {
         // SurveyJS keeps the "Other" text in `<name>-Comment`.
         result.push(
@@ -262,13 +279,15 @@ function questionEntries(element, screening, freeTextSchema, report) {
 
 const hasOther = (element) => element.showOtherItem === true || element.hasOther === true;
 const hasNone = (element) => element.showNoneItem === true || element.hasNone === true;
+// The value SurveyJS gives the None item, and the widget's name for its None box.
+const NONE = "none";
 
 /** A SurveyJS choice, row, column or rate value, as `{ value, text }`. */
 const item = (c) =>
   typeof c === "object" && c !== null ? { value: c.value, text: c.text ?? String(c.value) } : { value: c, text: String(c) };
 
-/** The options of a choice question, in their on-chain order. */
-function choiceList(element, excluded = new Set()) {
+/** The options of a choice question, in their on-chain order, with None unless `withNone` is false. */
+function choiceList(element, excluded = new Set(), withNone = true) {
   const choices = (element.choices ?? []).map(item).filter((c) => !excluded.has(c.value));
   if (element.choicesOrder === "asc" || element.choicesOrder === "desc") {
     // SurveyJS sorts by displayed text; on chain we sort by the English text.
@@ -276,7 +295,7 @@ function choiceList(element, excluded = new Set()) {
     if (element.choicesOrder === "desc") choices.reverse();
   }
   if (hasOther(element)) choices.push({ value: "other", text: element.otherText ?? BUILT_IN_TEXTS.other });
-  if (hasNone(element)) choices.push({ value: "none", text: element.noneText ?? BUILT_IN_TEXTS.none });
+  if (withNone && hasNone(element)) choices.push({ value: NONE, text: element.noneText ?? BUILT_IN_TEXTS.none });
   return choices;
 }
 
@@ -320,6 +339,10 @@ function resolveCondition(condition, index, entries, mainEntry) {
   }
   const options = [];
   for (const value of condition.values) {
+    if (value === mapping.none) {
+      options.push(NONE);
+      continue;
+    }
     const option = mapping.values.indexOf(value);
     if (option < 0) return `${condition.name} has no option "${value}"`;
     options.push(option);
@@ -378,6 +401,12 @@ function locales(text) {
   return typeof text === "object" && text !== null ? Object.keys(text) : [];
 }
 
+/** A text in each of its languages. */
+function allTexts(text) {
+  if (typeof text === "string") return [text];
+  return typeof text === "object" && text !== null ? Object.values(text) : [];
+}
+
 /** `a` and `b` as paragraphs, per locale, falling back to each one's default. */
 function joinTexts(a, b) {
   if (!b) return a;
@@ -398,6 +427,7 @@ function buildTranslations(survey, entries) {
     collect(entry.prompt);
     (entry.labels ?? []).forEach(collect);
     (entry.levels ?? []).forEach(collect);
+    collect(entry.noneLabel);
   }
   all.delete("default");
   all.delete(DEFAULT_LANGUAGE);
@@ -417,6 +447,9 @@ function buildTranslations(survey, entries) {
       if (options) translation.options = options;
       const ratingLabels = translated(entry.levels);
       if (ratingLabels) translation.ratingLabels = ratingLabels;
+      // Untranslated, the None box shows its label in the default language.
+      const noneLabel = localText(entry.noneLabel, locale);
+      if (noneLabel !== undefined) translation.noneLabel = noneLabel;
       return translation;
     });
     translations[locale] = {

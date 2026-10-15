@@ -78,7 +78,7 @@ server.listen(Number(args.port), "127.0.0.1", () => {
 async function preview() {
   const schemaBytes = await readFile(join(here, "free-text.schema.json"));
   const survey = JSON.parse(await readFile(args.survey, "utf8"));
-  const { definition, conditions, translations, mapping, screening, problems } = buildSurvey(survey, {
+  const { definition, conditions, translations, noneLabels, mapping, screening, problems } = buildSurvey(survey, {
     owner: { type: "key", keyHash: new Uint8Array(28) },
     endEpoch: 1000,
     freeTextSchema: { uri: "https://example.org/free-text.schema.json", hash: blake2b(schemaBytes, { dkLen: 32 }) },
@@ -88,6 +88,7 @@ async function preview() {
     metadata: { 17: toDetailedJson(metadata.get(17n)) },
     conditions,
     translations,
+    noneLabels,
     maxTextBytes: JSON.parse(schemaBytes).maxUtf8Bytes,
     sponsor: env ? { network: env.SPONSOR_NETWORK, survey: env.SPONSOR_SURVEY } : null,
     screening: screeningEntries(survey, screening),
