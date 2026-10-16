@@ -31,7 +31,7 @@
             ]
           },
           {
-            "prompt": "Que développez-vous sur Cardano ?\n\nChoisissez-en jusqu'à 4.",
+            "prompt": "Que développez-vous sur Cardano ? Choisissez-en jusqu'à 4.",
             "options": [
               "Agents d'IA",
               "Ponts et interopérabilité",
@@ -62,7 +62,7 @@
             ]
           },
           {
-            "prompt": "Où peut-on trouver ce projet (lien vers le site web ou le dépôt) ?\n\nCe lien est public et associe toutes vos réponses à ce projet."
+            "prompt": "Où peut-on trouver ce projet (lien vers le site web ou le dépôt) ? Ce lien est public et associe toutes vos réponses à ce projet."
           },
           {
             "prompt": "Quand avez-vous commencé à développer sur Cardano ?",
@@ -128,7 +128,7 @@
             "noneLabel": "Aucun, je n'écris pas de code on-chain"
           },
           {
-            "prompt": "Quelles bibliothèques on-chain avez-vous utilisées au cours des 12 derniers mois ?\n\nSans compter les bibliothèques standard.",
+            "prompt": "Quelles bibliothèques on-chain avez-vous utilisées au cours des 12 derniers mois ? Sans compter les bibliothèques standard.",
             "options": [
               "Aicone, avec Sundae multisig (Aiken)",
               "ak-381 (Aiken)",
@@ -205,7 +205,7 @@
             "noneLabel": "Aucun"
           },
           {
-            "prompt": "Quels outils de développement avez-vous utilisés au cours des 12 derniers mois ?\n\nY compris les outils pour les stake pools.",
+            "prompt": "Quels outils de développement avez-vous utilisés au cours des 12 derniers mois ? Y compris les outils pour les stake pools.",
             "options": [
               "bech32",
               "Cardano Dev Wallet",
@@ -312,7 +312,7 @@
             ]
           },
           {
-            "prompt": "Où trouvez-vous des réponses à vos questions techniques sur Cardano ?\n\nChoisissez-en jusqu'à 5, les sources sur lesquelles vous comptez le plus.",
+            "prompt": "Où trouvez-vous des réponses à vos questions techniques sur Cardano ? Choisissez-en jusqu'à 5, les sources sur lesquelles vous comptez le plus.",
             "options": [
               "Assistants d'IA",
               "Blogs et articles",
@@ -359,7 +359,7 @@
             ]
           },
           {
-            "prompt": "Au-delà de la technique, qu'est-ce qui freine le plus votre projet ?\n\nChoisissez-en jusqu'à 3.",
+            "prompt": "Au-delà de la technique, qu'est-ce qui freine le plus votre projet ? Choisissez-en jusqu'à 3.",
             "options": [
               "Le coût des audits",
               "Trouver des utilisateurs",
@@ -375,7 +375,7 @@
             "noneLabel": "Rien de notable"
           },
           {
-            "prompt": "Pourquoi développez-vous sur Cardano ?\n\nChoisissez-en jusqu'à 3.",
+            "prompt": "Pourquoi développez-vous sur Cardano ? Choisissez-en jusqu'à 3.",
             "options": [
               "Curiosité, apprentissage",
               "Décentralisation et valeurs",
@@ -404,7 +404,7 @@
             "prompt": "Quel outil, bibliothèque ou fonctionnalité qui n'existe pas encore vous aiderait le plus ?"
           },
           {
-            "prompt": "Qu'est-ce qui décrit le mieux votre rôle ?\n\nLes dernières questions portent sur vous : ignorez celles auxquelles vous préférez ne pas répondre.",
+            "prompt": "Qu'est-ce qui décrit le mieux votre rôle ? Les dernières questions portent sur vous : ignorez celles auxquelles vous préférez ne pas répondre.",
             "options": [
               "Architecture ou direction technique",
               "Data science ou analyse de données",
@@ -436,7 +436,7 @@
             "noneLabel": "Aucun, seulement Cardano"
           },
           {
-            "prompt": "Comment votre travail sur Cardano est-il financé ?\n\nChoisissez-en jusqu'à 3, les principales sources.",
+            "prompt": "Comment votre travail sur Cardano est-il financé ? Choisissez-en jusqu'à 3, les principales sources.",
             "options": [
               "Non financé (sur mon temps personnel)",
               "Salaire d'une entité fondatrice (IOG, EMURGO, CF)",

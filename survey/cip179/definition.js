@@ -407,13 +407,13 @@ function allTexts(text) {
   return typeof text === "object" && text !== null ? Object.values(text) : [];
 }
 
-/** `a` and `b` as paragraphs, per locale, falling back to each one's default. */
+/** `a` then `b`, after a space, per locale, falling back to each one's default. */
 function joinTexts(a, b) {
   if (!b) return a;
-  const joined = { default: `${defaultText(a)}\n\n${defaultText(b)}` };
+  const joined = { default: `${defaultText(a)} ${defaultText(b)}` };
   for (const locale of new Set([...locales(a), ...locales(b)])) {
     if (locale === "default") continue;
-    joined[locale] = `${localText(a, locale) ?? defaultText(a)}\n\n${localText(b, locale) ?? defaultText(b)}`;
+    joined[locale] = `${localText(a, locale) ?? defaultText(a)} ${localText(b, locale) ?? defaultText(b)}`;
   }
   return joined;
 }

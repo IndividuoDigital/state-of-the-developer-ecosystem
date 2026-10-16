@@ -127,7 +127,7 @@
                           "int": 2
                         },
                         {
-                          "string": "What are you building on Cardano?\n\nChoose up to 4."
+                          "string": "What are you building on Cardano? Choose up to 4."
                         },
                         {
                           "list": [
@@ -226,10 +226,10 @@
                         {
                           "list": [
                             {
-                              "string": "Where can we find this project (website or repository link)?\n\nTh"
+                              "string": "Where can we find this project (website or repository link)? Thi"
                             },
                             {
-                              "string": "is link is public and ties all your answers to this project."
+                              "string": "s link is public and ties all your answers to this project."
                             }
                           ]
                         },
@@ -497,10 +497,10 @@
                         {
                           "list": [
                             {
-                              "string": "Which on-chain libraries have you used in the last 12 months?\n\nN"
+                              "string": "Which on-chain libraries have you used in the last 12 months? No"
                             },
                             {
-                              "string": "ot counting standard libraries."
+                              "string": "t counting standard libraries."
                             }
                           ]
                         },
@@ -748,10 +748,10 @@
                         {
                           "list": [
                             {
-                              "string": "Which developer tools have you used in the last 12 months?\n\nIncl"
+                              "string": "Which developer tools have you used in the last 12 months? Inclu"
                             },
                             {
-                              "string": "uding stake pool tools."
+                              "string": "ding stake pool tools."
                             }
                           ]
                         },
@@ -1131,10 +1131,10 @@
                         {
                           "list": [
                             {
-                              "string": "Where do you get answers to technical questions about Cardano?\n\n"
+                              "string": "Where do you get answers to technical questions about Cardano? C"
                             },
                             {
-                              "string": "Choose up to 5, the ones you rely on most."
+                              "string": "hoose up to 5, the ones you rely on most."
                             }
                           ]
                         },
@@ -1284,10 +1284,10 @@
                         {
                           "list": [
                             {
-                              "string": "Beyond technology, what holds your project back the most?\n\nChoos"
+                              "string": "Beyond technology, what holds your project back the most? Choose"
                             },
                             {
-                              "string": "e up to 3."
+                              "string": " up to 3."
                             }
                           ]
                         },
@@ -1339,7 +1339,7 @@
                           "int": 2
                         },
                         {
-                          "string": "Why do you build on Cardano?\n\nChoose up to 3."
+                          "string": "Why do you build on Cardano? Choose up to 3."
                         },
                         {
                           "list": [
@@ -1464,10 +1464,10 @@
                         {
                           "list": [
                             {
-                              "string": "Which best describes your role?\n\nThe last questions are about yo"
+                              "string": "Which best describes your role? The last questions are about you"
                             },
                             {
-                              "string": "u: skip any you'd rather not answer."
+                              "string": ": skip any you'd rather not answer."
                             }
                           ]
                         },
@@ -1568,10 +1568,10 @@
                         {
                           "list": [
                             {
-                              "string": "How is your Cardano work funded?\n\nChoose up to 3, the main sourc"
+                              "string": "How is your Cardano work funded? Choose up to 3, the main source"
                             },
                             {
-                              "string": "es."
+                              "string": "s."
                             }
                           ]
                         },
