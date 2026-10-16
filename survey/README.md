@@ -46,7 +46,7 @@ A multi-select's None item (`showNoneItem` on a checkbox or tagbox) isn't an opt
 
 `yarn test` runs the 2025 answers through CIP-179 responses and back, to check that mapping.
 
-`cip179/draft/survey.json` is the draft of the 2026 survey, in English. Its files, beside it, are written for a first test on the preview testnet. `SPONSOR_SURVEY` in `wrangler.jsonc` still names a test survey published on the preview testnet, `70928d2c8cca0fa616e8df54a54d5c311deeec354f5a261fa6c1009ffde89aa5#0`. It was built from `cip179/example/`, a survey with every kind of question the builder supports, now in the git history.
+`cip179/draft/survey.json` is the draft of the 2026 survey, in English and French. Its files, beside it, are written for a first test on the preview testnet. `SPONSOR_SURVEY` in `wrangler.jsonc` still names a test survey published on the preview testnet, `70928d2c8cca0fa616e8df54a54d5c311deeec354f5a261fa6c1009ffde89aa5#0`. It was built from `cip179/example/`, a survey with every kind of question the builder supports, now in the git history.
 
 ### Sponsored responses
 
