@@ -13,17 +13,17 @@
     {
       "binding": "db",
       "database_name": "cip179-sponsor-preview",
-      "database_id": "not-created-yet",
+      "database_id": "3f5042f0-98ec-4eb2-9072-8421eda29a0c",
       "migrations_dir": "migrations"
     }
   ],
   "vars": {
     /* The Turnstile widget of the site's hostname. Its TURNSTILE_SECRET is a
        secret; locally, the test secret in .dev.vars. */
-    "TURNSTILE_SITE_KEY": "0x4AAAAAAB4YSM5mX3jPwKvf",
+    "TURNSTILE_SITE_KEY": "0x4AAAAAAFYzWeyCVNJMl0nI",
     /* The sponsor (cip179/sponsor.js); its SPONSOR_MNEMONIC is a secret. */
     "SPONSOR_NETWORK": "preview",
     "SPONSOR_KOIOS": "https://preview.koios.rest/api/v1",
-    "SPONSOR_SURVEY": "70928d2c8cca0fa616e8df54a54d5c311deeec354f5a261fa6c1009ffde89aa5#0"
+    "SPONSOR_SURVEY": "1c48bbd663d2304330589c1342f7731c8a4069ad2a2aed2c5f4e485e1b42e7bc#0"
   }
 }
