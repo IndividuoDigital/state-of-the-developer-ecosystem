@@ -116,7 +116,7 @@ Once. For another network, only steps 3 and 5.
    yarn wrangler d1 create cip179-sponsor-preview
    ```
 
-   Put its `database_id` in `wrangler.jsonc`, then:
+   When it offers to add the database to your config, answer no. Put its `database_id` in the `db` entry of `wrangler.jsonc`, then:
 
    ```
    yarn db:migrate --remote
