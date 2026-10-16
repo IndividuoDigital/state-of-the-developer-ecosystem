@@ -16,7 +16,7 @@
 import * as Address from "@evolution-sdk/evolution/Address";
 import * as Assets from "@evolution-sdk/evolution/Assets";
 import * as TransactionHash from "@evolution-sdk/evolution/TransactionHash";
-import { mainnet, preview } from "@evolution-sdk/evolution/sdk/client/Chain";
+import { mainnet, preprod, preview } from "@evolution-sdk/evolution/sdk/client/Chain";
 import * as Client from "@evolution-sdk/evolution/sdk/client/Client";
 import { addressFromSeed } from "@evolution-sdk/evolution/sdk/wallet/Derivation";
 import { dirname, join } from "node:path";
@@ -34,7 +34,7 @@ const { values: args } = parseArgs({
 const proxy = await getPlatformProxy({ configPath: join(dirname(fileURLToPath(import.meta.url)), "..", "wrangler.jsonc") });
 const { env } = proxy;
 await proxy.dispose();
-const chain = { preview, mainnet }[env.SPONSOR_NETWORK];
+const chain = { preview, preprod, mainnet }[env.SPONSOR_NETWORK];
 if (!chain) throw new Error(`unknown SPONSOR_NETWORK ${env.SPONSOR_NETWORK}`);
 const count = Number(args.coins);
 if (!Number.isInteger(count) || count < 2) throw new Error("--coins must be at least 2");

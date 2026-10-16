@@ -3,7 +3,7 @@
 // gitignored `.dev.vars` as SPONSOR_MNEMONIC for `wrangler pages dev`, and
 // importable in any Cardano wallet to fund it. Prints its first address.
 //
-//   node cip179/sponsor-key.js [--network preview|mainnet]
+//   node cip179/sponsor-key.js [--network preview|preprod|mainnet]
 //
 // The phrase isn't printed: read it from `.dev.vars`. For a deployment, set
 // it as a secret instead (`wrangler pages secret put SPONSOR_MNEMONIC`).
@@ -15,7 +15,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { parseArgs } from "node:util";
 
 const { values: args } = parseArgs({ options: { network: { type: "string", default: "preview" } } });
-const networkId = { preview: 0, mainnet: 1 }[args.network];
+const networkId = { preview: 0, preprod: 0, mainnet: 1 }[args.network];
 if (networkId === undefined) throw new Error(`unknown network ${args.network}`);
 
 const VARS = ".dev.vars";
