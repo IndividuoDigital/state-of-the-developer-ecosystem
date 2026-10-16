@@ -1,0 +1,463 @@
+{
+  "questions": [
+    {
+      "name": "experience",
+      "values": [
+        "under-2",
+        "2-4",
+        "5-9",
+        "10-plus"
+      ]
+    },
+    {
+      "name": "building",
+      "values": [
+        "ai-agents",
+        "bridges",
+        "defi",
+        "dev-tools",
+        "education",
+        "gaming",
+        "governance",
+        "identity",
+        "layer-2",
+        "nfts",
+        "oracles",
+        "payments",
+        "privacy",
+        "real-world-assets",
+        "staking",
+        "wallets",
+        "other"
+      ]
+    },
+    {
+      "name": "stage",
+      "values": [
+        "learning",
+        "development",
+        "released",
+        "users"
+      ]
+    },
+    {
+      "name": "project_link"
+    },
+    {
+      "name": "started",
+      "values": [
+        "2026",
+        "2025",
+        "2023-2024",
+        "2021-2022",
+        "2020-or-earlier"
+      ]
+    },
+    {
+      "name": "weekly_hours",
+      "values": [
+        "under-5",
+        "5-19",
+        "20-34",
+        "35-plus"
+      ]
+    },
+    {
+      "name": "satisfaction",
+      "values": [
+        "very-satisfied",
+        "satisfied",
+        "neutral",
+        "dissatisfied",
+        "very-dissatisfied"
+      ]
+    },
+    {
+      "name": "trend",
+      "values": [
+        "much-easier",
+        "easier",
+        "same",
+        "harder",
+        "much-harder",
+        "new"
+      ]
+    },
+    {
+      "name": "best"
+    },
+    {
+      "name": "most_painful"
+    },
+    {
+      "name": "onchain_languages",
+      "values": [
+        "Aiken",
+        "Helios",
+        "JuLC",
+        "Marlowe",
+        "OpShin",
+        "Pebble",
+        "Plinth (Plutus-Tx)",
+        "Plu-ts",
+        "Plutarch",
+        "Scalus",
+        "other"
+      ],
+      "none": "none"
+    },
+    {
+      "name": "onchain_libraries",
+      "values": [
+        "Aicone, with Sundae multisig (Aiken)",
+        "ak-381 (Aiken)",
+        "Assist (Aiken)",
+        "Design Patterns (Aiken)",
+        "Fuzz (Aiken)",
+        "Merkle Patricia Forestry (Aiken)",
+        "Oakshield (Aiken)",
+        "Vodka (Aiken)",
+        "ZeroJ (JuLC)",
+        "plutus-script-utils (Plinth)",
+        "Plutus Simple Model (Plinth)",
+        "catalyst-onchain-libs (Plutarch)",
+        "Liqwid libs (Plutarch)",
+        "Ply (Plutarch)",
+        "Design Patterns (Scalus)",
+        "other"
+      ],
+      "none": "none"
+    },
+    {
+      "name": "offchain_libraries",
+      "values": [
+        "Chrysalis (.NET)",
+        "elm-cardano (Elm)",
+        "Apollo (Go)",
+        "gOuroboros (Go)",
+        "Atlas (Haskell)",
+        "cardano-api (Haskell)",
+        "sc-tools (Haskell)",
+        "cardano-client-lib (Java)",
+        "Yaci (Java)",
+        "cardano-transaction-lib (PureScript)",
+        "PyCardano (Python)",
+        "Pallas (Rust)",
+        "CML, cardano-multiplatform-lib (Rust, JS)",
+        "CSL, cardano-serialization-lib (Rust, JS)",
+        "Scalus (Scala)",
+        "Tx3",
+        "Blaze (TypeScript)",
+        "Cardano JS SDK (TypeScript)",
+        "Cometa (TypeScript)",
+        "Dexter (TypeScript)",
+        "Evolution SDK (TypeScript)",
+        "Lucid (TypeScript)",
+        "Mesh (TypeScript)",
+        "other"
+      ],
+      "none": "none"
+    },
+    {
+      "name": "self_hosted",
+      "values": [
+        "Adder",
+        "Amaru",
+        "Blockfrost",
+        "cardano-db-sync",
+        "cardano-graphql",
+        "cardano-node",
+        "cardano-wallet",
+        "Dingo",
+        "Dolos",
+        "Gummiworm",
+        "Hydra",
+        "Kupo",
+        "Mithril",
+        "Ogmios",
+        "Oura",
+        "Scrolls",
+        "Yaci DevKit",
+        "Yaci Store",
+        "other"
+      ],
+      "none": "none"
+    },
+    {
+      "name": "dev_tools",
+      "values": [
+        "bech32",
+        "Cardano Dev Wallet",
+        "cardano-addresses",
+        "cardano-cli",
+        "cardano-hw-cli",
+        "cardano-signer",
+        "cardano-up",
+        "cncli",
+        "Cquisitor",
+        "CShell",
+        "Gastronomy",
+        "Lace Anatomy",
+        "nview",
+        "offchain-metadata-tools",
+        "Sorbet",
+        "SPO scripts (gitmachtl)",
+        "txtop",
+        "other"
+      ],
+      "none": "none"
+    },
+    {
+      "name": "hosted_apis",
+      "values": [
+        "AdaStat",
+        "Blockfrost",
+        "Cardanoscan",
+        "Cexplorer",
+        "Charli3",
+        "Demeter",
+        "Dune",
+        "IAG Insight",
+        "Koios",
+        "Maestro",
+        "Nexus",
+        "NMKR",
+        "Orcfax",
+        "Pyth",
+        "SteelSwap",
+        "TapTools",
+        "Token registry",
+        "other"
+      ],
+      "none": "none"
+    },
+    {
+      "name": "testing",
+      "values": [
+        "unit",
+        "property",
+        "emulator",
+        "devnet",
+        "testnet",
+        "mainnet",
+        "by-hand",
+        "formal-verification",
+        "audit",
+        "other"
+      ],
+      "none": "none"
+    },
+    {
+      "name": "missing_tools"
+    },
+    {
+      "name": "ai_frequency",
+      "values": [
+        "daily",
+        "weekly",
+        "less",
+        "never"
+      ]
+    },
+    {
+      "name": "ai_worst"
+    },
+    {
+      "name": "problems",
+      "values": [
+        "first-app",
+        "choosing-tools",
+        "documentation",
+        "examples",
+        "help",
+        "eutxo-design",
+        "minimum-ada",
+        "building-transactions",
+        "wallets",
+        "testing",
+        "debugging",
+        "libraries",
+        "breaking-changes",
+        "chain-data",
+        "api-limits",
+        "infrastructure",
+        "ai"
+      ],
+      "levels": [
+        "big",
+        "could-be-better",
+        "good",
+        "not-relevant"
+      ]
+    },
+    {
+      "name": "answer_sources",
+      "values": [
+        "ai",
+        "blogs",
+        "Cardano Blueprint",
+        "cardano-docs",
+        "Cardano Forum",
+        "CIPs",
+        "colleagues",
+        "developer-portal",
+        "Discord",
+        "github",
+        "papers",
+        "project-docs",
+        "Reddit",
+        "source-code",
+        "Stack Exchange",
+        "Telegram",
+        "videos",
+        "X (Twitter)",
+        "other"
+      ]
+    },
+    {
+      "name": "roadmap",
+      "values": [
+        "throughput",
+        "finality",
+        "layer-2",
+        "bridges",
+        "zero-knowledge",
+        "nested-transactions",
+        "fee-tokens",
+        "programmable-tokens",
+        "global-state",
+        "light-clients",
+        "alternative-nodes",
+        "formal-verification"
+      ],
+      "levels": [
+        "unblock",
+        "help",
+        "not-needed",
+        "unknown"
+      ]
+    },
+    {
+      "name": "blockers",
+      "values": [
+        "audits",
+        "users",
+        "funding",
+        "visibility",
+        "hiring",
+        "integrations",
+        "time",
+        "legal",
+        "liquidity",
+        "other"
+      ],
+      "none": "none"
+    },
+    {
+      "name": "motives",
+      "values": [
+        "curiosity",
+        "values",
+        "funding",
+        "tooling",
+        "market",
+        "employer",
+        "research",
+        "security",
+        "community",
+        "eutxo",
+        "other"
+      ]
+    },
+    {
+      "name": "retention",
+      "values": [
+        "very-likely",
+        "likely",
+        "not-sure",
+        "unlikely",
+        "very-unlikely"
+      ]
+    },
+    {
+      "name": "wish"
+    },
+    {
+      "name": "role",
+      "values": [
+        "architect",
+        "data",
+        "devops",
+        "educator",
+        "founder",
+        "manager",
+        "researcher",
+        "engineer",
+        "student",
+        "other"
+      ]
+    },
+    {
+      "name": "other_chains",
+      "values": [
+        "Algorand",
+        "Avalanche",
+        "Bitcoin (incl. Lightning)",
+        "BNB",
+        "Ergo",
+        "Ethereum",
+        "evm",
+        "Midnight",
+        "Solana",
+        "Sui",
+        "other"
+      ],
+      "none": "none"
+    },
+    {
+      "name": "funding",
+      "values": [
+        "unfunded",
+        "founding-entity",
+        "company",
+        "revenue",
+        "clients",
+        "Catalyst",
+        "treasury",
+        "grants",
+        "investors",
+        "other"
+      ]
+    },
+    {
+      "name": "region",
+      "values": [
+        "africa",
+        "north-america",
+        "latin-america",
+        "east-asia",
+        "southeast-asia",
+        "south-asia",
+        "middle-east",
+        "europe",
+        "oceania"
+      ]
+    },
+    {
+      "name": "participation",
+      "values": [
+        "read-cip",
+        "reviewed-cip",
+        "wrote-cip",
+        "open-source",
+        "voted",
+        "stake-pool",
+        "applied-funding",
+        "intersect",
+        "event",
+        "taught"
+      ],
+      "none": "none"
+    }
+  ]
+}

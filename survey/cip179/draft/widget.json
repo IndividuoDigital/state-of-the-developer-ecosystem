@@ -1,0 +1,192 @@
+{
+  "conditions": {
+    "3": {
+      "question": 2,
+      "anyOf": [
+        2,
+        3
+      ]
+    },
+    "19": {
+      "question": 18,
+      "noneOf": [
+        3
+      ]
+    }
+  },
+  "translations": {
+    "defaultLanguage": "en",
+    "translations": {
+      "fr": {
+        "questions": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {
+            "noneLabel": "Aucun"
+          },
+          {
+            "noneLabel": "Aucun"
+          },
+          {
+            "noneLabel": "Aucun"
+          },
+          {
+            "noneLabel": "Aucun"
+          },
+          {
+            "noneLabel": "Aucun"
+          },
+          {
+            "noneLabel": "Aucun"
+          },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      },
+      "ja": {
+        "questions": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {
+            "noneLabel": "なし"
+          },
+          {
+            "noneLabel": "なし"
+          },
+          {
+            "noneLabel": "なし"
+          },
+          {
+            "noneLabel": "なし"
+          },
+          {
+            "noneLabel": "なし"
+          },
+          {
+            "noneLabel": "なし"
+          },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      },
+      "vi": {
+        "questions": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {
+            "noneLabel": "Không có"
+          },
+          {
+            "noneLabel": "Không có"
+          },
+          {
+            "noneLabel": "Không có"
+          },
+          {
+            "noneLabel": "Không có"
+          },
+          {
+            "noneLabel": "Không có"
+          },
+          {
+            "noneLabel": "Không có"
+          },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    }
+  },
+  "noneLabels": {
+    "10": "None, I don't write on-chain code",
+    "11": "None",
+    "12": "None",
+    "13": "None",
+    "14": "None",
+    "15": "None",
+    "16": "None",
+    "23": "Nothing significant",
+    "28": "None, only Cardano",
+    "31": "None of these"
+  },
+  "maxTextBytes": 1024,
+  "screening": [
+    {
+      "name": "experience",
+      "values": [
+        "not-a-developer"
+      ],
+      "labels": [
+        {
+          "en": "I don't write or deploy software"
+        }
+      ]
+    }
+  ]
+}

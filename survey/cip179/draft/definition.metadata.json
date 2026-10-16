@@ -1,0 +1,1723 @@
+{
+  "17": {
+    "list": [
+      {
+        "int": 0
+      },
+      {
+        "list": [
+          {
+            "map": [
+              {
+                "k": {
+                  "int": 0
+                },
+                "v": {
+                  "int": 5
+                }
+              },
+              {
+                "k": {
+                  "int": 1
+                },
+                "v": {
+                  "list": [
+                    {
+                      "int": 0
+                    },
+                    {
+                      "bytes": "d0430dd25d8534858e6cfaa394364aa662c604547ead70d979d7273f"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": {
+                  "int": 2
+                },
+                "v": {
+                  "string": "Cardano Developer Survey 2026"
+                }
+              },
+              {
+                "k": {
+                  "int": 3
+                },
+                "v": {
+                  "list": [
+                    {
+                      "string": "About 10 minutes. Only the first question is required: skip any "
+                    },
+                    {
+                      "string": "other. The results tell tool builders, documentation writers and"
+                    },
+                    {
+                      "string": " funders what to work on first."
+                    }
+                  ]
+                }
+              },
+              {
+                "k": {
+                  "int": 4
+                },
+                "v": {
+                  "list": [
+                    {
+                      "int": 4
+                    }
+                  ]
+                }
+              },
+              {
+                "k": {
+                  "int": 5
+                },
+                "v": {
+                  "int": 1452
+                }
+              },
+              {
+                "k": {
+                  "int": 6
+                },
+                "v": {
+                  "list": [
+                    {
+                      "int": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "k": {
+                  "int": 7
+                },
+                "v": {
+                  "list": [
+                    {
+                      "list": [
+                        {
+                          "int": 1
+                        },
+                        {
+                          "string": "How long have you been writing or deploying software?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Less than 2 years"
+                            },
+                            {
+                              "string": "2 to 4 years"
+                            },
+                            {
+                              "string": "5 to 9 years"
+                            },
+                            {
+                              "string": "10 years or more"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 1
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "string": "What are you building on Cardano?\n\nChoose up to 4."
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "AI agents"
+                            },
+                            {
+                              "string": "Bridges and interoperability"
+                            },
+                            {
+                              "string": "DeFi"
+                            },
+                            {
+                              "string": "Developer tools and infrastructure"
+                            },
+                            {
+                              "string": "Education and community"
+                            },
+                            {
+                              "string": "Gaming"
+                            },
+                            {
+                              "string": "Governance tools"
+                            },
+                            {
+                              "string": "Identity"
+                            },
+                            {
+                              "string": "Layer 2s and scaling"
+                            },
+                            {
+                              "string": "NFTs"
+                            },
+                            {
+                              "string": "Oracles and data"
+                            },
+                            {
+                              "string": "Payments and stablecoins"
+                            },
+                            {
+                              "string": "Privacy and zero-knowledge"
+                            },
+                            {
+                              "string": "Real-world assets"
+                            },
+                            {
+                              "string": "Staking and SPO tools"
+                            },
+                            {
+                              "string": "Wallets"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 1
+                        },
+                        {
+                          "int": 4
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 1
+                        },
+                        {
+                          "string": "How far along is your main Cardano project?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Learning or experimenting"
+                            },
+                            {
+                              "string": "In development (testnet)"
+                            },
+                            {
+                              "string": "Released (mainnet, or a published tool)"
+                            },
+                            {
+                              "string": "Released, with regular users"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Where can we find this project (website or repository link)?\n\nTh"
+                            },
+                            {
+                              "string": "is link is public and ties all your answers to this project."
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 1
+                        },
+                        {
+                          "string": "When did you start building on Cardano?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "2026"
+                            },
+                            {
+                              "string": "2025"
+                            },
+                            {
+                              "string": "2023–2024"
+                            },
+                            {
+                              "string": "2021–2022"
+                            },
+                            {
+                              "string": "2020 or earlier"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 1
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "In a typical week, how much time do you spend building on Cardan"
+                            },
+                            {
+                              "string": "o?"
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Less than 5 hours"
+                            },
+                            {
+                              "string": "5 to 19 hours"
+                            },
+                            {
+                              "string": "20 to 34 hours"
+                            },
+                            {
+                              "string": "35 hours or more"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 1
+                        },
+                        {
+                          "string": "Overall, how satisfied are you with building on Cardano?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Very satisfied"
+                            },
+                            {
+                              "string": "Satisfied"
+                            },
+                            {
+                              "string": "Neither satisfied nor dissatisfied"
+                            },
+                            {
+                              "string": "Dissatisfied"
+                            },
+                            {
+                              "string": "Very dissatisfied"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 1
+                        },
+                        {
+                          "string": "Compared with a year ago, building on Cardano is:"
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Much easier"
+                            },
+                            {
+                              "string": "Somewhat easier"
+                            },
+                            {
+                              "string": "About the same"
+                            },
+                            {
+                              "string": "Somewhat harder"
+                            },
+                            {
+                              "string": "Much harder"
+                            },
+                            {
+                              "string": "I wasn't building on Cardano a year ago"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "string": "What is the best thing about building on Cardano?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "string": "What is the most painful thing about building on Cardano?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Which languages have you used for on-chain code in the last 12 m"
+                            },
+                            {
+                              "string": "onths?"
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Aiken"
+                            },
+                            {
+                              "string": "Helios"
+                            },
+                            {
+                              "string": "JuLC"
+                            },
+                            {
+                              "string": "Marlowe"
+                            },
+                            {
+                              "string": "OpShin"
+                            },
+                            {
+                              "string": "Pebble"
+                            },
+                            {
+                              "string": "Plinth (Plutus-Tx)"
+                            },
+                            {
+                              "string": "Plu-ts"
+                            },
+                            {
+                              "string": "Plutarch"
+                            },
+                            {
+                              "string": "Scalus"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 0
+                        },
+                        {
+                          "int": 11
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Which on-chain libraries have you used in the last 12 months?\n\nN"
+                            },
+                            {
+                              "string": "ot counting standard libraries."
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Aicone, with Sundae multisig (Aiken)"
+                            },
+                            {
+                              "string": "ak-381 (Aiken)"
+                            },
+                            {
+                              "string": "Assist (Aiken)"
+                            },
+                            {
+                              "string": "Design Patterns (Aiken)"
+                            },
+                            {
+                              "string": "Fuzz (Aiken)"
+                            },
+                            {
+                              "string": "Merkle Patricia Forestry (Aiken)"
+                            },
+                            {
+                              "string": "Oakshield (Aiken)"
+                            },
+                            {
+                              "string": "Vodka (Aiken)"
+                            },
+                            {
+                              "string": "ZeroJ (JuLC)"
+                            },
+                            {
+                              "string": "plutus-script-utils (Plinth)"
+                            },
+                            {
+                              "string": "Plutus Simple Model (Plinth)"
+                            },
+                            {
+                              "string": "catalyst-onchain-libs (Plutarch)"
+                            },
+                            {
+                              "string": "Liqwid libs (Plutarch)"
+                            },
+                            {
+                              "string": "Ply (Plutarch)"
+                            },
+                            {
+                              "string": "Design Patterns (Scalus)"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 0
+                        },
+                        {
+                          "int": 16
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "string": "Which off-chain libraries have you used in the last 12 months?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Chrysalis (.NET)"
+                            },
+                            {
+                              "string": "elm-cardano (Elm)"
+                            },
+                            {
+                              "string": "Apollo (Go)"
+                            },
+                            {
+                              "string": "gOuroboros (Go)"
+                            },
+                            {
+                              "string": "Atlas (Haskell)"
+                            },
+                            {
+                              "string": "cardano-api (Haskell)"
+                            },
+                            {
+                              "string": "sc-tools (Haskell)"
+                            },
+                            {
+                              "string": "cardano-client-lib (Java)"
+                            },
+                            {
+                              "string": "Yaci (Java)"
+                            },
+                            {
+                              "string": "cardano-transaction-lib (PureScript)"
+                            },
+                            {
+                              "string": "PyCardano (Python)"
+                            },
+                            {
+                              "string": "Pallas (Rust)"
+                            },
+                            {
+                              "string": "CML, cardano-multiplatform-lib (Rust, JS)"
+                            },
+                            {
+                              "string": "CSL, cardano-serialization-lib (Rust, JS)"
+                            },
+                            {
+                              "string": "Scalus (Scala)"
+                            },
+                            {
+                              "string": "Tx3"
+                            },
+                            {
+                              "string": "Blaze (TypeScript)"
+                            },
+                            {
+                              "string": "Cardano JS SDK (TypeScript)"
+                            },
+                            {
+                              "string": "Cometa (TypeScript)"
+                            },
+                            {
+                              "string": "Dexter (TypeScript)"
+                            },
+                            {
+                              "string": "Evolution SDK (TypeScript)"
+                            },
+                            {
+                              "string": "Lucid (TypeScript)"
+                            },
+                            {
+                              "string": "Mesh (TypeScript)"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 0
+                        },
+                        {
+                          "int": 24
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Which of these have you run yourself in the last 12 months, loca"
+                            },
+                            {
+                              "string": "lly or on your servers?"
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Adder"
+                            },
+                            {
+                              "string": "Amaru"
+                            },
+                            {
+                              "string": "Blockfrost"
+                            },
+                            {
+                              "string": "cardano-db-sync"
+                            },
+                            {
+                              "string": "cardano-graphql"
+                            },
+                            {
+                              "string": "cardano-node"
+                            },
+                            {
+                              "string": "cardano-wallet"
+                            },
+                            {
+                              "string": "Dingo"
+                            },
+                            {
+                              "string": "Dolos"
+                            },
+                            {
+                              "string": "Gummiworm"
+                            },
+                            {
+                              "string": "Hydra"
+                            },
+                            {
+                              "string": "Kupo"
+                            },
+                            {
+                              "string": "Mithril"
+                            },
+                            {
+                              "string": "Ogmios"
+                            },
+                            {
+                              "string": "Oura"
+                            },
+                            {
+                              "string": "Scrolls"
+                            },
+                            {
+                              "string": "Yaci DevKit"
+                            },
+                            {
+                              "string": "Yaci Store"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 0
+                        },
+                        {
+                          "int": 19
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Which developer tools have you used in the last 12 months?\n\nIncl"
+                            },
+                            {
+                              "string": "uding stake pool tools."
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "bech32"
+                            },
+                            {
+                              "string": "Cardano Dev Wallet"
+                            },
+                            {
+                              "string": "cardano-addresses"
+                            },
+                            {
+                              "string": "cardano-cli"
+                            },
+                            {
+                              "string": "cardano-hw-cli"
+                            },
+                            {
+                              "string": "cardano-signer"
+                            },
+                            {
+                              "string": "cardano-up"
+                            },
+                            {
+                              "string": "cncli"
+                            },
+                            {
+                              "string": "Cquisitor"
+                            },
+                            {
+                              "string": "CShell"
+                            },
+                            {
+                              "string": "Gastronomy"
+                            },
+                            {
+                              "string": "Lace Anatomy"
+                            },
+                            {
+                              "string": "nview"
+                            },
+                            {
+                              "string": "offchain-metadata-tools"
+                            },
+                            {
+                              "string": "Sorbet"
+                            },
+                            {
+                              "string": "SPO scripts (gitmachtl)"
+                            },
+                            {
+                              "string": "txtop"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 0
+                        },
+                        {
+                          "int": 18
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "string": "Which hosted API services have you used in the last 12 months?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "AdaStat"
+                            },
+                            {
+                              "string": "Blockfrost"
+                            },
+                            {
+                              "string": "Cardanoscan"
+                            },
+                            {
+                              "string": "Cexplorer"
+                            },
+                            {
+                              "string": "Charli3"
+                            },
+                            {
+                              "string": "Demeter"
+                            },
+                            {
+                              "string": "Dune"
+                            },
+                            {
+                              "string": "IAG Insight"
+                            },
+                            {
+                              "string": "Koios"
+                            },
+                            {
+                              "string": "Maestro"
+                            },
+                            {
+                              "string": "Nexus"
+                            },
+                            {
+                              "string": "NMKR"
+                            },
+                            {
+                              "string": "Orcfax"
+                            },
+                            {
+                              "string": "Pyth"
+                            },
+                            {
+                              "string": "SteelSwap"
+                            },
+                            {
+                              "string": "TapTools"
+                            },
+                            {
+                              "string": "Token registry"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 0
+                        },
+                        {
+                          "int": 18
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "string": "How have you tested your Cardano code in the last 12 months?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Unit tests of validators"
+                            },
+                            {
+                              "string": "Property-based tests or fuzzing"
+                            },
+                            {
+                              "string": "Emulator, no node (Lucid Evolution, Scalus, sc-tools…)"
+                            },
+                            {
+                              "string": "Local devnet (Yaci DevKit, cardano-testnet…)"
+                            },
+                            {
+                              "string": "Public testnet (Preview, Preprod)"
+                            },
+                            {
+                              "string": "Mainnet, with small amounts"
+                            },
+                            {
+                              "string": "By hand, with a wallet or the command line"
+                            },
+                            {
+                              "string": "Formal verification"
+                            },
+                            {
+                              "string": "Audit by another team"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 0
+                        },
+                        {
+                          "int": 10
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "string": "Which tools do you use that are missing from the lists above?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 1
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "In the past month, how often did you use AI coding tools for Car"
+                            },
+                            {
+                              "string": "dano work?"
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Daily or nearly so"
+                            },
+                            {
+                              "string": "Weekly or nearly so"
+                            },
+                            {
+                              "string": "Less often"
+                            },
+                            {
+                              "string": "Never"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Which Cardano language, library or tool does AI handle worst, an"
+                            },
+                            {
+                              "string": "d what goes wrong?"
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 6
+                        },
+                        {
+                          "string": "How much of a problem is each of these for you?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Getting a first application working end to end"
+                            },
+                            {
+                              "string": "Knowing which tools and libraries to choose"
+                            },
+                            {
+                              "string": "Finding up-to-date documentation"
+                            },
+                            {
+                              "string": "Finding working examples"
+                            },
+                            {
+                              "string": "Getting help when I am stuck"
+                            },
+                            {
+                              "string": "Designing for eUTxO (state, concurrency)"
+                            },
+                            {
+                              "string": "Minimum ada in each output (micropayments, airdrops)"
+                            },
+                            {
+                              "string": "Building transactions"
+                            },
+                            {
+                              "string": "Connecting to wallets (CIP-30 issues, mobile wallets)"
+                            },
+                            {
+                              "string": "Testing validators"
+                            },
+                            {
+                              "string": "Debugging validators"
+                            },
+                            {
+                              "string": "Incomplete or unmaintained libraries"
+                            },
+                            {
+                              "string": "Breaking changes in tools and libraries"
+                            },
+                            {
+                              "string": "Getting chain data (indexers, APIs)"
+                            },
+                            {
+                              "string": "Limits and pricing of hosted APIs"
+                            },
+                            {
+                              "string": "Running infrastructure (node, indexer)"
+                            },
+                            {
+                              "string": "Getting good results from AI tools on Cardano code"
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Big problem for me"
+                            },
+                            {
+                              "string": "Could be better, doesn't limit me"
+                            },
+                            {
+                              "string": "Good for me"
+                            },
+                            {
+                              "string": "Not relevant to me"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 0
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Where do you get answers to technical questions about Cardano?\n\n"
+                            },
+                            {
+                              "string": "Choose up to 5, the ones you rely on most."
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "AI assistants"
+                            },
+                            {
+                              "string": "Blogs and articles"
+                            },
+                            {
+                              "string": "Cardano Blueprint"
+                            },
+                            {
+                              "string": "Cardano docs (docs.cardano.org)"
+                            },
+                            {
+                              "string": "Cardano Forum"
+                            },
+                            {
+                              "string": "CIPs"
+                            },
+                            {
+                              "string": "Colleagues and friends"
+                            },
+                            {
+                              "string": "Developer portal (developers.cardano.org)"
+                            },
+                            {
+                              "string": "Discord"
+                            },
+                            {
+                              "string": "GitHub issues and discussions"
+                            },
+                            {
+                              "string": "Papers and specifications"
+                            },
+                            {
+                              "string": "Project documentation"
+                            },
+                            {
+                              "string": "Reddit"
+                            },
+                            {
+                              "string": "Source code"
+                            },
+                            {
+                              "string": "Stack Exchange"
+                            },
+                            {
+                              "string": "Telegram"
+                            },
+                            {
+                              "string": "Videos and courses"
+                            },
+                            {
+                              "string": "X (Twitter)"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 1
+                        },
+                        {
+                          "int": 5
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 6
+                        },
+                        {
+                          "string": "How much would each of these help what you are building?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Higher throughput"
+                            },
+                            {
+                              "string": "Faster finality"
+                            },
+                            {
+                              "string": "Layer 2s"
+                            },
+                            {
+                              "string": "Bridges to other chains"
+                            },
+                            {
+                              "string": "Zero-knowledge proof verification on chain"
+                            },
+                            {
+                              "string": "Nested transactions"
+                            },
+                            {
+                              "string": "Paying fees in other tokens"
+                            },
+                            {
+                              "string": "Programmable tokens"
+                            },
+                            {
+                              "string": "Global state with concurrent updates (as on EVM chains)"
+                            },
+                            {
+                              "string": "Light clients"
+                            },
+                            {
+                              "string": "Alternative nodes"
+                            },
+                            {
+                              "string": "Formal verification of smart contracts"
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Would unblock me"
+                            },
+                            {
+                              "string": "Would help"
+                            },
+                            {
+                              "string": "I don't need it"
+                            },
+                            {
+                              "string": "I don't know what it is"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 0
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Beyond technology, what holds your project back the most?\n\nChoos"
+                            },
+                            {
+                              "string": "e up to 3."
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Cost of audits"
+                            },
+                            {
+                              "string": "Finding users"
+                            },
+                            {
+                              "string": "Funding"
+                            },
+                            {
+                              "string": "Getting noticed (visibility, marketing)"
+                            },
+                            {
+                              "string": "Hiring experienced developers"
+                            },
+                            {
+                              "string": "Integrations (exchanges, wallets, custodians)"
+                            },
+                            {
+                              "string": "Lack of time"
+                            },
+                            {
+                              "string": "Legal and regulatory uncertainty"
+                            },
+                            {
+                              "string": "Liquidity on chain"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 0
+                        },
+                        {
+                          "int": 3
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "string": "Why do you build on Cardano?\n\nChoose up to 3."
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Curiosity, learning"
+                            },
+                            {
+                              "string": "Decentralisation and values"
+                            },
+                            {
+                              "string": "Funding (Catalyst, treasury, grants)"
+                            },
+                            {
+                              "string": "Languages and tooling"
+                            },
+                            {
+                              "string": "Market opportunity"
+                            },
+                            {
+                              "string": "My employer or client chose it"
+                            },
+                            {
+                              "string": "Research-driven approach"
+                            },
+                            {
+                              "string": "Security and reliability of the chain"
+                            },
+                            {
+                              "string": "The community"
+                            },
+                            {
+                              "string": "The eUTxO model and deterministic transactions"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 1
+                        },
+                        {
+                          "int": 3
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 1
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "How likely are you to still be building on Cardano a year from n"
+                            },
+                            {
+                              "string": "ow?"
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Very likely"
+                            },
+                            {
+                              "string": "Likely"
+                            },
+                            {
+                              "string": "Not sure"
+                            },
+                            {
+                              "string": "Unlikely"
+                            },
+                            {
+                              "string": "Very unlikely"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Which tool, library or feature that doesn't exist yet would help"
+                            },
+                            {
+                              "string": " you the most?"
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 1
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Which best describes your role?\n\nThe last questions are about yo"
+                            },
+                            {
+                              "string": "u: skip any you'd rather not answer."
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Architect or technical lead"
+                            },
+                            {
+                              "string": "Data scientist or analyst"
+                            },
+                            {
+                              "string": "DevOps or system administrator"
+                            },
+                            {
+                              "string": "Educator"
+                            },
+                            {
+                              "string": "Founder or executive"
+                            },
+                            {
+                              "string": "Product or project manager"
+                            },
+                            {
+                              "string": "Researcher"
+                            },
+                            {
+                              "string": "Software engineer"
+                            },
+                            {
+                              "string": "Student"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "string": "Which other blockchain ecosystems have you built on?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Algorand"
+                            },
+                            {
+                              "string": "Avalanche"
+                            },
+                            {
+                              "string": "Bitcoin (incl. Lightning)"
+                            },
+                            {
+                              "string": "BNB"
+                            },
+                            {
+                              "string": "Ergo"
+                            },
+                            {
+                              "string": "Ethereum"
+                            },
+                            {
+                              "string": "Ethereum L2s and other EVM chains"
+                            },
+                            {
+                              "string": "Midnight"
+                            },
+                            {
+                              "string": "Solana"
+                            },
+                            {
+                              "string": "Sui"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 0
+                        },
+                        {
+                          "int": 11
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "How is your Cardano work funded?\n\nChoose up to 3, the main sourc"
+                            },
+                            {
+                              "string": "es."
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Not funded (my own time)"
+                            },
+                            {
+                              "string": "Salary from a founding entity (IOG, EMURGO, CF)"
+                            },
+                            {
+                              "string": "Salary from another company"
+                            },
+                            {
+                              "string": "My own product or service revenue"
+                            },
+                            {
+                              "string": "Client work or consulting"
+                            },
+                            {
+                              "string": "Catalyst"
+                            },
+                            {
+                              "string": "Treasury (Intersect budget, governance action)"
+                            },
+                            {
+                              "string": "Other grants"
+                            },
+                            {
+                              "string": "Investors or token sale"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 1
+                        },
+                        {
+                          "int": 3
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 1
+                        },
+                        {
+                          "string": "Where are you based?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Africa"
+                            },
+                            {
+                              "string": "North America (USA, Canada)"
+                            },
+                            {
+                              "string": "Latin America and the Caribbean (incl. Mexico)"
+                            },
+                            {
+                              "string": "East Asia (China, Japan, Korea)"
+                            },
+                            {
+                              "string": "Southeast Asia (Indonesia, Philippines, Singapore, Vietnam)"
+                            },
+                            {
+                              "string": "South Asia (India, Pakistan, Bangladesh)"
+                            },
+                            {
+                              "string": "Middle East and Central Asia"
+                            },
+                            {
+                              "string": "Europe"
+                            },
+                            {
+                              "string": "Oceania"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "string": "Which of these did you do in the last 12 months?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Read or used a CIP"
+                            },
+                            {
+                              "string": "Commented on or reviewed a CIP"
+                            },
+                            {
+                              "string": "Wrote or co-wrote a CIP"
+                            },
+                            {
+                              "string": "Contributed to an open-source Cardano project that isn't mine"
+                            },
+                            {
+                              "string": "Voted on a governance action (as DRep or SPO)"
+                            },
+                            {
+                              "string": "Ran a stake pool"
+                            },
+                            {
+                              "string": "Applied for funding (Catalyst, treasury, grants)"
+                            },
+                            {
+                              "string": "Took part in an Intersect committee or working group"
+                            },
+                            {
+                              "string": "Attended a Cardano developer event or hackathon"
+                            },
+                            {
+                              "string": "Wrote a tutorial, taught or mentored"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 0
+                        },
+                        {
+                          "int": 10
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
