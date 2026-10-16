@@ -57,7 +57,7 @@ Respondents don't need a wallet: the sponsor wallet pays for their transactions.
 
 A refusal comes as `{ error, code }`. The survey site words it from the code, in the respondent's language.
 
-The sponsor pays at most 0.3 ada per response (about 3 KB of transaction), and once per respondent key: the browser keeps its key, and a respondent changes their answer with their own wallet. It also stops once the survey is cancelled, which it checks on chain every 10 minutes. `SPONSOR_DAILY_CAP`, in lovelace, would also cap what it spends in 24 hours.
+The sponsor pays at most 0.5 ada per response (about 7.8 KB of transaction), and once per respondent key: the browser keeps its key, and a respondent changes their answer with their own wallet. It also stops once the survey is cancelled, which it checks on chain every 10 minutes. `SPONSOR_DAILY_CAP`, in lovelace, would also cap what it spends in 24 hours.
 
 Its state is in the D1 database `db` (`migrations/`, `cip179/sponsor-store.js`): its coins, one sponsorship per respondent key, and what it read from the chain. It tracks its coins itself: a sponsored transaction spends one coin and its change replaces it, usable 30 seconds later, once the other nodes know the transaction. So a response costs a single Koios call, its submission. Koios confirms the coins every 30 minutes, or when none is free or the node refuses one: it adds the coins the sponsor didn't know of, and forgets the transactions that never made it on chain. The transactions are built offline, with the protocol parameters read once per epoch.
 

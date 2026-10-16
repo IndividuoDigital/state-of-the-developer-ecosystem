@@ -28,7 +28,7 @@ beforeEach(async () => {
 
 const T = 1_800_000_000_000;
 const ADA = 1_000_000;
-const MIN_COIN = 1_300_000n;
+const MIN_COIN = 1_500_000n;
 const key = (n) => String(n).padStart(56, "k");
 const tx = (n) => String(n).padStart(64, "0");
 const coin = (n, index = 1) => `${tx(n)}#${index}`;
@@ -69,7 +69,7 @@ test("the schema refuses impossible rows", async () => {
   await assert.rejects(insert("INSERT INTO coins VALUES ('nohash', 1, 0)"));
   await assert.rejects(insert("INSERT INTO coins VALUES (?, 0, 0)", coin(1)));
   const s = "INSERT INTO sponsorships VALUES (?, ?, ?, ?, ?, ?)";
-  await assert.rejects(insert(s, key(1), coin(1), tx(1), 400_000, T, null), /CHECK/); // over MAX_FEE
+  await assert.rejects(insert(s, key(1), coin(1), tx(1), 600_000, T, null), /CHECK/); // over MAX_FEE
   await assert.rejects(insert(s, key(1), coin(1), tx(1), 200_000, T, T + 1), /CHECK/); // submitted too late
   await assert.rejects(insert(s, "short", coin(1), tx(1), 200_000, T, null), /CHECK/);
   await assert.rejects(insert("UPDATE chain_view SET scan_slot = NULL"), /CHECK/); // neither open nor cancelled
@@ -89,7 +89,7 @@ test("candidates: free, usable, large enough, largest first; picked within the w
   }, T);
   assert.deepEqual(await refs(), [coin(2), coin(1), coin(3)]);
   const candidates = await store.candidates(db, T, MIN_COIN);
-  const picked = new Set(Array.from({ length: 50 }, (_, i) => store.pick(candidates, 300_000n, () => i / 50).ref));
+  const picked = new Set(Array.from({ length: 50 }, (_, i) => store.pick(candidates, 500_000n, () => i / 50).ref));
   assert.deepEqual([...picked].sort(), [coin(1), coin(2)]);
 
   assert.equal(await lease(1, coin(2)), "leased");

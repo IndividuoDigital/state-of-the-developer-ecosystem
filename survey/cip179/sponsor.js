@@ -50,9 +50,9 @@ import { decodeTxProof } from "cip-179/txproof";
 
 import * as store from "./sponsor-store.js";
 
-// The most the sponsor pays for a response, in lovelace: about 3 KB of
+// The most the sponsor pays for a response, in lovelace: about 7.8 KB of
 // transaction.
-const MAX_FEE = 300_000n;
+const MAX_FEE = 500_000n;
 // The fee is 155381 lovelace plus 44 per byte, so a larger payload alone
 // costs more than MAX_FEE.
 const MAX_PAYLOAD_BYTES = Number((MAX_FEE - 155_381n) / 44n);
@@ -61,7 +61,7 @@ const MAX_PAYLOAD_BYTES = Number((MAX_FEE - 155_381n) / 44n);
 const VALIDITY_MS = 5 * 60 * 1000;
 // Coins worth less can't pay for the largest response and the change's
 // minimum (about 0.97 ada).
-const MIN_COIN = 1_300_000n;
+const MIN_COIN = 1_500_000n;
 // Attempts at leasing a coin that another request may claim first.
 const LEASE_ATTEMPTS = 3;
 // How often Koios confirms the coins, and how often at most when none is
