@@ -172,18 +172,13 @@ select:focus-visible {
   outline-offset: 2px;
 }
 
-/* The answers that end the survey: a quiet way out under "Start". */
+/* The answers that end the survey, as buttons beside "Start": those they apply to must see them. */
 .exits {
-  margin-top: 1.5rem;
+  display: contents;
 }
 
 .exits button {
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--muted);
-  font-weight: 400;
-  text-decoration: underline;
+  border-color: var(--ink);
 }
 
 #progress {

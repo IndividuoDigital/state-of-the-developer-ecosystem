@@ -26,7 +26,7 @@ export default {
 
   screened: {
     title: "Thank you",
-    body: "This survey is for people who write or deploy software, so there is nothing more to answer. Nothing was recorded.",
+    body: "This survey is for people who write or deploy software, so there is nothing more to answer.",
     back: "Back",
   },
 

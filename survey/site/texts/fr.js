@@ -26,7 +26,7 @@ export default {
 
   screened: {
     title: "Merci",
-    body: "Cette enquête s'adresse aux personnes qui écrivent ou déploient des logiciels : il n'y a rien d'autre à répondre. Rien n'a été enregistré.",
+    body: "Cette enquête s'adresse aux personnes qui écrivent ou déploient des logiciels : il n'y a rien d'autre à répondre.",
     back: "Retour",
   },
 
