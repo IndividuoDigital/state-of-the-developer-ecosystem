@@ -23,7 +23,7 @@ const [txId, index] = built.survey.split("#");
 const endEpoch = Number(definition.endEpoch);
 // Each survey has its own respondent: key, answers and language.
 const me = respondent(`survey.${built.survey}.`);
-const challenge = turnstileChallenge("#challenge");
+const challenge = turnstileChallenge("#challenge", built.turnstileSiteKey);
 
 // The languages the page and the survey both have.
 const { defaultLanguage, translations } = built.translations;

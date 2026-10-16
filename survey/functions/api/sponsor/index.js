@@ -6,13 +6,12 @@
 
 import { reply, sponsor, SponsorError } from "../../../cip179/sponsor.js";
 
-const TURNSTILE_SECRET_ENV_VAR = "state-of-the-developer-ecosystem-2025-turnstile";
-
 export const onRequestPost = ({ request, env }) =>
   reply(async () => {
     const { challenge, payload } = await request.json();
     const ip = request.headers.get("CF-Connecting-IP") ?? "";
-    if (!(await validateTurnstile(env[TURNSTILE_SECRET_ENV_VAR], challenge, ip))) {
+    if (!env.TURNSTILE_SECRET) throw new Error("no TURNSTILE_SECRET");
+    if (!(await validateTurnstile(env.TURNSTILE_SECRET, challenge, ip))) {
       throw new SponsorError("invalid turnstile verification", 400, "turnstile");
     }
     return sponsor(env, payload);

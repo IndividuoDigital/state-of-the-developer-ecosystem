@@ -20,9 +20,9 @@ const RETRY_MS = 5000;
 
 const TURNSTILE_SCRIPT = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
 // Turnstile's test site key always passes, and gives the dummy token that the
-// test secret in wrangler.jsonc accepts.
-const TURNSTILE_SITEKEY = (hostname) =>
-  ["[::1]", "127.0.0.1", "localhost"].includes(hostname) ? "1x00000000000000000000AA" : "0x4AAAAAAB4YSM5mX3jPwKvf";
+// test secret in .dev.vars accepts.
+const TURNSTILE_SITEKEY = (hostname, sitekey) =>
+  ["[::1]", "127.0.0.1", "localhost"].includes(hostname) ? "1x00000000000000000000AA" : sitekey;
 
 /**
  * The respondent on this device. `prefix` names what is kept in `storage`: a
@@ -116,11 +116,12 @@ export function respondent(prefix, { storage = deviceStorage(), retryMs = RETRY_
 }
 
 /**
- * Turnstile in `element`, only visible when it needs the respondent. Returns
+ * Turnstile in `element`, with the widget's `sitekey` (Turnstile's test site
+ * key on localhost), only visible when it needs the respondent. Returns
  * the function giving a fresh token: each is good for one request. Cloudflare's
  * script is loaded at the first token, or ahead of it with `load()`.
  */
-export function turnstileChallenge(element) {
+export function turnstileChallenge(element, sitekey) {
   const failed = (reason) => Object.assign(new Error(`the Turnstile check failed (${reason})`), { code: "turnstile" });
   let waiting, rendered;
   const load = () =>
@@ -132,7 +133,7 @@ export function turnstileChallenge(element) {
       document.head.append(script);
     }).then(() =>
       turnstile.render(element, {
-        sitekey: TURNSTILE_SITEKEY(location.hostname),
+        sitekey: TURNSTILE_SITEKEY(location.hostname, sitekey),
         execution: "execute",
         appearance: "interaction-only",
         callback: (token) => waiting?.resolve(token),

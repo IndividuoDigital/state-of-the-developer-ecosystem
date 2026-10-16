@@ -10,9 +10,10 @@
 //   --unpublished    a survey not published yet, to try it locally
 //
 // The network and the survey's reference are the sponsor's, from the vars of
-// `wrangler.jsonc`: the page and the sponsor can't disagree. The definition
-// must be the one published at that reference, which is read from Koios: a
-// page showing other questions would record answers to the wrong ones.
+// `wrangler.jsonc`: the page and the sponsor can't disagree. The Turnstile
+// site key comes from there too. The definition must be the one published at
+// that reference, which is read from Koios: a page showing other questions
+// would record answers to the wrong ones.
 //
 // With `--unpublished`, the definition isn't checked, and the page doesn't
 // send answers to the sponsor: it only shows the survey.
@@ -49,9 +50,10 @@ const read = (file) => {
   return JSON.parse(readFileSync(path, "utf8"));
 };
 
-const { SPONSOR_NETWORK: network, SPONSOR_KOIOS: koios, SPONSOR_SURVEY: survey } = wranglerVars();
+const { SPONSOR_NETWORK: network, SPONSOR_KOIOS: koios, SPONSOR_SURVEY: survey, TURNSTILE_SITE_KEY: turnstileSiteKey } = wranglerVars();
 const [, txId, index] = /^([0-9a-f]{64})#(\d+)$/.exec(survey ?? "") ?? [];
 if (!txId) fail(`SPONSOR_SURVEY isn't "<tx id>#<index>": ${survey}`);
+if (!turnstileSiteKey) fail("wrangler.jsonc has no TURNSTILE_SITE_KEY");
 
 const metadata = read("definition.metadata.json");
 const { definitions } = decodeMetadata(new Map([[17n, fromDetailedJson(metadata[17])]]));
@@ -70,6 +72,7 @@ const baked = {
   network,
   survey: reference,
   unpublished: args.unpublished,
+  turnstileSiteKey,
   definition: metadata[17],
   conditions,
   noneLabels,
