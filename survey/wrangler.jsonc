@@ -1,22 +1,18 @@
 /**
- * For more details on how to configure Wrangler, refer to:
- * https://developers.cloudflare.com/workers/wrangler/configuration/
+ * The Cloudflare Pages project: `yarn wrangler pages deploy` deploys `dist/`
+ * with these bindings and vars. See the README's deployment steps.
+ * https://developers.cloudflare.com/pages/functions/wrangler-configuration/
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "state-of-cardano-developer-survey-2025",
+  "name": "state-of-cardano-developer-survey-2026",
+  "pages_build_output_dir": "dist",
   "compatibility_date": "2025-09-27",
-  "keep_vars": true,
-  "observability": {
-    "enabled": true
-  },
-  /* The sponsor's state (cip179/sponsor-store.js). Create it with
-     `wrangler d1 create cip179-sponsor`, put its id here, then
-     `yarn db:migrate --remote`. */
+  /* The sponsor's state (cip179/sponsor-store.js), one database per network. */
   "d1_databases": [
     {
       "binding": "db",
-      "database_name": "cip179-sponsor",
+      "database_name": "cip179-sponsor-preview",
       "database_id": "not-created-yet",
       "migrations_dir": "migrations"
     }
