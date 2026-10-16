@@ -36,7 +36,7 @@ let state = start({ epoch: epochAt(built.network), endEpoch, submitted: me.submi
 // The widget, made when the questions are first shown, and its last response.
 let widget, payload;
 
-$("#language").append(...languages.map((tag) => new Option(TEXTS[tag].language, tag)));
+$("#language").append(...languages.map((tag) => new Option(`${TEXTS[tag].flag} ${TEXTS[tag].language}`, tag)));
 $("#language").hidden = languages.length < 2;
 $("#language").addEventListener("change", () => {
   language = $("#language").value;

@@ -3,6 +3,7 @@
 
 export default {
   language: "Français",
+  flag: "🇫🇷",
   brand: "État de l'écosystème des développeurs Cardano",
   loading: "Chargement…",
   terms: "Conditions générales",

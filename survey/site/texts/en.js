@@ -3,6 +3,7 @@
 
 export default {
   language: "English",
+  flag: "🇬🇧",
   brand: "State of the Cardano Developer Ecosystem",
   loading: "Loading…",
   terms: "Terms and conditions",
