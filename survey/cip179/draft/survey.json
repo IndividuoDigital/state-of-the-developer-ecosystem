@@ -368,7 +368,7 @@
             "Pyth",
             "SteelSwap",
             "TapTools",
-            { "value": "Token registry", "text": { "default": "Token registry", "fr": "Registre des jetons (Token registry)" } },
+            "Token registry",
             { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
           ],
           "showNoneItem": true,
@@ -530,8 +530,8 @@
             { "value": "bridges", "text": { "default": "Bridges to other chains", "fr": "Des ponts vers d'autres chaînes" } },
             { "value": "zero-knowledge", "text": { "default": "Zero-knowledge proof verification on chain", "fr": "La vérification de preuves zero-knowledge on-chain" } },
             { "value": "nested-transactions", "text": { "default": "Nested transactions", "fr": "Les transactions imbriquées" } },
-            { "value": "fee-tokens", "text": { "default": "Paying fees in other tokens", "fr": "Payer les frais avec d'autres jetons" } },
-            { "value": "programmable-tokens", "text": { "default": "Programmable tokens", "fr": "Les jetons programmables" } },
+            { "value": "fee-tokens", "text": { "default": "Paying fees in other tokens", "fr": "Payer les frais avec d'autres tokens" } },
+            { "value": "programmable-tokens", "text": { "default": "Programmable tokens", "fr": "Les tokens programmables" } },
             { "value": "global-state", "text": { "default": "Global state with concurrent updates (as on EVM chains)", "fr": "Un état global à accès concurrents (comme les chaînes EVM)" } },
             { "value": "light-clients", "text": { "default": "Light clients", "fr": "Les clients légers" } },
             { "value": "alternative-nodes", "text": { "default": "Alternative nodes", "fr": "Des nœuds alternatifs" } },
@@ -693,7 +693,7 @@
             "Catalyst",
             { "value": "treasury", "text": { "default": "Treasury (Intersect budget, governance action)", "fr": "Trésorerie (budget Intersect, action de gouvernance)" } },
             { "value": "grants", "text": { "default": "Other grants", "fr": "Autres subventions" } },
-            { "value": "investors", "text": { "default": "Investors or token sale", "fr": "Investisseurs ou vente de jetons" } },
+            { "value": "investors", "text": { "default": "Investors or token sale", "fr": "Investisseurs ou vente de tokens" } },
             { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
           ]
         },

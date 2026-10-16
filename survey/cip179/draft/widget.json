@@ -247,7 +247,7 @@
               "Pyth",
               "SteelSwap",
               "TapTools",
-              "Registre des jetons (Token registry)",
+              "Token registry",
               "Autre"
             ],
             "noneLabel": "Aucun"
@@ -344,8 +344,8 @@
               "Des ponts vers d'autres chaînes",
               "La vérification de preuves zero-knowledge on-chain",
               "Les transactions imbriquées",
-              "Payer les frais avec d'autres jetons",
-              "Les jetons programmables",
+              "Payer les frais avec d'autres tokens",
+              "Les tokens programmables",
               "Un état global à accès concurrents (comme les chaînes EVM)",
               "Les clients légers",
               "Des nœuds alternatifs",
@@ -446,7 +446,7 @@
               "Catalyst",
               "Trésorerie (budget Intersect, action de gouvernance)",
               "Autres subventions",
-              "Investisseurs ou vente de jetons",
+              "Investisseurs ou vente de tokens",
               "Autre"
             ]
           },
