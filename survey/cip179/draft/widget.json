@@ -305,10 +305,10 @@
               "Obtenir de bons résultats des outils d'IA sur du code Cardano"
             ],
             "ratingLabels": [
-              "Gros problème pour moi",
-              "Pourrait être mieux, sans me limiter",
-              "Satisfaisant pour moi",
-              "Ne me concerne pas"
+              "Gros problème",
+              "Pourrait être mieux",
+              "Tout va bien",
+              "Non pertinent"
             ]
           },
           {
@@ -354,8 +354,8 @@
             "ratingLabels": [
               "Me débloquerait",
               "M'aiderait",
-              "Je n'en ai pas besoin",
-              "Je ne sais pas ce que c'est"
+              "Pas besoin",
+              "C'est quoi ?"
             ]
           },
           {

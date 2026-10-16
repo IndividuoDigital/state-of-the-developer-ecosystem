@@ -1105,16 +1105,16 @@
                         {
                           "list": [
                             {
-                              "string": "Big problem for me"
+                              "string": "Big problem"
                             },
                             {
-                              "string": "Could be better, doesn't limit me"
+                              "string": "Could be better"
                             },
                             {
-                              "string": "Good for me"
+                              "string": "All good"
                             },
                             {
-                              "string": "Not relevant to me"
+                              "string": "Not relevant"
                             }
                           ]
                         },
@@ -1264,10 +1264,10 @@
                               "string": "Would help"
                             },
                             {
-                              "string": "I don't need it"
+                              "string": "No need"
                             },
                             {
-                              "string": "I don't know what it is"
+                              "string": "What is it?"
                             }
                           ]
                         },

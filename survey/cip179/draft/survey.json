@@ -446,10 +446,10 @@
             "fr": "Dans quelle mesure chacun de ces points vous pose-t-il problème\u00a0?"
           },
           "columns": [
-            { "value": "big", "text": { "default": "Big problem for me", "fr": "Gros problème pour moi" } },
-            { "value": "could-be-better", "text": { "default": "Could be better, doesn't limit me", "fr": "Pourrait être mieux, sans me limiter" } },
-            { "value": "good", "text": { "default": "Good for me", "fr": "Satisfaisant pour moi" } },
-            { "value": "not-relevant", "text": { "default": "Not relevant to me", "fr": "Ne me concerne pas" } }
+            { "value": "big", "text": { "default": "Big problem", "fr": "Gros problème" } },
+            { "value": "could-be-better", "text": { "default": "Could be better", "fr": "Pourrait être mieux" } },
+            { "value": "good", "text": { "default": "All good", "fr": "Tout va bien" } },
+            { "value": "not-relevant", "text": { "default": "Not relevant", "fr": "Non pertinent" } }
           ],
           "rows": [
             { "value": "first-app", "text": { "default": "Getting a first application working end to end", "fr": "Faire fonctionner une première application de bout en bout" } },
@@ -520,8 +520,8 @@
           "columns": [
             { "value": "unblock", "text": { "default": "Would unblock me", "fr": "Me débloquerait" } },
             { "value": "help", "text": { "default": "Would help", "fr": "M'aiderait" } },
-            { "value": "not-needed", "text": { "default": "I don't need it", "fr": "Je n'en ai pas besoin" } },
-            { "value": "unknown", "text": { "default": "I don't know what it is", "fr": "Je ne sais pas ce que c'est" } }
+            { "value": "not-needed", "text": { "default": "No need", "fr": "Pas besoin" } },
+            { "value": "unknown", "text": { "default": "What is it?", "fr": "C'est quoi\u00a0?" } }
           ],
           "rows": [
             { "value": "throughput", "text": { "default": "Higher throughput", "fr": "Un débit plus élevé" } },
