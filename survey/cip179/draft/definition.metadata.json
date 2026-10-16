@@ -46,13 +46,10 @@
                 "v": {
                   "list": [
                     {
-                      "string": "About 10 minutes. Only the first question is required: skip any "
+                      "string": "About 15 minutes. The results tell tool builders, documentation "
                     },
                     {
-                      "string": "other. The results tell tool builders, documentation writers and"
-                    },
-                    {
-                      "string": " funders what to work on first."
+                      "string": "writers and funders what to work on first."
                     }
                   ]
                 }

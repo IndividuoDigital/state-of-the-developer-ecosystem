@@ -19,7 +19,7 @@
     "translations": {
       "fr": {
         "title": "Enquête 2026 auprès des développeurs Cardano",
-        "description": "Environ 10 minutes. Seule la première question est obligatoire : vous pouvez ignorer les autres. Les résultats montrent aux créateurs d'outils, aux auteurs de documentation et aux financeurs sur quoi travailler en priorité.",
+        "description": "Environ 15 minutes. Les résultats montrent aux créateurs d'outils, aux auteurs de documentation et aux financeurs sur quoi travailler en priorité.",
         "questions": [
           {
             "prompt": "Depuis combien de temps écrivez-vous ou déployez-vous des logiciels ?",

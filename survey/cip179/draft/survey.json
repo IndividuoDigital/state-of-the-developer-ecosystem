@@ -4,8 +4,8 @@
     "fr": "Enquête 2026 auprès des développeurs Cardano"
   },
   "description": {
-    "default": "About 10 minutes. Only the first question is required: skip any other. The results tell tool builders, documentation writers and funders what to work on first.",
-    "fr": "Environ 10 minutes. Seule la première question est obligatoire\u00a0: vous pouvez ignorer les autres. Les résultats montrent aux créateurs d'outils, aux auteurs de documentation et aux financeurs sur quoi travailler en priorité."
+    "default": "About 15 minutes. The results tell tool builders, documentation writers and funders what to work on first.",
+    "fr": "Environ 15 minutes. Les résultats montrent aux créateurs d'outils, aux auteurs de documentation et aux financeurs sur quoi travailler en priorité."
   },
   "triggers": [{ "type": "complete", "expression": "{experience} = 'not-a-developer'" }],
   "pages": [
