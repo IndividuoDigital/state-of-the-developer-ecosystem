@@ -48,6 +48,7 @@ $("#restart").addEventListener("click", () => {
   me.forgetAnswers();
   dispatch({ type: "start" });
 });
+$("#share").addEventListener("click", share);
 $("#return").addEventListener("click", () => dispatch({ type: "return" }));
 $("#back").addEventListener("click", () => dispatch({ type: "back" }));
 $("#publish").addEventListener("click", publish);
@@ -78,6 +79,19 @@ async function publish() {
   } catch (error) {
     console.error(error);
     dispatch({ type: "refused", code: error.code, txId: error.txId });
+  }
+}
+
+/** The site's link, in the device's share sheet, or else copied. */
+async function share() {
+  const url = location.origin + location.pathname;
+  try {
+    if (navigator.share) return await navigator.share({ title: document.title, url });
+    await navigator.clipboard.writeText(url);
+    $("#share").textContent = TEXTS[language].screened.copied;
+  } catch (error) {
+    // Closing the share sheet rejects too.
+    if (error.name !== "AbortError") console.error(error);
   }
 }
 

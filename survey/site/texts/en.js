@@ -27,6 +27,9 @@ export default {
   screened: {
     title: "Thank you",
     body: "This survey is for people who write or deploy software, so there is nothing more to answer.",
+    invite: "If you know Cardano developers, please share it with them: each answer helps.",
+    share: "Share the survey",
+    copied: "Link copied",
     back: "Back",
   },
 

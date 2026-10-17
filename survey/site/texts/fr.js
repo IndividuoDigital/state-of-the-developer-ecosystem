@@ -27,6 +27,9 @@ export default {
   screened: {
     title: "Merci",
     body: "Cette enquête s'adresse aux personnes qui écrivent ou déploient des logiciels : il n'y a rien d'autre à répondre.",
+    invite: "Si vous connaissez des développeurs Cardano, partagez-la avec eux : chaque réponse compte.",
+    share: "Partager l'enquête",
+    copied: "Lien copié",
     back: "Retour",
   },
 
