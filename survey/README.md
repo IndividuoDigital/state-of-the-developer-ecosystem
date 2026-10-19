@@ -55,7 +55,7 @@ That secret is Turnstile's test secret, which always passes (`2x0000000000000000
    - `mapping.json`: to turn responses back into `answers.json` rows.
 
    Commit them.
-5. `yarn test` checks that the 2025 answers go through CIP-179 responses and back.
+5. `yarn test` runs the tests of the builder, the site and the sponsor.
 
 ## Deploy
 
