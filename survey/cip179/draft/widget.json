@@ -1,16 +1,289 @@
 {
   "conditions": {
+    "2": {
+      "question": 1,
+      "anyOf": [
+        1
+      ]
+    },
     "3": {
-      "question": 2,
+      "question": 1,
+      "anyOf": [
+        2
+      ]
+    },
+    "4": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "5": {
+      "question": 4,
+      "anyOf": [
+        12
+      ]
+    },
+    "6": {
+      "question": 4,
+      "anyOf": [
+        4,
+        6,
+        7,
+        9
+      ]
+    },
+    "7": {
+      "question": 6,
+      "anyOf": [
+        15
+      ]
+    },
+    "8": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "9": {
+      "question": 8,
       "anyOf": [
         2,
         3
       ]
     },
+    "10": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "11": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "12": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "13": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "14": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "15": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "16": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "17": {
+      "question": 16,
+      "anyOf": [
+        10
+      ]
+    },
+    "18": {
+      "question": 16,
+      "anyOf": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
     "19": {
       "question": 18,
-      "noneOf": [
-        3
+      "anyOf": [
+        15
+      ]
+    },
+    "20": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "21": {
+      "question": 20,
+      "anyOf": [
+        23
+      ]
+    },
+    "22": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "23": {
+      "question": 22,
+      "anyOf": [
+        18
+      ]
+    },
+    "24": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "25": {
+      "question": 24,
+      "anyOf": [
+        17
+      ]
+    },
+    "26": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "27": {
+      "question": 26,
+      "anyOf": [
+        17
+      ]
+    },
+    "28": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "29": {
+      "question": 28,
+      "anyOf": [
+        9
+      ]
+    },
+    "30": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "31": {
+      "question": 30,
+      "anyOf": [
+        0,
+        1,
+        2
+      ]
+    },
+    "32": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "33": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "34": {
+      "question": 33,
+      "anyOf": [
+        17
+      ]
+    },
+    "35": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "36": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "37": {
+      "question": 36,
+      "anyOf": [
+        9
+      ]
+    },
+    "38": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "39": {
+      "question": 38,
+      "anyOf": [
+        10
+      ]
+    },
+    "40": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "41": {
+      "question": 4,
+      "anyOf": [
+        10
+      ]
+    },
+    "42": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "44": {
+      "question": 43,
+      "anyOf": [
+        9
+      ]
+    },
+    "46": {
+      "question": 45,
+      "anyOf": [
+        10
+      ]
+    },
+    "47": {
+      "question": 1,
+      "anyOf": [
+        0
+      ]
+    },
+    "48": {
+      "question": 47,
+      "anyOf": [
+        9
       ]
     }
   },
@@ -31,34 +304,71 @@
             ]
           },
           {
-            "prompt": "Que développez-vous sur Cardano ? Choisissez-en jusqu'à 4.",
+            "prompt": "Développez-vous sur Cardano aujourd'hui ?",
             "options": [
+              "Oui (y compris pour apprendre ou expérimenter)",
+              "Je l'ai fait, mais j'ai arrêté",
+              "J'y ai pensé, mais je ne m'y suis pas mis"
+            ]
+          },
+          {
+            "prompt": "Qu'est-ce qui vous a fait arrêter de développer sur Cardano ?"
+          },
+          {
+            "prompt": "Qu'est-ce qui vous a empêché de développer sur Cardano ?"
+          },
+          {
+            "prompt": "Sur quoi travaillez-vous ?",
+            "options": [
+              "Audits et sécurité",
+              "Protocole de base (nœud, ledger, consensus)",
+              "Outils de développement et bibliothèques",
+              "Économie et incitations (tokenomics, frais, récompenses)",
+              "Front-end et intégration des portefeuilles",
+              "Infrastructure (nœuds, indexeurs, API)",
+              "Applications mobiles",
+              "Code off-chain et back-end",
+              "Recherche",
+              "Smart contracts (code on-chain)",
+              "Opération d'un stake pool",
+              "Enseignement, documentation et communauté",
+              "Autre"
+            ]
+          },
+          {
+            "prompt": "Autre (précisez)"
+          },
+          {
+            "prompt": "Quels types d'applications développez-vous ? Choisissez-en jusqu'à 4.",
+            "options": [
+              "Comptabilité et reporting financier",
               "Agents d'IA",
-              "Ponts et interopérabilité",
+              "Bridges et interopérabilité",
               "DeFi",
-              "Outils de développement et infrastructure",
-              "Éducation et communauté",
               "Jeux",
               "Outils de gouvernance",
               "Identité",
-              "Layer 2 et passage à l'échelle",
+              "Layer 2",
               "NFT",
               "Oracles et données",
               "Paiements et stablecoins",
               "Confidentialité et zero-knowledge",
               "Actifs du monde réel",
-              "Staking et outils pour SPO",
+              "Chaîne d'approvisionnement et traçabilité",
               "Portefeuilles",
               "Autre"
             ]
+          },
+          {
+            "prompt": "Autre (précisez)"
           },
           {
             "prompt": "Où en est votre principal projet Cardano ?",
             "options": [
               "Apprentissage ou expérimentation",
               "En développement (testnet)",
-              "Lancé (mainnet, ou outil publié)",
-              "Lancé, et utilisé régulièrement"
+              "Déployé (mainnet, ou outil publié)",
+              "Déployé, et utilisé régulièrement"
             ]
           },
           {
@@ -125,7 +435,10 @@
               "Scalus",
               "Autre"
             ],
-            "noneLabel": "Aucun, je n'écris pas de code on-chain"
+            "noneLabel": "Aucun"
+          },
+          {
+            "prompt": "Autre (précisez)"
           },
           {
             "prompt": "Quelles bibliothèques on-chain avez-vous utilisées au cours des 12 derniers mois ? Sans compter les bibliothèques standard.",
@@ -148,6 +461,9 @@
               "Autre"
             ],
             "noneLabel": "Aucune"
+          },
+          {
+            "prompt": "Autre (précisez)"
           },
           {
             "prompt": "Quelles bibliothèques off-chain avez-vous utilisées au cours des 12 derniers mois ?",
@@ -180,6 +496,9 @@
             "noneLabel": "Aucune"
           },
           {
+            "prompt": "Autre (précisez)"
+          },
+          {
             "prompt": "Lesquels de ces logiciels avez-vous fait tourner vous-même au cours des 12 derniers mois, en local ou sur vos serveurs ?",
             "options": [
               "Adder",
@@ -203,6 +522,9 @@
               "Autre"
             ],
             "noneLabel": "Aucun"
+          },
+          {
+            "prompt": "Autre (précisez)"
           },
           {
             "prompt": "Quels outils de développement avez-vous utilisés au cours des 12 derniers mois ? Y compris les outils pour les stake pools.",
@@ -229,7 +551,10 @@
             "noneLabel": "Aucun"
           },
           {
-            "prompt": "Quels services d'API hébergés avez-vous utilisés au cours des 12 derniers mois ?",
+            "prompt": "Autre (précisez)"
+          },
+          {
+            "prompt": "Quels services d'API avez-vous utilisés au cours des 12 derniers mois ?",
             "options": [
               "AdaStat",
               "Blockfrost",
@@ -253,9 +578,12 @@
             "noneLabel": "Aucun"
           },
           {
+            "prompt": "Autre (précisez)"
+          },
+          {
             "prompt": "Comment avez-vous testé votre code Cardano au cours des 12 derniers mois ?",
             "options": [
-              "Tests unitaires des validateurs",
+              "Tests unitaires",
               "Tests basés sur les propriétés ou fuzzing",
               "Émulateur, sans nœud (Lucid Evolution, Scalus, sc-tools…)",
               "Devnet local (Yaci DevKit, cardano-testnet…)",
@@ -269,7 +597,7 @@
             "noneLabel": "Aucun"
           },
           {
-            "prompt": "Quels outils utilisez-vous qui manquent dans les listes ci-dessus ?"
+            "prompt": "Autre (précisez)"
           },
           {
             "prompt": "Au cours du dernier mois, à quelle fréquence avez-vous utilisé des outils d'IA pour coder sur Cardano ?",
@@ -286,13 +614,14 @@
           {
             "prompt": "Dans quelle mesure chacun de ces points vous pose-t-il problème ?",
             "options": [
-              "Faire fonctionner une première application de bout en bout",
               "Savoir quels outils et bibliothèques choisir",
               "Trouver une documentation à jour",
               "Trouver des exemples qui fonctionnent",
               "Obtenir de l'aide en cas de blocage",
               "Concevoir pour l'eUTxO (état, concurrence)",
-              "Le minimum d'ada par sortie (micropaiements, airdrops)",
+              "Composer avec d'autres protocoles (DEX, oracles…)",
+              "Limites d'exécution et de taille des transactions",
+              "Le minimum d'ada par UTxO (micropaiements, airdrops)",
               "Construire des transactions",
               "Se connecter aux portefeuilles (CIP-30, portefeuilles mobiles)",
               "Tester les validateurs",
@@ -302,7 +631,8 @@
               "Obtenir les données de la chaîne (indexeurs, API)",
               "Limites et tarifs des API hébergées",
               "Faire tourner l'infrastructure (nœud, indexeur)",
-              "Obtenir de bons résultats des outils d'IA sur du code Cardano"
+              "Obtenir de bons résultats des outils d'IA sur du code Cardano",
+              "Faire fonctionner une première application de bout en bout"
             ],
             "ratingLabels": [
               "Gros problème",
@@ -319,12 +649,11 @@
               "Cardano Blueprint",
               "Documentation Cardano (docs.cardano.org)",
               "Cardano Forum",
-              "CIPs",
+              "CIP, articles de recherche et spécifications",
               "Collègues et proches",
               "Portail des développeurs (developers.cardano.org)",
               "Discord",
               "Issues et discussions GitHub",
-              "Articles de recherche et spécifications",
               "Documentation des projets",
               "Reddit",
               "Code source",
@@ -336,12 +665,15 @@
             ]
           },
           {
+            "prompt": "Autre (précisez)"
+          },
+          {
             "prompt": "Dans quelle mesure chacun de ces points aiderait-il ce que vous développez ?",
             "options": [
               "Un débit plus élevé",
               "Une finalité plus rapide",
-              "Les layer 2",
-              "Des ponts vers d'autres chaînes",
+              "Des frais de transaction plus bas",
+              "Des bridges vers d'autres chaînes",
               "La vérification de preuves zero-knowledge on-chain",
               "Les transactions imbriquées",
               "Payer les frais avec d'autres tokens",
@@ -361,7 +693,7 @@
           {
             "prompt": "Au-delà de la technique, qu'est-ce qui freine le plus votre projet ? Choisissez-en jusqu'à 3.",
             "options": [
-              "Le coût des audits",
+              "Le coût et la disponibilité des audits",
               "Trouver des utilisateurs",
               "Le financement",
               "Se faire connaître (visibilité, marketing)",
@@ -373,6 +705,9 @@
               "Autre"
             ],
             "noneLabel": "Rien de notable"
+          },
+          {
+            "prompt": "Autre (précisez)"
           },
           {
             "prompt": "Pourquoi développez-vous sur Cardano ? Choisissez-en jusqu'à 3.",
@@ -391,6 +726,9 @@
             ]
           },
           {
+            "prompt": "Autre (précisez)"
+          },
+          {
             "prompt": "Quelle est la probabilité que vous développiez encore sur Cardano dans un an ?",
             "options": [
               "Très probable",
@@ -401,10 +739,24 @@
             ]
           },
           {
+            "prompt": "En tant qu'opérateur de stake pool, comment chacun de ces points se passe-t-il pour vous ?",
+            "options": [
+              "Être informé à temps des nouvelles versions du nœud",
+              "Comprendre ce que change une version",
+              "Tester une version avant le mainnet",
+              "Être consulté avant les hard forks et changements de paramètres"
+            ],
+            "ratingLabels": [
+              "Bien",
+              "Pourrait être mieux",
+              "Mal"
+            ]
+          },
+          {
             "prompt": "Quel outil, bibliothèque ou fonctionnalité qui n'existe pas encore vous aiderait le plus ?"
           },
           {
-            "prompt": "Qu'est-ce qui décrit le mieux votre rôle ? Les dernières questions portent sur vous : ignorez celles auxquelles vous préférez ne pas répondre.",
+            "prompt": "Lesquels de ces rôles vous décrivent ? Les dernières questions portent sur vous : ignorez celles auxquelles vous préférez ne pas répondre.",
             "options": [
               "Architecture ou direction technique",
               "Data science ou analyse de données",
@@ -417,6 +769,9 @@
               "Études",
               "Autre"
             ]
+          },
+          {
+            "prompt": "Autre (précisez)"
           },
           {
             "prompt": "Sur quels autres écosystèmes blockchain avez-vous développé ?",
@@ -433,7 +788,10 @@
               "Sui",
               "Autre"
             ],
-            "noneLabel": "Aucun, seulement Cardano"
+            "noneLabel": "Aucun"
+          },
+          {
+            "prompt": "Autre (précisez)"
           },
           {
             "prompt": "Comment votre travail sur Cardano est-il financé ? Choisissez-en jusqu'à 3, les principales sources.",
@@ -451,6 +809,9 @@
             ]
           },
           {
+            "prompt": "Autre (précisez)"
+          },
+          {
             "prompt": "Où vivez-vous ?",
             "options": [
               "Afrique",
@@ -462,6 +823,15 @@
               "Moyen-Orient et Asie centrale",
               "Europe",
               "Océanie"
+            ]
+          },
+          {
+            "prompt": "Combien de dApps Cardano, autres que les vôtres, avez-vous utilisées au cours des 12 derniers mois ?",
+            "options": [
+              "Aucune",
+              "1 ou 2",
+              "3 à 9",
+              "10 ou plus"
             ]
           },
           {
@@ -485,16 +855,16 @@
     }
   },
   "noneLabels": {
-    "10": "None, I don't write on-chain code",
-    "11": "None",
-    "12": "None",
-    "13": "None",
-    "14": "None",
-    "15": "None",
     "16": "None",
-    "23": "Nothing significant",
-    "28": "None, only Cardano",
-    "31": "None of these"
+    "18": "None",
+    "20": "None",
+    "22": "None",
+    "24": "None",
+    "26": "None",
+    "28": "None",
+    "36": "Nothing significant",
+    "45": "None",
+    "51": "None of these"
   },
   "maxTextBytes": 1024,
   "screening": [

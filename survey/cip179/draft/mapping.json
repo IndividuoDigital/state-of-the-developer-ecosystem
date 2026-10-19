@@ -10,13 +10,47 @@
       ]
     },
     {
+      "name": "building_on_cardano",
+      "values": [
+        "yes",
+        "stopped",
+        "considered"
+      ]
+    },
+    {
+      "name": "why_stopped"
+    },
+    {
+      "name": "why_not_started"
+    },
+    {
+      "name": "work",
+      "values": [
+        "audits",
+        "core",
+        "dev-tools",
+        "economics",
+        "front-ends",
+        "infrastructure",
+        "mobile",
+        "off-chain",
+        "research",
+        "smart-contracts",
+        "stake-pool",
+        "teaching",
+        "other"
+      ]
+    },
+    {
+      "name": "work-Comment"
+    },
+    {
       "name": "building",
       "values": [
+        "accounting",
         "ai-agents",
         "bridges",
         "defi",
-        "dev-tools",
-        "education",
         "gaming",
         "governance",
         "identity",
@@ -26,10 +60,13 @@
         "payments",
         "privacy",
         "real-world-assets",
-        "staking",
+        "supply-chain",
         "wallets",
         "other"
       ]
+    },
+    {
+      "name": "building-Comment"
     },
     {
       "name": "stage",
@@ -107,6 +144,9 @@
       "none": "none"
     },
     {
+      "name": "onchain_languages-Comment"
+    },
+    {
       "name": "onchain_libraries",
       "values": [
         "Aicone, with Sundae multisig (Aiken)",
@@ -127,6 +167,9 @@
         "other"
       ],
       "none": "none"
+    },
+    {
+      "name": "onchain_libraries-Comment"
     },
     {
       "name": "offchain_libraries",
@@ -159,6 +202,9 @@
       "none": "none"
     },
     {
+      "name": "offchain_libraries-Comment"
+    },
+    {
       "name": "self_hosted",
       "values": [
         "Adder",
@@ -182,6 +228,9 @@
         "other"
       ],
       "none": "none"
+    },
+    {
+      "name": "self_hosted-Comment"
     },
     {
       "name": "dev_tools",
@@ -208,6 +257,9 @@
       "none": "none"
     },
     {
+      "name": "dev_tools-Comment"
+    },
+    {
       "name": "hosted_apis",
       "values": [
         "AdaStat",
@@ -232,6 +284,9 @@
       "none": "none"
     },
     {
+      "name": "hosted_apis-Comment"
+    },
+    {
       "name": "testing",
       "values": [
         "unit",
@@ -248,7 +303,7 @@
       "none": "none"
     },
     {
-      "name": "missing_tools"
+      "name": "testing-Comment"
     },
     {
       "name": "ai_frequency",
@@ -265,12 +320,13 @@
     {
       "name": "problems",
       "values": [
-        "first-app",
         "choosing-tools",
         "documentation",
         "examples",
         "help",
         "eutxo-design",
+        "composition",
+        "limits",
         "minimum-ada",
         "building-transactions",
         "wallets",
@@ -281,7 +337,8 @@
         "chain-data",
         "api-limits",
         "infrastructure",
-        "ai"
+        "ai",
+        "first-app"
       ],
       "levels": [
         "big",
@@ -298,12 +355,11 @@
         "Cardano Blueprint",
         "cardano-docs",
         "Cardano Forum",
-        "CIPs",
+        "specifications",
         "colleagues",
         "developer-portal",
         "Discord",
         "github",
-        "papers",
         "project-docs",
         "Reddit",
         "source-code",
@@ -315,11 +371,14 @@
       ]
     },
     {
+      "name": "answer_sources-Comment"
+    },
+    {
       "name": "roadmap",
       "values": [
         "throughput",
         "finality",
-        "layer-2",
+        "lower-fees",
         "bridges",
         "zero-knowledge",
         "nested-transactions",
@@ -354,6 +413,9 @@
       "none": "none"
     },
     {
+      "name": "blockers-Comment"
+    },
+    {
       "name": "motives",
       "values": [
         "curiosity",
@@ -370,6 +432,9 @@
       ]
     },
     {
+      "name": "motives-Comment"
+    },
+    {
       "name": "retention",
       "values": [
         "very-likely",
@@ -377,6 +442,20 @@
         "not-sure",
         "unlikely",
         "very-unlikely"
+      ]
+    },
+    {
+      "name": "spo_cycle",
+      "values": [
+        "release-news",
+        "release-changes",
+        "release-testing",
+        "being-heard"
+      ],
+      "levels": [
+        "works-well",
+        "could-be-better",
+        "poorly"
       ]
     },
     {
@@ -398,6 +477,9 @@
       ]
     },
     {
+      "name": "role-Comment"
+    },
+    {
       "name": "other_chains",
       "values": [
         "Algorand",
@@ -415,6 +497,9 @@
       "none": "none"
     },
     {
+      "name": "other_chains-Comment"
+    },
+    {
       "name": "funding",
       "values": [
         "unfunded",
@@ -430,6 +515,9 @@
       ]
     },
     {
+      "name": "funding-Comment"
+    },
+    {
       "name": "region",
       "values": [
         "africa",
@@ -441,6 +529,15 @@
         "middle-east",
         "europe",
         "oceania"
+      ]
+    },
+    {
+      "name": "dapps_used",
+      "values": [
+        "none",
+        "1-2",
+        "3-9",
+        "10-plus"
       ]
     },
     {

@@ -71,7 +71,7 @@
                   "int": 5
                 },
                 "v": {
-                  "int": 1455
+                  "int": 1457
                 }
               },
               {
@@ -124,13 +124,182 @@
                     {
                       "list": [
                         {
-                          "int": 2
+                          "int": 1
                         },
                         {
-                          "string": "What are you building on Cardano? Choose up to 4."
+                          "string": "Do you build on Cardano today?"
                         },
                         {
                           "list": [
+                            {
+                              "string": "Yes (including learning or experimenting)"
+                            },
+                            {
+                              "string": "I did, but I stopped"
+                            },
+                            {
+                              "string": "I considered it, but haven't built on it"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 1
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "string": "What made you stop building on Cardano?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "string": "What has kept you from building on Cardano?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "string": "What do you work on?"
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Audits and security"
+                            },
+                            {
+                              "string": "Core protocol (node, ledger, consensus)"
+                            },
+                            {
+                              "string": "Developer tools and libraries"
+                            },
+                            {
+                              "string": "Economics and incentive design (tokenomics, fees, rewards)"
+                            },
+                            {
+                              "string": "Front ends and wallet integration"
+                            },
+                            {
+                              "string": "Infrastructure (nodes, indexers, APIs)"
+                            },
+                            {
+                              "string": "Mobile apps"
+                            },
+                            {
+                              "string": "Off-chain code and back ends"
+                            },
+                            {
+                              "string": "Research"
+                            },
+                            {
+                              "string": "Smart contracts (on-chain code)"
+                            },
+                            {
+                              "string": "Stake pool operation"
+                            },
+                            {
+                              "string": "Teaching, documentation and community"
+                            },
+                            {
+                              "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 1
+                        },
+                        {
+                          "int": 13
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "string": "Other (please specify)"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 2
+                        },
+                        {
+                          "string": "What kinds of applications are you building? Choose up to 4."
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Accounting and financial reporting"
+                            },
                             {
                               "string": "AI agents"
                             },
@@ -139,12 +308,6 @@
                             },
                             {
                               "string": "DeFi"
-                            },
-                            {
-                              "string": "Developer tools and infrastructure"
-                            },
-                            {
-                              "string": "Education and community"
                             },
                             {
                               "string": "Gaming"
@@ -156,7 +319,7 @@
                               "string": "Identity"
                             },
                             {
-                              "string": "Layer 2s and scaling"
+                              "string": "Layer 2s"
                             },
                             {
                               "string": "NFTs"
@@ -174,7 +337,7 @@
                               "string": "Real-world assets"
                             },
                             {
-                              "string": "Staking and SPO tools"
+                              "string": "Supply chain and traceability"
                             },
                             {
                               "string": "Wallets"
@@ -189,6 +352,33 @@
                         },
                         {
                           "int": 4
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "string": "Other (please specify)"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -492,6 +682,33 @@
                     {
                       "list": [
                         {
+                          "int": 0
+                        },
+                        {
+                          "string": "Other (please specify)"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
                           "int": 2
                         },
                         {
@@ -561,6 +778,33 @@
                         },
                         {
                           "int": 16
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "string": "Other (please specify)"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -659,6 +903,33 @@
                     {
                       "list": [
                         {
+                          "int": 0
+                        },
+                        {
+                          "string": "Other (please specify)"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
                           "int": 2
                         },
                         {
@@ -737,6 +1008,33 @@
                         },
                         {
                           "int": 19
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "string": "Other (please specify)"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -824,6 +1122,33 @@
                     {
                       "list": [
                         {
+                          "int": 0
+                        },
+                        {
+                          "string": "Other (please specify)"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
                           "int": 2
                         },
                         {
@@ -898,6 +1223,33 @@
                     {
                       "list": [
                         {
+                          "int": 0
+                        },
+                        {
+                          "string": "Other (please specify)"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
                           "int": 2
                         },
                         {
@@ -906,7 +1258,7 @@
                         {
                           "list": [
                             {
-                              "string": "Unit tests of validators"
+                              "string": "Unit tests"
                             },
                             {
                               "string": "Property-based tests or fuzzing"
@@ -951,7 +1303,7 @@
                           "int": 0
                         },
                         {
-                          "string": "Which tools do you use that are missing from the lists above?"
+                          "string": "Other (please specify)"
                         },
                         {
                           "list": [
@@ -1050,9 +1402,6 @@
                         {
                           "list": [
                             {
-                              "string": "Getting a first application working end to end"
-                            },
-                            {
                               "string": "Knowing which tools and libraries to choose"
                             },
                             {
@@ -1066,6 +1415,12 @@
                             },
                             {
                               "string": "Designing for eUTxO (state, concurrency)"
+                            },
+                            {
+                              "string": "Composing with other protocols (DEXes, oracles…)"
+                            },
+                            {
+                              "string": "Execution budget and transaction size limits"
                             },
                             {
                               "string": "Minimum ada in each output (micropayments, airdrops)"
@@ -1099,6 +1454,9 @@
                             },
                             {
                               "string": "Getting good results from AI tools on Cardano code"
+                            },
+                            {
+                              "string": "Getting a first application working end to end"
                             }
                           ]
                         },
@@ -1156,7 +1514,7 @@
                               "string": "Cardano Forum"
                             },
                             {
-                              "string": "CIPs"
+                              "string": "CIPs, papers and specifications"
                             },
                             {
                               "string": "Colleagues and friends"
@@ -1169,9 +1527,6 @@
                             },
                             {
                               "string": "GitHub issues and discussions"
-                            },
-                            {
-                              "string": "Papers and specifications"
                             },
                             {
                               "string": "Project documentation"
@@ -1210,6 +1565,33 @@
                     {
                       "list": [
                         {
+                          "int": 0
+                        },
+                        {
+                          "string": "Other (please specify)"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
                           "int": 6
                         },
                         {
@@ -1224,7 +1606,7 @@
                               "string": "Faster finality"
                             },
                             {
-                              "string": "Layer 2s"
+                              "string": "Lower transaction fees"
                             },
                             {
                               "string": "Bridges to other chains"
@@ -1294,7 +1676,7 @@
                         {
                           "list": [
                             {
-                              "string": "Cost of audits"
+                              "string": "Cost and availability of audits"
                             },
                             {
                               "string": "Finding users"
@@ -1330,6 +1712,33 @@
                         },
                         {
                           "int": 3
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "string": "Other (please specify)"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1389,6 +1798,33 @@
                     {
                       "list": [
                         {
+                          "int": 0
+                        },
+                        {
+                          "string": "Other (please specify)"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
                           "int": 1
                         },
                         {
@@ -1419,6 +1855,55 @@
                               "string": "Very unlikely"
                             }
                           ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 6
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "As a stake pool operator, how well does each of these work for y"
+                            },
+                            {
+                              "string": "ou?"
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Hearing about node releases in time"
+                            },
+                            {
+                              "string": "Understanding what a release changes"
+                            },
+                            {
+                              "string": "Testing a release before mainnet"
+                            },
+                            {
+                              "string": "Being heard before hard forks and parameter changes"
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "Works well"
+                            },
+                            {
+                              "string": "Could be better"
+                            },
+                            {
+                              "string": "Poorly"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 0
                         }
                       ]
                     },
@@ -1459,15 +1944,15 @@
                     {
                       "list": [
                         {
-                          "int": 1
+                          "int": 2
                         },
                         {
                           "list": [
                             {
-                              "string": "Which best describes your role? The last questions are about you"
+                              "string": "Which of these describe your role? The last questions are about "
                             },
                             {
-                              "string": ": skip any you'd rather not answer."
+                              "string": "you: skip any you'd rather not answer."
                             }
                           ]
                         },
@@ -1502,6 +1987,39 @@
                             },
                             {
                               "string": "Other"
+                            }
+                          ]
+                        },
+                        {
+                          "int": 1
+                        },
+                        {
+                          "int": 10
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "string": "Other (please specify)"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
                             }
                           ]
                         }
@@ -1557,6 +2075,33 @@
                         },
                         {
                           "int": 11
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 0
+                        },
+                        {
+                          "string": "Other (please specify)"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1620,6 +2165,33 @@
                     {
                       "list": [
                         {
+                          "int": 0
+                        },
+                        {
+                          "string": "Other (please specify)"
+                        },
+                        {
+                          "list": [
+                            {
+                              "list": [
+                                {
+                                  "string": "https://cardano-foundation.github.io/state-of-the-developer-ecos"
+                                },
+                                {
+                                  "string": "ystem/survey/cip179/free-text.schema.json"
+                                }
+                              ]
+                            },
+                            {
+                              "bytes": "d59ae5f91542b2b70fd5fe267efbb520d5cb83786ef2cac2cd5286ac446b6240"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
                           "int": 1
                         },
                         {
@@ -1653,6 +2225,39 @@
                             },
                             {
                               "string": "Oceania"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "list": [
+                        {
+                          "int": 1
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "How many Cardano dApps, other than your own, have you used in th"
+                            },
+                            {
+                              "string": "e last 12 months?"
+                            }
+                          ]
+                        },
+                        {
+                          "list": [
+                            {
+                              "string": "None"
+                            },
+                            {
+                              "string": "1 or 2"
+                            },
+                            {
+                              "string": "3 to 9"
+                            },
+                            {
+                              "string": "10 or more"
                             }
                           ]
                         }

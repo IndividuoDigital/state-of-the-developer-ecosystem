@@ -17,7 +17,7 @@
           "name": "experience",
           "title": {
             "default": "How long have you been writing or deploying software?",
-            "fr": "Depuis combien de temps écrivez-vous ou déployez-vous des logiciels\u00a0?"
+            "fr": "Depuis combien de temps écrivez-vous ou déployez-vous des logiciels ?"
           },
           "isRequired": true,
           "choices": [
@@ -29,11 +29,68 @@
           ]
         },
         {
+          "type": "radiogroup",
+          "name": "building_on_cardano",
+          "title": {
+            "default": "Do you build on Cardano today?",
+            "fr": "Développez-vous sur Cardano aujourd'hui ?"
+          },
+          "isRequired": true,
+          "choices": [
+            { "value": "yes", "text": { "default": "Yes (including learning or experimenting)", "fr": "Oui (y compris pour apprendre ou expérimenter)" } },
+            { "value": "stopped", "text": { "default": "I did, but I stopped", "fr": "Je l'ai fait, mais j'ai arrêté" } },
+            { "value": "considered", "text": { "default": "I considered it, but haven't built on it", "fr": "J'y ai pensé, mais je ne m'y suis pas mis" } }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "why_stopped",
+          "visibleIf": "{building_on_cardano} = 'stopped'",
+          "title": {
+            "default": "What made you stop building on Cardano?",
+            "fr": "Qu'est-ce qui vous a fait arrêter de développer sur Cardano ?"
+          }
+        },
+        {
+          "type": "comment",
+          "name": "why_not_started",
+          "visibleIf": "{building_on_cardano} = 'considered'",
+          "title": {
+            "default": "What has kept you from building on Cardano?",
+            "fr": "Qu'est-ce qui vous a empêché de développer sur Cardano ?"
+          }
+        },
+        {
+          "type": "checkbox",
+          "name": "work",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "What do you work on?",
+            "fr": "Sur quoi travaillez-vous ?"
+          },
+          "choices": [
+            { "value": "audits", "text": { "default": "Audits and security", "fr": "Audits et sécurité" } },
+            { "value": "core", "text": { "default": "Core protocol (node, ledger, consensus)", "fr": "Protocole de base (nœud, ledger, consensus)" } },
+            { "value": "dev-tools", "text": { "default": "Developer tools and libraries", "fr": "Outils de développement et bibliothèques" } },
+            { "value": "economics", "text": { "default": "Economics and incentive design (tokenomics, fees, rewards)", "fr": "Économie et incitations (tokenomics, frais, récompenses)" } },
+            { "value": "front-ends", "text": { "default": "Front ends and wallet integration", "fr": "Front-end et intégration des portefeuilles" } },
+            { "value": "infrastructure", "text": { "default": "Infrastructure (nodes, indexers, APIs)", "fr": "Infrastructure (nœuds, indexeurs, API)" } },
+            { "value": "mobile", "text": { "default": "Mobile apps", "fr": "Applications mobiles" } },
+            { "value": "off-chain", "text": { "default": "Off-chain code and back ends", "fr": "Code off-chain et back-end" } },
+            { "value": "research", "text": { "default": "Research", "fr": "Recherche" } },
+            { "value": "smart-contracts", "text": { "default": "Smart contracts (on-chain code)", "fr": "Smart contracts (code on-chain)" } },
+            { "value": "stake-pool", "text": { "default": "Stake pool operation", "fr": "Opération d'un stake pool" } },
+            { "value": "teaching", "text": { "default": "Teaching, documentation and community", "fr": "Enseignement, documentation et communauté" } }
+          ],
+          "showOtherItem": true
+        },
+        {
           "type": "checkbox",
           "name": "building",
+          "visibleIf": "{work} anyof ['front-ends', 'mobile', 'off-chain', 'smart-contracts']",
           "title": {
-            "default": "What are you building on Cardano?",
-            "fr": "Que développez-vous sur Cardano\u00a0?"
+            "default": "What kinds of applications are you building?",
+            "fr": "Quels types d'applications développez-vous ?"
           },
           "description": {
             "default": "Choose up to 4.",
@@ -41,37 +98,37 @@
           },
           "maxSelectedChoices": 4,
           "choices": [
+            { "value": "accounting", "text": { "default": "Accounting and financial reporting", "fr": "Comptabilité et reporting financier" } },
             { "value": "ai-agents", "text": { "default": "AI agents", "fr": "Agents d'IA" } },
-            { "value": "bridges", "text": { "default": "Bridges and interoperability", "fr": "Ponts et interopérabilité" } },
+            { "value": "bridges", "text": { "default": "Bridges and interoperability", "fr": "Bridges et interopérabilité" } },
             { "value": "defi", "text": "DeFi" },
-            { "value": "dev-tools", "text": { "default": "Developer tools and infrastructure", "fr": "Outils de développement et infrastructure" } },
-            { "value": "education", "text": { "default": "Education and community", "fr": "Éducation et communauté" } },
             { "value": "gaming", "text": { "default": "Gaming", "fr": "Jeux" } },
             { "value": "governance", "text": { "default": "Governance tools", "fr": "Outils de gouvernance" } },
             { "value": "identity", "text": { "default": "Identity", "fr": "Identité" } },
-            { "value": "layer-2", "text": { "default": "Layer 2s and scaling", "fr": "Layer 2 et passage à l'échelle" } },
+            { "value": "layer-2", "text": { "default": "Layer 2s", "fr": "Layer 2" } },
             { "value": "nfts", "text": { "default": "NFTs", "fr": "NFT" } },
             { "value": "oracles", "text": { "default": "Oracles and data", "fr": "Oracles et données" } },
             { "value": "payments", "text": { "default": "Payments and stablecoins", "fr": "Paiements et stablecoins" } },
             { "value": "privacy", "text": { "default": "Privacy and zero-knowledge", "fr": "Confidentialité et zero-knowledge" } },
             { "value": "real-world-assets", "text": { "default": "Real-world assets", "fr": "Actifs du monde réel" } },
-            { "value": "staking", "text": { "default": "Staking and SPO tools", "fr": "Staking et outils pour SPO" } },
-            { "value": "wallets", "text": { "default": "Wallets", "fr": "Portefeuilles" } },
-            { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
-          ]
+            { "value": "supply-chain", "text": { "default": "Supply chain and traceability", "fr": "Chaîne d'approvisionnement et traçabilité" } },
+            { "value": "wallets", "text": { "default": "Wallets", "fr": "Portefeuilles" } }
+          ],
+          "showOtherItem": true
         },
         {
           "type": "radiogroup",
           "name": "stage",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "How far along is your main Cardano project?",
-            "fr": "Où en est votre principal projet Cardano\u00a0?"
+            "fr": "Où en est votre principal projet Cardano ?"
           },
           "choices": [
             { "value": "learning", "text": { "default": "Learning or experimenting", "fr": "Apprentissage ou expérimentation" } },
             { "value": "development", "text": { "default": "In development (testnet)", "fr": "En développement (testnet)" } },
-            { "value": "released", "text": { "default": "Released (mainnet, or a published tool)", "fr": "Lancé (mainnet, ou outil publié)" } },
-            { "value": "users", "text": { "default": "Released, with regular users", "fr": "Lancé, et utilisé régulièrement" } }
+            { "value": "released", "text": { "default": "Released (mainnet, or a published tool)", "fr": "Déployé (mainnet, ou outil publié)" } },
+            { "value": "users", "text": { "default": "Released, with regular users", "fr": "Déployé, et utilisé régulièrement" } }
           ]
         },
         {
@@ -80,7 +137,7 @@
           "visibleIf": "{stage} anyof ['released', 'users']",
           "title": {
             "default": "Where can we find this project (website or repository link)?",
-            "fr": "Où peut-on trouver ce projet (lien vers le site web ou le dépôt)\u00a0?"
+            "fr": "Où peut-on trouver ce projet (lien vers le site web ou le dépôt) ?"
           },
           "description": {
             "default": "This link is public and ties all your answers to this project.",
@@ -90,9 +147,10 @@
         {
           "type": "radiogroup",
           "name": "started",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "When did you start building on Cardano?",
-            "fr": "Quand avez-vous commencé à développer sur Cardano\u00a0?"
+            "fr": "Quand avez-vous commencé à développer sur Cardano ?"
           },
           "choices": [
             "2026",
@@ -105,9 +163,10 @@
         {
           "type": "radiogroup",
           "name": "weekly_hours",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "In a typical week, how much time do you spend building on Cardano?",
-            "fr": "Lors d'une semaine type, combien de temps passez-vous à développer sur Cardano\u00a0?"
+            "fr": "Lors d'une semaine type, combien de temps passez-vous à développer sur Cardano ?"
           },
           "choices": [
             { "value": "under-5", "text": { "default": "Less than 5 hours", "fr": "Moins de 5 heures" } },
@@ -124,9 +183,10 @@
         {
           "type": "radiogroup",
           "name": "satisfaction",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "Overall, how satisfied are you with building on Cardano?",
-            "fr": "Dans l'ensemble, comment jugez-vous votre expérience de développement sur Cardano\u00a0?"
+            "fr": "Dans l'ensemble, comment jugez-vous votre expérience de développement sur Cardano ?"
           },
           "choices": [
             { "value": "very-satisfied", "text": { "default": "Very satisfied", "fr": "Très satisfaisante" } },
@@ -139,9 +199,10 @@
         {
           "type": "radiogroup",
           "name": "trend",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "Compared with a year ago, building on Cardano is:",
-            "fr": "Par rapport à il y a un an, développer sur Cardano est\u00a0:"
+            "fr": "Par rapport à il y a un an, développer sur Cardano est :"
           },
           "choices": [
             { "value": "much-easier", "text": { "default": "Much easier", "fr": "Beaucoup plus facile" } },
@@ -155,17 +216,19 @@
         {
           "type": "comment",
           "name": "best",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "What is the best thing about building on Cardano?",
-            "fr": "Quel est le meilleur aspect du développement sur Cardano\u00a0?"
+            "fr": "Quel est le meilleur aspect du développement sur Cardano ?"
           }
         },
         {
           "type": "comment",
           "name": "most_painful",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "What is the most painful thing about building on Cardano?",
-            "fr": "Quel est l'aspect le plus pénible du développement sur Cardano\u00a0?"
+            "fr": "Quel est l'aspect le plus pénible du développement sur Cardano ?"
           }
         }
       ]
@@ -176,9 +239,10 @@
         {
           "type": "checkbox",
           "name": "onchain_languages",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "Which languages have you used for on-chain code in the last 12 months?",
-            "fr": "Quels langages avez-vous utilisés pour du code on-chain au cours des 12 derniers mois\u00a0?"
+            "fr": "Quels langages avez-vous utilisés pour du code on-chain au cours des 12 derniers mois ?"
           },
           "choices": [
             "Aiken",
@@ -190,21 +254,22 @@
             "Plinth (Plutus-Tx)",
             "Plu-ts",
             "Plutarch",
-            "Scalus",
-            { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
+            "Scalus"
           ],
+          "showOtherItem": true,
           "showNoneItem": true,
           "noneText": {
-            "default": "None, I don't write on-chain code",
-            "fr": "Aucun, je n'écris pas de code on-chain"
+            "default": "None",
+            "fr": "Aucun"
           }
         },
         {
           "type": "checkbox",
           "name": "onchain_libraries",
+          "visibleIf": "{onchain_languages} anyof ['Aiken', 'Helios', 'JuLC', 'Marlowe', 'OpShin', 'Pebble', 'Plinth (Plutus-Tx)', 'Plu-ts', 'Plutarch', 'Scalus', 'other']",
           "title": {
             "default": "Which on-chain libraries have you used in the last 12 months?",
-            "fr": "Quelles bibliothèques on-chain avez-vous utilisées au cours des 12 derniers mois\u00a0?"
+            "fr": "Quelles bibliothèques on-chain avez-vous utilisées au cours des 12 derniers mois ?"
           },
           "description": {
             "default": "Not counting standard libraries.",
@@ -225,9 +290,9 @@
             "catalyst-onchain-libs (Plutarch)",
             "Liqwid libs (Plutarch)",
             "Ply (Plutarch)",
-            "Design Patterns (Scalus)",
-            { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
+            "Design Patterns (Scalus)"
           ],
+          "showOtherItem": true,
           "showNoneItem": true,
           "noneText": {
             "default": "None",
@@ -237,9 +302,10 @@
         {
           "type": "checkbox",
           "name": "offchain_libraries",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "Which off-chain libraries have you used in the last 12 months?",
-            "fr": "Quelles bibliothèques off-chain avez-vous utilisées au cours des 12 derniers mois\u00a0?"
+            "fr": "Quelles bibliothèques off-chain avez-vous utilisées au cours des 12 derniers mois ?"
           },
           "choices": [
             "Chrysalis (.NET)",
@@ -264,9 +330,9 @@
             "Dexter (TypeScript)",
             "Evolution SDK (TypeScript)",
             "Lucid (TypeScript)",
-            "Mesh (TypeScript)",
-            { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
+            "Mesh (TypeScript)"
           ],
+          "showOtherItem": true,
           "showNoneItem": true,
           "noneText": {
             "default": "None",
@@ -276,9 +342,10 @@
         {
           "type": "checkbox",
           "name": "self_hosted",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "Which of these have you run yourself in the last 12 months, locally or on your servers?",
-            "fr": "Lesquels de ces logiciels avez-vous fait tourner vous-même au cours des 12 derniers mois, en local ou sur vos serveurs\u00a0?"
+            "fr": "Lesquels de ces logiciels avez-vous fait tourner vous-même au cours des 12 derniers mois, en local ou sur vos serveurs ?"
           },
           "choices": [
             "Adder",
@@ -298,9 +365,9 @@
             "Oura",
             "Scrolls",
             "Yaci DevKit",
-            "Yaci Store",
-            { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
+            "Yaci Store"
           ],
+          "showOtherItem": true,
           "showNoneItem": true,
           "noneText": {
             "default": "None",
@@ -310,9 +377,10 @@
         {
           "type": "checkbox",
           "name": "dev_tools",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "Which developer tools have you used in the last 12 months?",
-            "fr": "Quels outils de développement avez-vous utilisés au cours des 12 derniers mois\u00a0?"
+            "fr": "Quels outils de développement avez-vous utilisés au cours des 12 derniers mois ?"
           },
           "description": {
             "default": "Including stake pool tools.",
@@ -335,9 +403,9 @@
             "offchain-metadata-tools",
             "Sorbet",
             { "value": "SPO scripts (gitmachtl)", "text": { "default": "SPO scripts (gitmachtl)", "fr": "Scripts SPO (gitmachtl)" } },
-            "txtop",
-            { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
+            "txtop"
           ],
+          "showOtherItem": true,
           "showNoneItem": true,
           "noneText": {
             "default": "None",
@@ -347,9 +415,10 @@
         {
           "type": "checkbox",
           "name": "hosted_apis",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "Which hosted API services have you used in the last 12 months?",
-            "fr": "Quels services d'API hébergés avez-vous utilisés au cours des 12 derniers mois\u00a0?"
+            "fr": "Quels services d'API avez-vous utilisés au cours des 12 derniers mois ?"
           },
           "choices": [
             "AdaStat",
@@ -368,9 +437,9 @@
             "Pyth",
             "SteelSwap",
             "TapTools",
-            "Token registry",
-            { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
+            "Token registry"
           ],
+          "showOtherItem": true,
           "showNoneItem": true,
           "noneText": {
             "default": "None",
@@ -380,12 +449,13 @@
         {
           "type": "checkbox",
           "name": "testing",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "How have you tested your Cardano code in the last 12 months?",
-            "fr": "Comment avez-vous testé votre code Cardano au cours des 12 derniers mois\u00a0?"
+            "fr": "Comment avez-vous testé votre code Cardano au cours des 12 derniers mois ?"
           },
           "choices": [
-            { "value": "unit", "text": { "default": "Unit tests of validators", "fr": "Tests unitaires des validateurs" } },
+            { "value": "unit", "text": { "default": "Unit tests", "fr": "Tests unitaires" } },
             { "value": "property", "text": { "default": "Property-based tests or fuzzing", "fr": "Tests basés sur les propriétés ou fuzzing" } },
             { "value": "emulator", "text": { "default": "Emulator, no node (Lucid Evolution, Scalus, sc-tools…)", "fr": "Émulateur, sans nœud (Lucid Evolution, Scalus, sc-tools…)" } },
             { "value": "devnet", "text": { "default": "Local devnet (Yaci DevKit, cardano-testnet…)", "fr": "Devnet local (Yaci DevKit, cardano-testnet…)" } },
@@ -393,9 +463,9 @@
             { "value": "mainnet", "text": { "default": "Mainnet, with small amounts", "fr": "Mainnet, avec de petits montants" } },
             { "value": "by-hand", "text": { "default": "By hand, with a wallet or the command line", "fr": "À la main, avec un portefeuille ou en ligne de commande" } },
             { "value": "formal-verification", "text": { "default": "Formal verification", "fr": "Vérification formelle" } },
-            { "value": "audit", "text": { "default": "Audit by another team", "fr": "Audit par une autre équipe" } },
-            { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
+            { "value": "audit", "text": { "default": "Audit by another team", "fr": "Audit par une autre équipe" } }
           ],
+          "showOtherItem": true,
           "showNoneItem": true,
           "noneText": {
             "default": "None",
@@ -403,19 +473,12 @@
           }
         },
         {
-          "type": "text",
-          "name": "missing_tools",
-          "title": {
-            "default": "Which tools do you use that are missing from the lists above?",
-            "fr": "Quels outils utilisez-vous qui manquent dans les listes ci-dessus\u00a0?"
-          }
-        },
-        {
           "type": "radiogroup",
           "name": "ai_frequency",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "In the past month, how often did you use AI coding tools for Cardano work?",
-            "fr": "Au cours du dernier mois, à quelle fréquence avez-vous utilisé des outils d'IA pour coder sur Cardano\u00a0?"
+            "fr": "Au cours du dernier mois, à quelle fréquence avez-vous utilisé des outils d'IA pour coder sur Cardano ?"
           },
           "choices": [
             { "value": "daily", "text": { "default": "Daily or nearly so", "fr": "Tous les jours ou presque" } },
@@ -427,10 +490,10 @@
         {
           "type": "text",
           "name": "ai_worst",
-          "visibleIf": "{ai_frequency} <> 'never'",
+          "visibleIf": "{ai_frequency} anyof ['daily', 'weekly', 'less']",
           "title": {
             "default": "Which Cardano language, library or tool does AI handle worst, and what goes wrong?",
-            "fr": "Quel langage, bibliothèque ou outil Cardano l'IA maîtrise-t-elle le moins bien, et qu'est-ce qui ne va pas\u00a0?"
+            "fr": "Quel langage, bibliothèque ou outil Cardano l'IA maîtrise-t-elle le moins bien, et qu'est-ce qui ne va pas ?"
           }
         }
       ]
@@ -441,9 +504,10 @@
         {
           "type": "matrix",
           "name": "problems",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "How much of a problem is each of these for you?",
-            "fr": "Dans quelle mesure chacun de ces points vous pose-t-il problème\u00a0?"
+            "fr": "Dans quelle mesure chacun de ces points vous pose-t-il problème ?"
           },
           "columns": [
             { "value": "big", "text": { "default": "Big problem", "fr": "Gros problème" } },
@@ -452,13 +516,14 @@
             { "value": "not-relevant", "text": { "default": "Not relevant", "fr": "Non pertinent" } }
           ],
           "rows": [
-            { "value": "first-app", "text": { "default": "Getting a first application working end to end", "fr": "Faire fonctionner une première application de bout en bout" } },
             { "value": "choosing-tools", "text": { "default": "Knowing which tools and libraries to choose", "fr": "Savoir quels outils et bibliothèques choisir" } },
             { "value": "documentation", "text": { "default": "Finding up-to-date documentation", "fr": "Trouver une documentation à jour" } },
             { "value": "examples", "text": { "default": "Finding working examples", "fr": "Trouver des exemples qui fonctionnent" } },
             { "value": "help", "text": { "default": "Getting help when I am stuck", "fr": "Obtenir de l'aide en cas de blocage" } },
             { "value": "eutxo-design", "text": { "default": "Designing for eUTxO (state, concurrency)", "fr": "Concevoir pour l'eUTxO (état, concurrence)" } },
-            { "value": "minimum-ada", "text": { "default": "Minimum ada in each output (micropayments, airdrops)", "fr": "Le minimum d'ada par sortie (micropaiements, airdrops)" } },
+            { "value": "composition", "text": { "default": "Composing with other protocols (DEXes, oracles…)", "fr": "Composer avec d'autres protocoles (DEX, oracles…)" } },
+            { "value": "limits", "text": { "default": "Execution budget and transaction size limits", "fr": "Limites d'exécution et de taille des transactions" } },
+            { "value": "minimum-ada", "text": { "default": "Minimum ada in each output (micropayments, airdrops)", "fr": "Le minimum d'ada par UTxO (micropaiements, airdrops)" } },
             { "value": "building-transactions", "text": { "default": "Building transactions", "fr": "Construire des transactions" } },
             { "value": "wallets", "text": { "default": "Connecting to wallets (CIP-30 issues, mobile wallets)", "fr": "Se connecter aux portefeuilles (CIP-30, portefeuilles mobiles)" } },
             { "value": "testing", "text": { "default": "Testing validators", "fr": "Tester les validateurs" } },
@@ -468,15 +533,17 @@
             { "value": "chain-data", "text": { "default": "Getting chain data (indexers, APIs)", "fr": "Obtenir les données de la chaîne (indexeurs, API)" } },
             { "value": "api-limits", "text": { "default": "Limits and pricing of hosted APIs", "fr": "Limites et tarifs des API hébergées" } },
             { "value": "infrastructure", "text": { "default": "Running infrastructure (node, indexer)", "fr": "Faire tourner l'infrastructure (nœud, indexeur)" } },
-            { "value": "ai", "text": { "default": "Getting good results from AI tools on Cardano code", "fr": "Obtenir de bons résultats des outils d'IA sur du code Cardano" } }
+            { "value": "ai", "text": { "default": "Getting good results from AI tools on Cardano code", "fr": "Obtenir de bons résultats des outils d'IA sur du code Cardano" } },
+            { "value": "first-app", "text": { "default": "Getting a first application working end to end", "fr": "Faire fonctionner une première application de bout en bout" } }
           ]
         },
         {
           "type": "checkbox",
           "name": "answer_sources",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "Where do you get answers to technical questions about Cardano?",
-            "fr": "Où trouvez-vous des réponses à vos questions techniques sur Cardano\u00a0?"
+            "fr": "Où trouvez-vous des réponses à vos questions techniques sur Cardano ?"
           },
           "description": {
             "default": "Choose up to 5, the ones you rely on most.",
@@ -489,21 +556,20 @@
             "Cardano Blueprint",
             { "value": "cardano-docs", "text": { "default": "Cardano docs (docs.cardano.org)", "fr": "Documentation Cardano (docs.cardano.org)" } },
             "Cardano Forum",
-            "CIPs",
+            { "value": "specifications", "text": { "default": "CIPs, papers and specifications", "fr": "CIP, articles de recherche et spécifications" } },
             { "value": "colleagues", "text": { "default": "Colleagues and friends", "fr": "Collègues et proches" } },
             { "value": "developer-portal", "text": { "default": "Developer portal (developers.cardano.org)", "fr": "Portail des développeurs (developers.cardano.org)" } },
             "Discord",
             { "value": "github", "text": { "default": "GitHub issues and discussions", "fr": "Issues et discussions GitHub" } },
-            { "value": "papers", "text": { "default": "Papers and specifications", "fr": "Articles de recherche et spécifications" } },
             { "value": "project-docs", "text": { "default": "Project documentation", "fr": "Documentation des projets" } },
             "Reddit",
             { "value": "source-code", "text": { "default": "Source code", "fr": "Code source" } },
             "Stack Exchange",
             "Telegram",
             { "value": "videos", "text": { "default": "Videos and courses", "fr": "Vidéos et cours" } },
-            "X (Twitter)",
-            { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
-          ]
+            "X (Twitter)"
+          ],
+          "showOtherItem": true
         }
       ]
     },
@@ -513,21 +579,22 @@
         {
           "type": "matrix",
           "name": "roadmap",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "How much would each of these help what you are building?",
-            "fr": "Dans quelle mesure chacun de ces points aiderait-il ce que vous développez\u00a0?"
+            "fr": "Dans quelle mesure chacun de ces points aiderait-il ce que vous développez ?"
           },
           "columns": [
             { "value": "unblock", "text": { "default": "Would unblock me", "fr": "Me débloquerait" } },
             { "value": "help", "text": { "default": "Would help", "fr": "M'aiderait" } },
             { "value": "not-needed", "text": { "default": "No need", "fr": "Pas besoin" } },
-            { "value": "unknown", "text": { "default": "What is it?", "fr": "C'est quoi\u00a0?" } }
+            { "value": "unknown", "text": { "default": "What is it?", "fr": "C'est quoi ?" } }
           ],
           "rows": [
             { "value": "throughput", "text": { "default": "Higher throughput", "fr": "Un débit plus élevé" } },
             { "value": "finality", "text": { "default": "Faster finality", "fr": "Une finalité plus rapide" } },
-            { "value": "layer-2", "text": { "default": "Layer 2s", "fr": "Les layer 2" } },
-            { "value": "bridges", "text": { "default": "Bridges to other chains", "fr": "Des ponts vers d'autres chaînes" } },
+            { "value": "lower-fees", "text": { "default": "Lower transaction fees", "fr": "Des frais de transaction plus bas" } },
+            { "value": "bridges", "text": { "default": "Bridges to other chains", "fr": "Des bridges vers d'autres chaînes" } },
             { "value": "zero-knowledge", "text": { "default": "Zero-knowledge proof verification on chain", "fr": "La vérification de preuves zero-knowledge on-chain" } },
             { "value": "nested-transactions", "text": { "default": "Nested transactions", "fr": "Les transactions imbriquées" } },
             { "value": "fee-tokens", "text": { "default": "Paying fees in other tokens", "fr": "Payer les frais avec d'autres tokens" } },
@@ -541,9 +608,10 @@
         {
           "type": "checkbox",
           "name": "blockers",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "Beyond technology, what holds your project back the most?",
-            "fr": "Au-delà de la technique, qu'est-ce qui freine le plus votre projet\u00a0?"
+            "fr": "Au-delà de la technique, qu'est-ce qui freine le plus votre projet ?"
           },
           "description": {
             "default": "Choose up to 3.",
@@ -551,7 +619,7 @@
           },
           "maxSelectedChoices": 3,
           "choices": [
-            { "value": "audits", "text": { "default": "Cost of audits", "fr": "Le coût des audits" } },
+            { "value": "audits", "text": { "default": "Cost and availability of audits", "fr": "Le coût et la disponibilité des audits" } },
             { "value": "users", "text": { "default": "Finding users", "fr": "Trouver des utilisateurs" } },
             { "value": "funding", "text": { "default": "Funding", "fr": "Le financement" } },
             { "value": "visibility", "text": { "default": "Getting noticed (visibility, marketing)", "fr": "Se faire connaître (visibilité, marketing)" } },
@@ -559,9 +627,9 @@
             { "value": "integrations", "text": { "default": "Integrations (exchanges, wallets, custodians)", "fr": "Les intégrations (exchanges, portefeuilles, dépositaires)" } },
             { "value": "time", "text": { "default": "Lack of time", "fr": "Le manque de temps" } },
             { "value": "legal", "text": { "default": "Legal and regulatory uncertainty", "fr": "L'incertitude juridique et réglementaire" } },
-            { "value": "liquidity", "text": { "default": "Liquidity on chain", "fr": "La liquidité on-chain" } },
-            { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
+            { "value": "liquidity", "text": { "default": "Liquidity on chain", "fr": "La liquidité on-chain" } }
           ],
+          "showOtherItem": true,
           "showNoneItem": true,
           "noneText": {
             "default": "Nothing significant",
@@ -571,9 +639,10 @@
         {
           "type": "checkbox",
           "name": "motives",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "Why do you build on Cardano?",
-            "fr": "Pourquoi développez-vous sur Cardano\u00a0?"
+            "fr": "Pourquoi développez-vous sur Cardano ?"
           },
           "description": {
             "default": "Choose up to 3.",
@@ -590,16 +659,17 @@
             { "value": "research", "text": { "default": "Research-driven approach", "fr": "Approche fondée sur la recherche" } },
             { "value": "security", "text": { "default": "Security and reliability of the chain", "fr": "Sécurité et fiabilité de la chaîne" } },
             { "value": "community", "text": { "default": "The community", "fr": "La communauté" } },
-            { "value": "eutxo", "text": { "default": "The eUTxO model and deterministic transactions", "fr": "Le modèle eUTxO et les transactions déterministes" } },
-            { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
-          ]
+            { "value": "eutxo", "text": { "default": "The eUTxO model and deterministic transactions", "fr": "Le modèle eUTxO et les transactions déterministes" } }
+          ],
+          "showOtherItem": true
         },
         {
           "type": "radiogroup",
           "name": "retention",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "How likely are you to still be building on Cardano a year from now?",
-            "fr": "Quelle est la probabilité que vous développiez encore sur Cardano dans un an\u00a0?"
+            "fr": "Quelle est la probabilité que vous développiez encore sur Cardano dans un an ?"
           },
           "choices": [
             { "value": "very-likely", "text": { "default": "Very likely", "fr": "Très probable" } },
@@ -610,11 +680,32 @@
           ]
         },
         {
+          "type": "matrix",
+          "name": "spo_cycle",
+          "visibleIf": "{work} anyof ['stake-pool']",
+          "title": {
+            "default": "As a stake pool operator, how well does each of these work for you?",
+            "fr": "En tant qu'opérateur de stake pool, comment chacun de ces points se passe-t-il pour vous ?"
+          },
+          "columns": [
+            { "value": "works-well", "text": { "default": "Works well", "fr": "Bien" } },
+            { "value": "could-be-better", "text": { "default": "Could be better", "fr": "Pourrait être mieux" } },
+            { "value": "poorly", "text": { "default": "Poorly", "fr": "Mal" } }
+          ],
+          "rows": [
+            { "value": "release-news", "text": { "default": "Hearing about node releases in time", "fr": "Être informé à temps des nouvelles versions du nœud" } },
+            { "value": "release-changes", "text": { "default": "Understanding what a release changes", "fr": "Comprendre ce que change une version" } },
+            { "value": "release-testing", "text": { "default": "Testing a release before mainnet", "fr": "Tester une version avant le mainnet" } },
+            { "value": "being-heard", "text": { "default": "Being heard before hard forks and parameter changes", "fr": "Être consulté avant les hard forks et changements de paramètres" } }
+          ]
+        },
+        {
           "type": "comment",
           "name": "wish",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "Which tool, library or feature that doesn't exist yet would help you the most?",
-            "fr": "Quel outil, bibliothèque ou fonctionnalité qui n'existe pas encore vous aiderait le plus\u00a0?"
+            "fr": "Quel outil, bibliothèque ou fonctionnalité qui n'existe pas encore vous aiderait le plus ?"
           }
         }
       ]
@@ -623,15 +714,15 @@
       "name": "about_you",
       "elements": [
         {
-          "type": "radiogroup",
+          "type": "checkbox",
           "name": "role",
           "title": {
-            "default": "Which best describes your role?",
-            "fr": "Qu'est-ce qui décrit le mieux votre rôle\u00a0?"
+            "default": "Which of these describe your role?",
+            "fr": "Lesquels de ces rôles vous décrivent ?"
           },
           "description": {
             "default": "The last questions are about you: skip any you'd rather not answer.",
-            "fr": "Les dernières questions portent sur vous\u00a0: ignorez celles auxquelles vous préférez ne pas répondre."
+            "fr": "Les dernières questions portent sur vous : ignorez celles auxquelles vous préférez ne pas répondre."
           },
           "choices": [
             { "value": "architect", "text": { "default": "Architect or technical lead", "fr": "Architecture ou direction technique" } },
@@ -642,16 +733,16 @@
             { "value": "manager", "text": { "default": "Product or project manager", "fr": "Gestion de produit ou de projet" } },
             { "value": "researcher", "text": { "default": "Researcher", "fr": "Recherche" } },
             { "value": "engineer", "text": { "default": "Software engineer", "fr": "Développement logiciel" } },
-            { "value": "student", "text": { "default": "Student", "fr": "Études" } },
-            { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
-          ]
+            { "value": "student", "text": { "default": "Student", "fr": "Études" } }
+          ],
+          "showOtherItem": true
         },
         {
           "type": "checkbox",
           "name": "other_chains",
           "title": {
             "default": "Which other blockchain ecosystems have you built on?",
-            "fr": "Sur quels autres écosystèmes blockchain avez-vous développé\u00a0?"
+            "fr": "Sur quels autres écosystèmes blockchain avez-vous développé ?"
           },
           "choices": [
             "Algorand",
@@ -663,21 +754,22 @@
             { "value": "evm", "text": { "default": "Ethereum L2s and other EVM chains", "fr": "L2 d'Ethereum et autres chaînes EVM" } },
             "Midnight",
             "Solana",
-            "Sui",
-            { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
+            "Sui"
           ],
+          "showOtherItem": true,
           "showNoneItem": true,
           "noneText": {
-            "default": "None, only Cardano",
-            "fr": "Aucun, seulement Cardano"
+            "default": "None",
+            "fr": "Aucun"
           }
         },
         {
           "type": "checkbox",
           "name": "funding",
+          "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
             "default": "How is your Cardano work funded?",
-            "fr": "Comment votre travail sur Cardano est-il financé\u00a0?"
+            "fr": "Comment votre travail sur Cardano est-il financé ?"
           },
           "description": {
             "default": "Choose up to 3, the main sources.",
@@ -693,16 +785,16 @@
             "Catalyst",
             { "value": "treasury", "text": { "default": "Treasury (Intersect budget, governance action)", "fr": "Trésorerie (budget Intersect, action de gouvernance)" } },
             { "value": "grants", "text": { "default": "Other grants", "fr": "Autres subventions" } },
-            { "value": "investors", "text": { "default": "Investors or token sale", "fr": "Investisseurs ou vente de tokens" } },
-            { "value": "other", "text": { "default": "Other", "fr": "Autre" } }
-          ]
+            { "value": "investors", "text": { "default": "Investors or token sale", "fr": "Investisseurs ou vente de tokens" } }
+          ],
+          "showOtherItem": true
         },
         {
           "type": "radiogroup",
           "name": "region",
           "title": {
             "default": "Where are you based?",
-            "fr": "Où vivez-vous\u00a0?"
+            "fr": "Où vivez-vous ?"
           },
           "choices": [
             { "value": "africa", "text": { "default": "Africa", "fr": "Afrique" } },
@@ -717,11 +809,25 @@
           ]
         },
         {
+          "type": "radiogroup",
+          "name": "dapps_used",
+          "title": {
+            "default": "How many Cardano dApps, other than your own, have you used in the last 12 months?",
+            "fr": "Combien de dApps Cardano, autres que les vôtres, avez-vous utilisées au cours des 12 derniers mois ?"
+          },
+          "choices": [
+            { "value": "none", "text": { "default": "None", "fr": "Aucune" } },
+            { "value": "1-2", "text": { "default": "1 or 2", "fr": "1 ou 2" } },
+            { "value": "3-9", "text": { "default": "3 to 9", "fr": "3 à 9" } },
+            { "value": "10-plus", "text": { "default": "10 or more", "fr": "10 ou plus" } }
+          ]
+        },
+        {
           "type": "checkbox",
           "name": "participation",
           "title": {
             "default": "Which of these did you do in the last 12 months?",
-            "fr": "Lesquelles de ces actions avez-vous faites au cours des 12 derniers mois\u00a0?"
+            "fr": "Lesquelles de ces actions avez-vous faites au cours des 12 derniers mois ?"
           },
           "choices": [
             { "value": "read-cip", "text": { "default": "Read or used a CIP", "fr": "Lu ou utilisé une CIP" } },
