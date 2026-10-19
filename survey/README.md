@@ -203,7 +203,7 @@ Before step 1, in `wrangler.jsonc`, set `SPONSOR_NETWORK` (`preprod` or `mainnet
 3. A submit screen: Turnstile, then the sponsor. A refusal is told there, and the answers are kept.
 4. A thank-you, with a link to the transaction.
 
-A survey past its end epoch, or cancelled, shows as closed. The page has its texts in nine languages (`site/texts/`, one file each, with the widget's texts for the languages the widget doesn't ship), and offers those the survey also has. The browser keeps the respondent's key, unsent answers and language, for each survey. It requests nothing from other sites before the submit screen.
+A survey past its end epoch, or cancelled, shows as closed. The page has its texts in nine languages (`site/texts/`, one file each, with the widget's texts for the languages the widget doesn't ship), and offers those the survey also has. A link can choose one: `?lang=es`. The browser keeps the respondent's key, unsent answers and language, for each survey. It requests nothing from other sites before the submit screen.
 
 **The sponsor.** The browser makes a key, and the response's credential is that key.
 

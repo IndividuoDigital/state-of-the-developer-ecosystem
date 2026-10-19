@@ -35,8 +35,10 @@ const challenge = turnstileChallenge("#challenge", built.turnstileSiteKey);
 // The languages the page and the survey both have.
 const { defaultLanguage, translations } = built.translations;
 const languages = Object.keys(TEXTS).filter((tag) => tag === defaultLanguage || Object.hasOwn(translations, tag));
+// A link can set the language: `?lang=es`.
+const linked = new URLSearchParams(location.search).get("lang");
 let language =
-  [me.get("language"), ...navigator.languages.map((tag) => tag.split("-")[0])].find((tag) => languages.includes(tag)) ??
+  [linked, me.get("language"), ...navigator.languages.map((tag) => tag.split("-")[0])].find((tag) => languages.includes(tag)) ??
   defaultLanguage;
 
 let state = start({ epoch: epochAt(built.network), endEpoch, submitted: me.submitted() });
@@ -48,6 +50,7 @@ $("#language").hidden = languages.length < 2;
 $("#language").addEventListener("change", () => {
   language = $("#language").value;
   me.set("language", language);
+  history.replaceState(history.state, "", link(language));
   show();
 });
 $("#start").addEventListener("click", () => dispatch({ type: "start" }));
@@ -87,6 +90,13 @@ async function publish() {
     console.error(error);
     dispatch({ type: "refused", code: error.code, txId: error.txId });
   }
+}
+
+/** The site's link in this language: `?lang=es`. */
+function link(tag) {
+  const url = new URL(location.pathname, location.origin);
+  url.searchParams.set("lang", tag);
+  return url.href;
 }
 
 /** The site's link, in the device's share sheet, or else copied. */
