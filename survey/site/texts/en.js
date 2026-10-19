@@ -10,6 +10,7 @@ export default {
   source: "Source code",
   results: "The results will be in the 2026 report. Until then, here is",
   previous: "the 2025 report",
+  period: ".",
 
   welcome: {
     until: (date) => `Open until ${date}.`,

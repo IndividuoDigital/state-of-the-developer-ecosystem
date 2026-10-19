@@ -11,10 +11,17 @@ import { fromDetailedJson } from "../cip179/metadatum.js";
 import { epochAt, epochEnd, transactionUrl } from "../cip179/network.js";
 import { fromHex, respondent, turnstileChallenge } from "../cip179/respondent.js";
 import { next, start } from "./flow.js";
+import de from "./texts/de.js";
 import en from "./texts/en.js";
+import es from "./texts/es.js";
 import fr from "./texts/fr.js";
+import it from "./texts/it.js";
+import ja from "./texts/ja.js";
+import pt from "./texts/pt.js";
+import vi from "./texts/vi.js";
+import zh from "./texts/zh.js";
 
-const TEXTS = { en, fr };
+const TEXTS = { en, fr, es, pt, it, de, ja, vi, zh };
 
 const $ = (selector) => document.querySelector(selector);
 

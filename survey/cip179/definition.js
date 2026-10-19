@@ -30,13 +30,18 @@ export const DEFAULT_LANGUAGE = "en";
 
 // Texts SurveyJS provides itself, for the locales we use.
 const BUILT_IN_TEXTS = {
-  other: { default: "Other", fr: "Autre", ja: "その他", vi: "Khác" },
-  none: { default: "None", fr: "Aucun", ja: "なし", vi: "Không có" },
+  other: { default: "Other", de: "Andere", es: "Otro", fr: "Autre", it: "Altro", ja: "その他", pt: "Outro", vi: "Khác", zh: "其他" },
+  none: { default: "None", de: "Keine", es: "Ninguno", fr: "Aucun", it: "Nessuno", ja: "なし", pt: "Nenhum", vi: "Không có", zh: "无" },
   otherComment: {
     default: "Other (please specify)",
+    de: "Andere (bitte angeben)",
+    es: "Otro (especifique)",
     fr: "Autre (précisez)",
+    it: "Altro (specificare)",
     ja: "その他（具体的に記入してください）",
+    pt: "Outro (especifique)",
     vi: "Khác (vui lòng ghi rõ)",
+    zh: "其他（请说明）",
   },
 };
 
