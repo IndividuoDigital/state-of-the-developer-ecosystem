@@ -198,7 +198,7 @@ Before step 1, in `wrangler.jsonc`, set `SPONSOR_NETWORK` (`preprod` or `mainnet
 
 **The site** (`site/flow.js`):
 
-1. A welcome screen, saying that answers are public and permanent. It also has the answers that end the survey there (SurveyJS "complete" triggers): nothing is recorded for them.
+1. A welcome screen, saying that answers are public and permanent. It also has the answers that end the survey there (SurveyJS "complete" triggers): nothing is recorded for them. And a reminder to answer later (`site/reminder.js`): a calendar file, a Google Calendar link, or an email to oneself.
 2. The questions, one per screen.
 3. A submit screen: Turnstile, then the sponsor. A refusal is told there, and the answers are kept.
 4. A thank-you, with a link to the transaction.

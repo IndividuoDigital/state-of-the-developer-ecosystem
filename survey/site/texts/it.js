@@ -23,6 +23,12 @@ export default {
     start: "Inizia",
     continue: "Continua",
     restart: "Ricomincia",
+    remind: "Non hai tempo adesso? Aggiungi un promemoria:",
+    calendar: "App calendario",
+    google: "Google Calendar",
+    email: "Email",
+    // In the reminder, before the closing date.
+    minutes: "Circa 15 minuti.",
   },
 
   screened: {

@@ -23,6 +23,12 @@ export default {
     start: "开始",
     continue: "继续",
     restart: "重新开始",
+    remind: "现在没时间？添加提醒：",
+    calendar: "日历应用",
+    google: "Google 日历",
+    email: "邮件",
+    // In the reminder, before the closing date.
+    minutes: "大约需要 15 分钟。",
   },
 
   screened: {

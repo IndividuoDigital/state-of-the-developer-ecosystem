@@ -23,6 +23,12 @@ export default {
     start: "開始",
     continue: "続ける",
     restart: "最初からやり直す",
+    remind: "今は時間がありませんか？リマインダーを追加：",
+    calendar: "カレンダーアプリ",
+    google: "Google カレンダー",
+    email: "メール",
+    // In the reminder, before the closing date.
+    minutes: "所要時間は約15分です。",
   },
 
   screened: {

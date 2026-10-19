@@ -23,6 +23,12 @@ export default {
     start: "Start",
     continue: "Continue",
     restart: "Start over",
+    remind: "No time right now? Add a reminder:",
+    calendar: "Calendar app",
+    google: "Google Calendar",
+    email: "Email",
+    // In the reminder, before the closing date.
+    minutes: "About 15 minutes.",
   },
 
   screened: {

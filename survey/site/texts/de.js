@@ -23,6 +23,12 @@ export default {
     start: "Starten",
     continue: "Weiter",
     restart: "Von vorn beginnen",
+    remind: "Gerade keine Zeit? Fügen Sie eine Erinnerung hinzu:",
+    calendar: "Kalender-App",
+    google: "Google Kalender",
+    email: "E-Mail",
+    // In the reminder, before the closing date.
+    minutes: "Etwa 15 Minuten.",
   },
 
   screened: {

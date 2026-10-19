@@ -23,6 +23,12 @@ export default {
     start: "Bắt đầu",
     continue: "Tiếp tục",
     restart: "Làm lại từ đầu",
+    remind: "Bây giờ chưa có thời gian? Thêm lời nhắc:",
+    calendar: "Ứng dụng lịch",
+    google: "Google Lịch",
+    email: "Email",
+    // In the reminder, before the closing date.
+    minutes: "Khoảng 15 phút.",
   },
 
   screened: {

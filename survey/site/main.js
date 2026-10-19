@@ -11,6 +11,7 @@ import { fromDetailedJson } from "../cip179/metadatum.js";
 import { epochAt, epochEnd, transactionUrl } from "../cip179/network.js";
 import { fromHex, respondent, turnstileChallenge } from "../cip179/respondent.js";
 import { next, start } from "./flow.js";
+import { googleCalendarUrl, icsFile, mailtoUrl, reminderTime } from "./reminder.js";
 import de from "./texts/de.js";
 import en from "./texts/en.js";
 import es from "./texts/es.js";
@@ -58,6 +59,13 @@ $("#restart").addEventListener("click", () => {
   me.forgetAnswers();
   dispatch({ type: "start" });
 });
+$("#calendar").addEventListener("click", () => {
+  const file = new Blob([icsFile({ ...reminder(), uid: `${crypto.randomUUID()}@${location.host}`, stamp: Date.now() })], {
+    type: "text/calendar",
+  });
+  URL.revokeObjectURL($("#calendar").href);
+  $("#calendar").href = URL.createObjectURL(file);
+});
 $("#share").addEventListener("click", share);
 $("#return").addEventListener("click", () => dispatch({ type: "return" }));
 $("#back").addEventListener("click", () => dispatch({ type: "back" }));
@@ -99,6 +107,20 @@ function link(tag) {
   return url.href;
 }
 
+/** The reminder to answer later, in the current language. */
+function reminder() {
+  const close = epochEnd(built.network, endEpoch);
+  const date = new Intl.DateTimeFormat(language, { dateStyle: "long", timeStyle: "short" }).format(close);
+  const { welcome } = TEXTS[language];
+  const url = link(language);
+  return {
+    ...reminderTime(Date.now(), close),
+    title: translations[language]?.title ?? definition.title,
+    details: `${welcome.minutes} ${welcome.until(date)}\n\n${url}`,
+    url,
+  };
+}
+
 /** The site's link, in the device's share sheet, or else copied. */
 async function share() {
   const url = location.origin + location.pathname;
@@ -133,6 +155,9 @@ function show() {
       $("#until").textContent = texts.welcome.until(closing.format(epochEnd(built.network, endEpoch)));
       $("#start").textContent = unsent ? texts.welcome.continue : texts.welcome.start;
       $("#restart").hidden = !unsent;
+      // The calendar file is made when clicked.
+      $("#google").href = googleCalendarUrl(reminder());
+      $("#email").href = mailtoUrl(reminder());
       // The answers that end the survey: nothing is recorded for them.
       $("#exits").replaceChildren(
         ...built.exits.map((label) => {

@@ -181,6 +181,15 @@ select:focus-visible {
   border-color: var(--ink);
 }
 
+.remind {
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+}
+
+.remind a {
+  white-space: nowrap;
+}
+
 #progress {
   margin: 1rem 0 0;
   color: var(--muted);
