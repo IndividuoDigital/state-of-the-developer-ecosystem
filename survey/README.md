@@ -2,7 +2,7 @@
 
 Since 2026, the survey's responses are published on the Cardano chain, as a [CIP-179](https://github.com/mpizenberg/Tessera/blob/main/frontend/cip-179.md) survey. Respondents don't need a wallet: a sponsor, run by Cloudflare Pages, pays their transactions. The 2025 site is in the git history; its questions and answers are in [2025/data/](../2025/data).
 
-Run everything from `survey/`, after `yarn`.
+Run everything from `survey/`, after `yarn`. To review a translation, see [TRANSLATIONS.md](TRANSLATIONS.md).
 
 - [Try it locally](#try-it-locally)
 - [Edit the survey](#edit-the-survey)
