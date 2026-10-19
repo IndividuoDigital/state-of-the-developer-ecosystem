@@ -14,7 +14,7 @@ export default {
 
   welcome: {
     until: (date) => `Abierta hasta el ${date}.`,
-    noWallet: "No necesitas wallet ni ada: nosotros pagamos la comisión de la transacción.",
+    noWallet: "No necesitas wallet ni ada: tus respuestas se publicarán.",
     kept: "Tus respuestas se quedan en este navegador hasta que las publiques, así que puedes parar y volver más tarde.",
     publicTitle: "Tus respuestas serán públicas",
     public:

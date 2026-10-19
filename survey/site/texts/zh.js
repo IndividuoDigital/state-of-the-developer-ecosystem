@@ -14,7 +14,7 @@ export default {
 
   welcome: {
     until: (date) => `开放至 ${date}。`,
-    noWallet: "你不需要钱包或 ada：交易手续费由我们支付。",
+    noWallet: "你不需要钱包或 ada：你的回答会被发布。",
     kept: "在你发布之前，你的回答会一直保存在这个浏览器里，所以你可以随时中断，稍后再回来。",
     publicTitle: "你的回答将会公开",
     public:

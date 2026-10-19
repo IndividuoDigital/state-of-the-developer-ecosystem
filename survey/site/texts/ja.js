@@ -14,7 +14,7 @@ export default {
 
   welcome: {
     until: (date) => `${date}まで回答できます。`,
-    noWallet: "ウォレットもadaも必要ありません。トランザクション手数料は私たちが負担します。",
+    noWallet: "ウォレットもadaも必要ありません。そのまま回答を公開できます。",
     kept: "回答は公開するまでこのブラウザに保存されるので、途中でやめて後で再開できます。",
     publicTitle: "回答は公開されます",
     public:

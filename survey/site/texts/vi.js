@@ -14,7 +14,7 @@ export default {
 
   welcome: {
     until: (date) => `Mở đến ${date}.`,
-    noWallet: "Bạn không cần ví hay ada: chúng tôi trả phí giao dịch.",
+    noWallet: "Bạn không cần ví hay ada: câu trả lời của bạn sẽ được công bố.",
     kept: "Câu trả lời của bạn được lưu trong trình duyệt này cho đến khi bạn công bố, nên bạn có thể dừng lại và quay lại sau.",
     publicTitle: "Câu trả lời của bạn sẽ công khai",
     public:
