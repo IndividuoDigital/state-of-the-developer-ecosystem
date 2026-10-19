@@ -14,6 +14,8 @@ export default {
 
   welcome: {
     until: (date) => `${date}まで回答できます。`,
+    // In the last week; `rel` is "in 3 days", "in 5 hours"…
+    closes: (rel, when) => (when ? `${rel}に締め切ります（${when}）。` : `${rel}に締め切ります。`),
     noWallet: "ウォレットもadaも必要ありません。そのまま回答を公開できます。",
     kept: "回答は公開するまでこのブラウザに保存されるので、途中でやめて後で再開できます。",
     publicTitle: "回答は公開されます",
@@ -44,6 +46,8 @@ export default {
     title: "回答を公開する",
     answered: (count) => `${count}問に回答しました。`,
     notice: "一度公開すると、回答はCardanoブロックチェーン上で公開され、変更も削除もできません。",
+    // In the last day.
+    soon: (rel) => `アンケートは${rel}に締め切られます。それまでに回答を公開してください。`,
     publish: "回答を公開する",
     back: "回答に戻る",
     sending: "公開中…",

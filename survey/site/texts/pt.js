@@ -14,6 +14,8 @@ export default {
 
   welcome: {
     until: (date) => `Aberta até ${date}.`,
+    // In the last week; `rel` is "in 3 days", "in 5 hours"…
+    closes: (rel, when) => (when ? `Fecha ${rel}: ${when}.` : `Fecha ${rel}.`),
     noWallet: "Você não precisa de carteira nem de ada: suas respostas serão publicadas.",
     kept: "Suas respostas ficam neste navegador até você publicá-las, então você pode parar e voltar depois.",
     publicTitle: "Suas respostas serão públicas",
@@ -44,6 +46,8 @@ export default {
     title: "Publicar suas respostas",
     answered: (count) => (count === 1 ? "Você respondeu a 1 pergunta." : `Você respondeu a ${count} perguntas.`),
     notice: "Depois de publicadas, suas respostas ficam públicas na blockchain Cardano e não podem ser alteradas nem removidas.",
+    // In the last day.
+    soon: (rel) => `A pesquisa fecha ${rel}: publique suas respostas antes disso.`,
     publish: "Publicar minhas respostas",
     back: "Voltar às minhas respostas",
     sending: "Publicando…",

@@ -14,6 +14,8 @@ export default {
 
   welcome: {
     until: (date) => `开放至 ${date}。`,
+    // In the last week; `rel` is "in 3 days", "in 5 hours"…
+    closes: (rel, when) => (when ? `${rel}截止（${when}）。` : `${rel}截止。`),
     noWallet: "你不需要钱包或 ada：你的回答会被发布。",
     kept: "在你发布之前，你的回答会一直保存在这个浏览器里，所以你可以随时中断，稍后再回来。",
     publicTitle: "你的回答将会公开",
@@ -44,6 +46,8 @@ export default {
     title: "发布你的回答",
     answered: (count) => `你回答了 ${count} 个问题。`,
     notice: "一旦发布，你的回答就会公开在 Cardano 区块链上，无法修改或删除。",
+    // In the last day.
+    soon: (rel) => `问卷将于${rel}截止：请在此之前发布你的回答。`,
     publish: "发布我的回答",
     back: "返回我的回答",
     sending: "发布中…",

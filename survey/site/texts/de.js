@@ -14,6 +14,8 @@ export default {
 
   welcome: {
     until: (date) => `Geöffnet bis ${date}.`,
+    // In the last week; `rel` is "in 3 days", "in 5 hours"…
+    closes: (rel, when) => (when ? `Endet ${rel}: ${when}.` : `Endet ${rel}.`),
     noWallet: "Sie brauchen weder eine Wallet noch ada: Ihre Antworten werden veröffentlicht.",
     kept: "Ihre Antworten bleiben in diesem Browser, bis Sie sie veröffentlichen. Sie können also unterbrechen und später weitermachen.",
     publicTitle: "Ihre Antworten werden öffentlich sein",
@@ -44,6 +46,8 @@ export default {
     title: "Ihre Antworten veröffentlichen",
     answered: (count) => (count === 1 ? "Sie haben 1 Frage beantwortet." : `Sie haben ${count} Fragen beantwortet.`),
     notice: "Nach der Veröffentlichung sind Ihre Antworten auf der Cardano-Blockchain öffentlich und können nicht mehr geändert oder gelöscht werden.",
+    // In the last day.
+    soon: (rel) => `Die Umfrage endet ${rel}: Veröffentlichen Sie Ihre Antworten bis dahin.`,
     publish: "Meine Antworten veröffentlichen",
     back: "Zurück zu meinen Antworten",
     sending: "Wird veröffentlicht…",

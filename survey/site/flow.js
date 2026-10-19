@@ -7,6 +7,9 @@
 //      ↓                                                      or a problem
 //   screened
 //
+// The survey's end, while the page is open, closes any screen but the thanks;
+// while sending, the sponsor's reply decides.
+//
 // The submit screen has three steps: "review" before publishing, "sending",
 // and "failed" with the problem to tell.
 
@@ -36,6 +39,7 @@ const FROM = {
   attempt: ["submit"],
   published: ["submit"],
   refused: ["submit"],
+  ended: ["welcome", "screened", "questions", "submit"],
 };
 
 /**
@@ -69,6 +73,8 @@ export function next(state, event) {
       return sending ? { ...state, attempt: event.attempt } : state;
     case "published":
       return sending ? { screen: "thanks", txId: event.txId } : state;
+    case "ended":
+      return sending ? state : { screen: "closed" };
     case "refused":
       if (!sending) return state;
       // This browser's key already had a response published: these answers

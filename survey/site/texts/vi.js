@@ -14,6 +14,8 @@ export default {
 
   welcome: {
     until: (date) => `Mở đến ${date}.`,
+    // In the last week; `rel` is "in 3 days", "in 5 hours"…
+    closes: (rel, when) => (when ? `Đóng ${rel}: ${when}.` : `Đóng ${rel}.`),
     noWallet: "Bạn không cần ví hay ada: câu trả lời của bạn sẽ được công bố.",
     kept: "Câu trả lời của bạn được lưu trong trình duyệt này cho đến khi bạn công bố, nên bạn có thể dừng lại và quay lại sau.",
     publicTitle: "Câu trả lời của bạn sẽ công khai",
@@ -44,6 +46,8 @@ export default {
     title: "Công bố câu trả lời của bạn",
     answered: (count) => `Bạn đã trả lời ${count} câu hỏi.`,
     notice: "Sau khi công bố, câu trả lời của bạn sẽ công khai trên blockchain Cardano và không thể sửa hay xóa.",
+    // In the last day.
+    soon: (rel) => `Khảo sát đóng ${rel}: hãy công bố câu trả lời của bạn trước thời điểm đó.`,
     publish: "Công bố câu trả lời của tôi",
     back: "Quay lại câu trả lời",
     sending: "Đang công bố…",

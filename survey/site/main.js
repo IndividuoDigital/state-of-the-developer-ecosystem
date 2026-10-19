@@ -25,10 +25,14 @@ import zh from "./texts/zh.js";
 const TEXTS = { en, fr, es, pt, it, de, ja, vi, zh };
 
 const $ = (selector) => document.querySelector(selector);
+const MINUTE = 60 * 1000;
+const HOUR = 60 * MINUTE;
+const DAY = 24 * HOUR;
 
 const [definition] = decodeMetadata(new Map([[17n, fromDetailedJson(built.definition)]])).definitions;
 const [txId, index] = built.survey.split("#");
 const endEpoch = Number(definition.endEpoch);
+const close = epochEnd(built.network, endEpoch);
 // Each survey has its own respondent: key, answers and language.
 const me = respondent(`survey.${built.survey}.`);
 const challenge = turnstileChallenge("#challenge", built.turnstileSiteKey);
@@ -72,6 +76,12 @@ $("#back").addEventListener("click", () => dispatch({ type: "back" }));
 $("#publish").addEventListener("click", publish);
 show();
 $("#loading").remove();
+// The countdown to the close, and the close itself, while the page is open.
+const ticking = setInterval(() => {
+  if (Date.now() < close) return showClosing();
+  clearInterval(ticking);
+  dispatch({ type: "ended" });
+}, MINUTE);
 
 // ----------------------------------------------------------------------------
 
@@ -107,9 +117,33 @@ function link(tag) {
   return url.href;
 }
 
+/**
+ * When the survey closes, and in the last week, how soon: in days, then in
+ * the last day in hours, and in the last hour in minutes.
+ */
+function closing() {
+  const left = close - Date.now();
+  const at = (options) => new Intl.DateTimeFormat(language, options).format(close);
+  const relative = new Intl.RelativeTimeFormat(language);
+  if (left > 7 * DAY) return { when: at({ dateStyle: "long", timeStyle: "short" }) };
+  if (left >= DAY) return { in: relative.format(Math.round(left / DAY), "day"), when: at({ dateStyle: "long", timeStyle: "short" }) };
+  if (left >= HOUR) return { in: relative.format(Math.round(left / HOUR), "hour"), when: at({ timeStyle: "short" }) };
+  return { in: relative.format(Math.max(1, Math.ceil(left / MINUTE)), "minute") };
+}
+
+/** The close, on the welcome, and in its last day on the submit screen. */
+function showClosing() {
+  const { welcome, submit } = TEXTS[language];
+  const soon = closing();
+  const lastDay = close - Date.now() < DAY;
+  $("#until").textContent = soon.in ? welcome.closes(soon.in, soon.when) : welcome.until(soon.when);
+  $("#until").classList.toggle("soon", Boolean(soon.in));
+  $("#closing").hidden = !lastDay;
+  $("#closing").textContent = lastDay ? submit.soon(soon.in) : "";
+}
+
 /** The reminder to answer later, in the current language. */
 function reminder() {
-  const close = epochEnd(built.network, endEpoch);
   const date = new Intl.DateTimeFormat(language, { dateStyle: "long", timeStyle: "short" }).format(close);
   const { welcome } = TEXTS[language];
   const url = link(language);
@@ -149,10 +183,9 @@ function show() {
   switch (state.screen) {
     case "welcome": {
       const unsent = me.stash.get(`${txId}:${index}`) !== undefined;
-      const closing = new Intl.DateTimeFormat(language, { dateStyle: "long", timeStyle: "short" });
       $("#welcome .survey-title").textContent = survey.title ?? definition.title;
       $("#welcome .survey-description").textContent = survey.description ?? definition.description;
-      $("#until").textContent = texts.welcome.until(closing.format(epochEnd(built.network, endEpoch)));
+      showClosing();
       $("#start").textContent = unsent ? texts.welcome.continue : texts.welcome.start;
       $("#restart").hidden = !unsent;
       // The calendar file is made when clicked.
@@ -177,6 +210,7 @@ function show() {
       const sending = state.step === "sending";
       challenge.load();
       $("#answered").textContent = texts.submit.answered(state.answered);
+      showClosing();
       $("#problem").hidden = state.step !== "failed";
       $("#problem").textContent = state.step === "failed" ? texts.submit.problems[state.problem] : "";
       $("#publish").textContent = state.step === "failed" ? texts.submit.retry : texts.submit.publish;

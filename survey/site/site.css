@@ -181,6 +181,12 @@ select:focus-visible {
   border-color: var(--ink);
 }
 
+/* The survey closes within a week. */
+.soon {
+  font-weight: 600;
+  color: #9a3412;
+}
+
 .remind {
   margin: 1.5rem 0 0;
   color: var(--muted);

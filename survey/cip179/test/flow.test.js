@@ -81,3 +81,14 @@ test("an event out of place changes nothing", () => {
   const thanks = { screen: "thanks", txId: TX };
   assert.equal(next(thanks, { type: "start" }), thanks);
 });
+
+test("the survey's end closes the page, but not while sending", () => {
+  const ended = { type: "ended" };
+  for (const state of [after(), after({ type: "leave" }), after({ type: "start" }), after({ type: "start" }, finish)]) {
+    assert.deepEqual(next(state, ended), { screen: "closed" }, state.screen);
+  }
+  const sending = after({ type: "start" }, finish, publish);
+  assert.equal(next(sending, ended), sending);
+  const thanks = { screen: "thanks", txId: TX };
+  assert.equal(next(thanks, ended), thanks);
+});

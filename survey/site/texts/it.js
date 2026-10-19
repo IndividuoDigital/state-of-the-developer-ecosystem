@@ -14,6 +14,8 @@ export default {
 
   welcome: {
     until: (date) => `Aperto fino al ${date}.`,
+    // In the last week; `rel` is "in 3 days", "in 5 hours"…
+    closes: (rel, when) => (when ? `Chiude ${rel}: ${when}.` : `Chiude ${rel}.`),
     noWallet: "Non ti servono un wallet né ada: le tue risposte verranno pubblicate.",
     kept: "Le tue risposte restano in questo browser finché non le pubblichi, così puoi fermarti e tornare più tardi.",
     publicTitle: "Le tue risposte saranno pubbliche",
@@ -44,6 +46,8 @@ export default {
     title: "Pubblica le tue risposte",
     answered: (count) => (count === 1 ? "Hai risposto a 1 domanda." : `Hai risposto a ${count} domande.`),
     notice: "Una volta pubblicate, le tue risposte sono pubbliche sulla blockchain Cardano e non possono essere modificate né rimosse.",
+    // In the last day.
+    soon: (rel) => `Il sondaggio chiude ${rel}: pubblica le tue risposte prima.`,
     publish: "Pubblica le mie risposte",
     back: "Torna alle mie risposte",
     sending: "Pubblicazione…",
