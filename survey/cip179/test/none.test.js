@@ -50,9 +50,15 @@ test("a multi-select's None is its None box, with no option", () => {
 });
 
 test("without its own text, the box reads as SurveyJS's None", () => {
-  const { noneLabels, translations } = build([{ ...chains, noneText: undefined }]);
+  const title = { default: chains.title, fr: "Sur quelles autres chaînes avez-vous développé ?" };
+  const { noneLabels, translations } = build([{ ...chains, title, noneText: undefined }]);
   assert.deepEqual(noneLabels, { 0: "None" });
   assert.equal(translations.translations.fr.questions[0].noneLabel, "Aucun");
+});
+
+test("SurveyJS's own texts don't add a language to the survey", () => {
+  const { translations } = build([{ ...chains, noneText: undefined, showOtherItem: true }]);
+  assert.deepEqual(translations.translations, {});
 });
 
 test("a single choice keeps None as an option", () => {

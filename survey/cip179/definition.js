@@ -30,10 +30,11 @@ export const DEFAULT_LANGUAGE = "en";
 
 // Texts SurveyJS provides itself, for the locales we use.
 const BUILT_IN_TEXTS = {
-  other: { default: "Other", ja: "その他", vi: "Khác" },
+  other: { default: "Other", fr: "Autre", ja: "その他", vi: "Khác" },
   none: { default: "None", fr: "Aucun", ja: "なし", vi: "Không có" },
   otherComment: {
     default: "Other (please specify)",
+    fr: "Autre (précisez)",
     ja: "その他（具体的に記入してください）",
     vi: "Khác (vui lòng ghi rõ)",
   },
@@ -419,8 +420,11 @@ function joinTexts(a, b) {
 }
 
 function buildTranslations(survey, entries) {
+  // The survey's languages are those of its own texts: SurveyJS's built-in
+  // texts come in more languages, and only fill in the survey's.
+  const builtIn = new Set(Object.values(BUILT_IN_TEXTS));
   const all = new Set();
-  const collect = (text) => locales(text).forEach((l) => all.add(l));
+  const collect = (text) => builtIn.has(text) || locales(text).forEach((l) => all.add(l));
   collect(survey.title);
   collect(survey.description);
   for (const entry of entries) {
