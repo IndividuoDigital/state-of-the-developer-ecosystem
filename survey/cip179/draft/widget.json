@@ -290,6 +290,1130 @@
   "translations": {
     "defaultLanguage": "en",
     "translations": {
+      "de": {
+        "title": "Cardano-Entwicklerumfrage 2026",
+        "description": "Etwa 15 Minuten. Die Ergebnisse zeigen Tool-Entwicklern, Dokumentationsautoren und Geldgebern, woran zuerst gearbeitet werden sollte.",
+        "questions": [
+          {
+            "prompt": "Wie lange schreiben oder deployen Sie schon Software?",
+            "options": [
+              "Weniger als 2 Jahre",
+              "2 bis 4 Jahre",
+              "5 bis 9 Jahre",
+              "10 Jahre oder mehr"
+            ]
+          },
+          {
+            "prompt": "Entwickeln Sie heute auf Cardano?",
+            "options": [
+              "Ja (auch zum Lernen oder Experimentieren)",
+              "Früher ja, aber ich habe aufgehört",
+              "Ich habe es erwogen, aber nicht angefangen"
+            ]
+          },
+          {
+            "prompt": "Warum haben Sie aufgehört, auf Cardano zu entwickeln?"
+          },
+          {
+            "prompt": "Was hat Sie davon abgehalten, auf Cardano zu entwickeln?"
+          },
+          {
+            "prompt": "Woran arbeiten Sie?",
+            "options": [
+              "Audits und Sicherheit",
+              "Kernprotokoll (Node, Ledger, Konsens)",
+              "Entwicklertools und Bibliotheken",
+              "Ökonomie und Anreizdesign (Tokenomics, Gebühren, Rewards)",
+              "Frontends und Wallet-Integration",
+              "Infrastruktur (Nodes, Indexer, APIs)",
+              "Mobile Apps",
+              "Off-Chain-Code und Backends",
+              "Forschung",
+              "Smart Contracts (On-Chain-Code)",
+              "Betrieb eines Stake Pools",
+              "Lehre, Dokumentation und Community",
+              "Andere"
+            ]
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Welche Arten von Anwendungen entwickeln Sie? Wählen Sie bis zu 4.",
+            "options": [
+              "Buchhaltung und Finanzberichterstattung",
+              "KI-Agenten",
+              "Bridges und Interoperabilität",
+              "DeFi",
+              "Gaming",
+              "Governance-Tools",
+              "Identität",
+              "Layer 2",
+              "NFTs",
+              "Oracles und Daten",
+              "Zahlungen und Stablecoins",
+              "Privatsphäre und Zero-Knowledge",
+              "Real-World Assets",
+              "Lieferkette und Rückverfolgbarkeit",
+              "Wallets",
+              "Andere"
+            ]
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Wie weit ist Ihr wichtigstes Cardano-Projekt?",
+            "options": [
+              "Lernen oder Experimentieren",
+              "In Entwicklung (Testnet)",
+              "Veröffentlicht (Mainnet oder ein veröffentlichtes Tool)",
+              "Veröffentlicht, mit regelmäßigen Nutzern"
+            ]
+          },
+          {
+            "prompt": "Wo finden wir dieses Projekt (Link zur Website oder zum Repository)? Dieser Link ist öffentlich und verknüpft alle Ihre Antworten mit diesem Projekt."
+          },
+          {
+            "prompt": "Wann haben Sie angefangen, auf Cardano zu entwickeln?",
+            "options": [
+              "2026",
+              "2025",
+              "2023–2024",
+              "2021–2022",
+              "2020 oder früher"
+            ]
+          },
+          {
+            "prompt": "Wie viel Zeit verbringen Sie in einer typischen Woche mit der Entwicklung auf Cardano?",
+            "options": [
+              "Weniger als 5 Stunden",
+              "5 bis 19 Stunden",
+              "20 bis 34 Stunden",
+              "35 Stunden oder mehr"
+            ]
+          },
+          {
+            "prompt": "Wie zufrieden sind Sie insgesamt mit der Entwicklung auf Cardano?",
+            "options": [
+              "Sehr zufrieden",
+              "Zufrieden",
+              "Weder zufrieden noch unzufrieden",
+              "Unzufrieden",
+              "Sehr unzufrieden"
+            ]
+          },
+          {
+            "prompt": "Im Vergleich zu vor einem Jahr ist die Entwicklung auf Cardano:",
+            "options": [
+              "Viel einfacher",
+              "Etwas einfacher",
+              "Etwa gleich",
+              "Etwas schwieriger",
+              "Viel schwieriger",
+              "Vor einem Jahr habe ich noch nicht auf Cardano entwickelt"
+            ]
+          },
+          {
+            "prompt": "Was ist das Beste an der Entwicklung auf Cardano?"
+          },
+          {
+            "prompt": "Was ist das Mühsamste an der Entwicklung auf Cardano?"
+          },
+          {
+            "prompt": "Welche Sprachen haben Sie in den letzten 12 Monaten für On-Chain-Code verwendet?",
+            "options": [
+              "Aiken",
+              "Helios",
+              "JuLC",
+              "Marlowe",
+              "OpShin",
+              "Pebble",
+              "Plinth (Plutus-Tx)",
+              "Plu-ts",
+              "Plutarch",
+              "Scalus",
+              "Andere"
+            ],
+            "noneLabel": "Keine"
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Welche On-Chain-Bibliotheken haben Sie in den letzten 12 Monaten verwendet? Ohne Standardbibliotheken.",
+            "options": [
+              "Aicone, mit Sundae multisig (Aiken)",
+              "ak-381 (Aiken)",
+              "Assist (Aiken)",
+              "Design Patterns (Aiken)",
+              "Fuzz (Aiken)",
+              "Merkle Patricia Forestry (Aiken)",
+              "Oakshield (Aiken)",
+              "Vodka (Aiken)",
+              "ZeroJ (JuLC)",
+              "plutus-script-utils (Plinth)",
+              "Plutus Simple Model (Plinth)",
+              "catalyst-onchain-libs (Plutarch)",
+              "Liqwid libs (Plutarch)",
+              "Ply (Plutarch)",
+              "Design Patterns (Scalus)",
+              "Andere"
+            ],
+            "noneLabel": "Keine"
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Welche Off-Chain-Bibliotheken haben Sie in den letzten 12 Monaten verwendet?",
+            "options": [
+              "Chrysalis (.NET)",
+              "elm-cardano (Elm)",
+              "Apollo (Go)",
+              "gOuroboros (Go)",
+              "Atlas (Haskell)",
+              "cardano-api (Haskell)",
+              "sc-tools (Haskell)",
+              "cardano-client-lib (Java)",
+              "Yaci (Java)",
+              "cardano-transaction-lib (PureScript)",
+              "PyCardano (Python)",
+              "Pallas (Rust)",
+              "CML, cardano-multiplatform-lib (Rust, JS)",
+              "CSL, cardano-serialization-lib (Rust, JS)",
+              "Scalus (Scala)",
+              "Tx3",
+              "Blaze (TypeScript)",
+              "Cardano JS SDK (TypeScript)",
+              "Cometa (TypeScript)",
+              "Dexter (TypeScript)",
+              "Evolution SDK (TypeScript)",
+              "Lucid (TypeScript)",
+              "Mesh (TypeScript)",
+              "Andere"
+            ],
+            "noneLabel": "Keine"
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Welche davon haben Sie in den letzten 12 Monaten selbst betrieben, lokal oder auf Ihren Servern?",
+            "options": [
+              "Adder",
+              "Amaru",
+              "Blockfrost",
+              "cardano-db-sync",
+              "cardano-graphql",
+              "cardano-node",
+              "cardano-wallet",
+              "Dingo",
+              "Dolos",
+              "Gummiworm",
+              "Hydra",
+              "Kupo",
+              "Mithril",
+              "Ogmios",
+              "Oura",
+              "Scrolls",
+              "Yaci DevKit",
+              "Yaci Store",
+              "Andere"
+            ],
+            "noneLabel": "Keine"
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Welche Entwicklertools haben Sie in den letzten 12 Monaten verwendet? Einschließlich Stake-Pool-Tools.",
+            "options": [
+              "bech32",
+              "Cardano Dev Wallet",
+              "cardano-addresses",
+              "cardano-cli",
+              "cardano-hw-cli",
+              "cardano-signer",
+              "cardano-up",
+              "cncli",
+              "Cquisitor",
+              "CShell",
+              "Gastronomy",
+              "Lace Anatomy",
+              "nview",
+              "offchain-metadata-tools",
+              "Sorbet",
+              "SPO-Skripte (gitmachtl)",
+              "txtop",
+              "Andere"
+            ],
+            "noneLabel": "Keine"
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Welche gehosteten API-Dienste haben Sie in den letzten 12 Monaten verwendet?",
+            "options": [
+              "AdaStat",
+              "Blockfrost",
+              "Cardanoscan",
+              "Cexplorer",
+              "Charli3",
+              "Demeter",
+              "Dune",
+              "IAG Insight",
+              "Koios",
+              "Maestro",
+              "Nexus",
+              "NMKR",
+              "Orcfax",
+              "Pyth",
+              "SteelSwap",
+              "TapTools",
+              "Token registry",
+              "Andere"
+            ],
+            "noneLabel": "Keine"
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Wie haben Sie Ihren Cardano-Code in den letzten 12 Monaten getestet?",
+            "options": [
+              "Unit-Tests",
+              "Property-based Tests oder Fuzzing",
+              "Emulator, ohne Node (Lucid Evolution, Scalus, sc-tools…)",
+              "Lokales Devnet (Yaci DevKit, cardano-testnet…)",
+              "Öffentliches Testnet (Preview, Preprod)",
+              "Mainnet, mit kleinen Beträgen",
+              "Von Hand, mit einer Wallet oder der Kommandozeile",
+              "Formale Verifikation",
+              "Audit durch ein anderes Team",
+              "Andere"
+            ],
+            "noneLabel": "Gar nicht"
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Wie oft haben Sie im letzten Monat KI-Coding-Tools für Ihre Arbeit an Cardano verwendet?",
+            "options": [
+              "Täglich oder fast täglich",
+              "Wöchentlich oder fast wöchentlich",
+              "Seltener",
+              "Nie"
+            ]
+          },
+          {
+            "prompt": "Mit welcher Cardano-Sprache, -Bibliothek oder welchem Cardano-Tool kommt KI am schlechtesten zurecht, und was geht dabei schief?"
+          },
+          {
+            "prompt": "Wie sehr ist jeder dieser Punkte für Sie ein Problem?",
+            "options": [
+              "Wissen, welche Tools und Bibliotheken man wählen soll",
+              "Aktuelle Dokumentation finden",
+              "Funktionierende Beispiele finden",
+              "Hilfe bekommen, wenn ich feststecke",
+              "Für eUTxO entwerfen (Zustand, Nebenläufigkeit)",
+              "Zusammenspiel mit anderen Protokollen (DEXes, Oracles…)",
+              "Ausführungsbudget und Limits der Transaktionsgröße",
+              "Mindestmenge an ada pro Output (Mikrozahlungen, Airdrops)",
+              "Transaktionen bauen",
+              "Verbindung zu Wallets (CIP-30-Probleme, mobile Wallets)",
+              "Validatoren testen",
+              "Validatoren debuggen",
+              "Unvollständige oder nicht gepflegte Bibliotheken",
+              "Breaking Changes in Tools und Bibliotheken",
+              "Chain-Daten abrufen (Indexer, APIs)",
+              "Limits und Preise gehosteter APIs",
+              "Infrastruktur betreiben (Node, Indexer)",
+              "Gute Ergebnisse von KI-Tools bei Cardano-Code bekommen",
+              "Eine erste Anwendung durchgängig zum Laufen bringen"
+            ],
+            "ratingLabels": [
+              "Großes Problem",
+              "Könnte besser sein",
+              "Alles gut",
+              "Nicht relevant"
+            ]
+          },
+          {
+            "prompt": "Wo finden Sie Antworten auf technische Fragen zu Cardano? Wählen Sie bis zu 5, die Quellen, auf die Sie sich am meisten verlassen.",
+            "options": [
+              "KI-Assistenten",
+              "Blogs und Artikel",
+              "Cardano Blueprint",
+              "Cardano-Dokumentation (docs.cardano.org)",
+              "Cardano Forum",
+              "CIPs, Papers und Spezifikationen",
+              "Kollegen und Freunde",
+              "Entwicklerportal (developers.cardano.org)",
+              "Discord",
+              "GitHub-Issues und -Diskussionen",
+              "Projektdokumentation",
+              "Reddit",
+              "Quellcode",
+              "Stack Exchange",
+              "Telegram",
+              "Videos und Kurse",
+              "X (Twitter)",
+              "Andere"
+            ]
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Wie sehr würde jeder dieser Punkte dem helfen, was Sie entwickeln?",
+            "options": [
+              "Höherer Durchsatz",
+              "Schnellere Finalität",
+              "Niedrigere Transaktionsgebühren",
+              "Bridges zu anderen Chains",
+              "Verifikation von Zero-Knowledge-Beweisen on-chain",
+              "Verschachtelte Transaktionen",
+              "Gebühren in anderen Tokens zahlen",
+              "Programmierbare Tokens",
+              "Globaler Zustand mit nebenläufigen Updates (wie auf EVM-Chains)",
+              "Light Clients",
+              "Alternative Nodes",
+              "Formale Verifikation von Smart Contracts"
+            ],
+            "ratingLabels": [
+              "Würde mich entblocken",
+              "Würde helfen",
+              "Kein Bedarf",
+              "Was ist das?"
+            ]
+          },
+          {
+            "prompt": "Was bremst Ihr Projekt jenseits der Technik am meisten? Wählen Sie bis zu 3.",
+            "options": [
+              "Kosten und Verfügbarkeit von Audits",
+              "Nutzer finden",
+              "Finanzierung",
+              "Bekannt werden (Sichtbarkeit, Marketing)",
+              "Erfahrene Entwickler einstellen",
+              "Integrationen (Börsen, Wallets, Verwahrer)",
+              "Zeitmangel",
+              "Rechtliche und regulatorische Unsicherheit",
+              "Liquidität on-chain",
+              "Andere"
+            ],
+            "noneLabel": "Nichts Nennenswertes"
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Warum entwickeln Sie auf Cardano? Wählen Sie bis zu 3.",
+            "options": [
+              "Neugier, Lernen",
+              "Dezentralisierung und Werte",
+              "Finanzierung (Catalyst, Treasury, Grants)",
+              "Sprachen und Tooling",
+              "Marktchance",
+              "Mein Arbeitgeber oder Kunde hat es gewählt",
+              "Forschungsbasierter Ansatz",
+              "Sicherheit und Zuverlässigkeit der Chain",
+              "Die Community",
+              "Das eUTxO-Modell und deterministische Transaktionen",
+              "Andere"
+            ]
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Wie wahrscheinlich ist es, dass Sie in einem Jahr noch auf Cardano entwickeln?",
+            "options": [
+              "Sehr wahrscheinlich",
+              "Wahrscheinlich",
+              "Unsicher",
+              "Unwahrscheinlich",
+              "Sehr unwahrscheinlich"
+            ]
+          },
+          {
+            "prompt": "Wie gut funktioniert jeder dieser Punkte für Sie als Stake-Pool-Operator?",
+            "options": [
+              "Rechtzeitig von neuen Node-Releases erfahren",
+              "Verstehen, was ein Release ändert",
+              "Ein Release vor dem Mainnet testen",
+              "Vor Hard Forks und Parameteränderungen gehört werden"
+            ],
+            "ratingLabels": [
+              "Gut",
+              "Könnte besser sein",
+              "Schlecht"
+            ]
+          },
+          {
+            "prompt": "Welches Tool, welche Bibliothek oder welche Funktion, die es noch nicht gibt, würde Ihnen am meisten helfen?"
+          },
+          {
+            "prompt": "Welche dieser Rollen beschreiben Sie? Die letzten Fragen betreffen Sie selbst: Überspringen Sie, was Sie lieber nicht beantworten möchten.",
+            "options": [
+              "Architektur oder technische Leitung",
+              "Data Science oder Datenanalyse",
+              "DevOps oder Systemadministration",
+              "Lehre oder Ausbildung",
+              "Gründung oder Geschäftsführung",
+              "Produkt- oder Projektmanagement",
+              "Forschung",
+              "Softwareentwicklung",
+              "Studium",
+              "Andere"
+            ]
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Auf welchen anderen Blockchain-Ökosystemen haben Sie entwickelt?",
+            "options": [
+              "Algorand",
+              "Avalanche",
+              "Bitcoin (inkl. Lightning)",
+              "BNB",
+              "Ergo",
+              "Ethereum",
+              "Ethereum-L2s und andere EVM-Chains",
+              "Midnight",
+              "Solana",
+              "Sui",
+              "Andere"
+            ],
+            "noneLabel": "Keine"
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Wie wird Ihre Arbeit an Cardano finanziert? Wählen Sie bis zu 3, die Hauptquellen.",
+            "options": [
+              "Nicht finanziert (meine eigene Zeit)",
+              "Gehalt von einer Gründungsorganisation (IOG, EMURGO, CF)",
+              "Gehalt von einem anderen Unternehmen",
+              "Einnahmen aus meinem eigenen Produkt oder Dienst",
+              "Kundenaufträge oder Beratung",
+              "Catalyst",
+              "Treasury (Intersect-Budget, Governance-Aktion)",
+              "Andere Grants",
+              "Investoren oder Token-Verkauf",
+              "Andere"
+            ]
+          },
+          {
+            "prompt": "Andere (bitte angeben)"
+          },
+          {
+            "prompt": "Wo leben Sie?",
+            "options": [
+              "Afrika",
+              "Nordamerika (USA, Kanada)",
+              "Lateinamerika und Karibik (inkl. Mexiko)",
+              "Ostasien (China, Japan, Korea)",
+              "Südostasien (Indonesien, Philippinen, Singapur, Vietnam)",
+              "Südasien (Indien, Pakistan, Bangladesch)",
+              "Naher Osten und Zentralasien",
+              "Europa",
+              "Ozeanien"
+            ]
+          },
+          {
+            "prompt": "Wie viele Cardano-dApps, außer Ihren eigenen, haben Sie in den letzten 12 Monaten genutzt?",
+            "options": [
+              "Keine",
+              "1 oder 2",
+              "3 bis 9",
+              "10 oder mehr"
+            ]
+          },
+          {
+            "prompt": "Was davon haben Sie in den letzten 12 Monaten getan?",
+            "options": [
+              "Eine CIP gelesen oder verwendet",
+              "Eine CIP kommentiert oder reviewt",
+              "Eine CIP geschrieben oder mitgeschrieben",
+              "Zu einem fremden Open-Source-Cardano-Projekt beigetragen",
+              "Über eine Governance-Aktion abgestimmt (als DRep oder SPO)",
+              "Einen Stake Pool betrieben",
+              "Finanzierung beantragt (Catalyst, Treasury, Grants)",
+              "An einem Intersect-Komitee oder einer Arbeitsgruppe teilgenommen",
+              "Ein Cardano-Entwicklerevent oder einen Hackathon besucht",
+              "Ein Tutorial geschrieben, unterrichtet oder gementort"
+            ],
+            "noneLabel": "Nichts davon"
+          }
+        ]
+      },
+      "es": {
+        "title": "Encuesta 2026 a desarrolladores de Cardano",
+        "description": "Unos 15 minutos. Los resultados indican a quienes crean herramientas, escriben documentación o financian proyectos en qué trabajar primero.",
+        "questions": [
+          {
+            "prompt": "¿Cuánto tiempo llevas escribiendo o desplegando software?",
+            "options": [
+              "Menos de 2 años",
+              "De 2 a 4 años",
+              "De 5 a 9 años",
+              "10 años o más"
+            ]
+          },
+          {
+            "prompt": "¿Desarrollas en Cardano actualmente?",
+            "options": [
+              "Sí (incluido aprender o experimentar)",
+              "Lo hice, pero lo dejé",
+              "Lo consideré, pero no llegué a hacerlo"
+            ]
+          },
+          {
+            "prompt": "¿Qué te hizo dejar de desarrollar en Cardano?"
+          },
+          {
+            "prompt": "¿Qué te ha impedido desarrollar en Cardano?"
+          },
+          {
+            "prompt": "¿En qué trabajas?",
+            "options": [
+              "Auditorías y seguridad",
+              "Protocolo base (nodo, ledger, consenso)",
+              "Herramientas y bibliotecas para desarrolladores",
+              "Economía y diseño de incentivos (tokenomics, comisiones, recompensas)",
+              "Front-end e integración de wallets",
+              "Infraestructura (nodos, indexadores, API)",
+              "Aplicaciones móviles",
+              "Código off-chain y back-end",
+              "Investigación",
+              "Smart contracts (código on-chain)",
+              "Operación de stake pool",
+              "Enseñanza, documentación y comunidad",
+              "Otro"
+            ]
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "¿Qué tipos de aplicaciones estás desarrollando? Elige hasta 4.",
+            "options": [
+              "Contabilidad e informes financieros",
+              "Agentes de IA",
+              "Bridges e interoperabilidad",
+              "DeFi",
+              "Juegos",
+              "Herramientas de gobernanza",
+              "Identidad",
+              "Layer 2",
+              "NFT",
+              "Oráculos y datos",
+              "Pagos y stablecoins",
+              "Privacidad y zero-knowledge",
+              "Activos del mundo real",
+              "Cadena de suministro y trazabilidad",
+              "Wallets",
+              "Otro"
+            ]
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "¿En qué fase está tu principal proyecto en Cardano?",
+            "options": [
+              "Aprendizaje o experimentación",
+              "En desarrollo (testnet)",
+              "Lanzado (mainnet, o herramienta publicada)",
+              "Lanzado, con usuarios habituales"
+            ]
+          },
+          {
+            "prompt": "¿Dónde podemos encontrar este proyecto (enlace al sitio web o al repositorio)? Este enlace es público y vincula todas tus respuestas a este proyecto."
+          },
+          {
+            "prompt": "¿Cuándo empezaste a desarrollar en Cardano?",
+            "options": [
+              "2026",
+              "2025",
+              "2023–2024",
+              "2021–2022",
+              "2020 o antes"
+            ]
+          },
+          {
+            "prompt": "En una semana típica, ¿cuánto tiempo dedicas a desarrollar en Cardano?",
+            "options": [
+              "Menos de 5 horas",
+              "De 5 a 19 horas",
+              "De 20 a 34 horas",
+              "35 horas o más"
+            ]
+          },
+          {
+            "prompt": "En general, ¿cómo valoras tu experiencia de desarrollo en Cardano?",
+            "options": [
+              "Muy satisfactoria",
+              "Satisfactoria",
+              "Ni satisfactoria ni insatisfactoria",
+              "Insatisfactoria",
+              "Muy insatisfactoria"
+            ]
+          },
+          {
+            "prompt": "En comparación con hace un año, desarrollar en Cardano es:",
+            "options": [
+              "Mucho más fácil",
+              "Algo más fácil",
+              "Más o menos igual",
+              "Algo más difícil",
+              "Mucho más difícil",
+              "Hace un año no desarrollaba en Cardano"
+            ]
+          },
+          {
+            "prompt": "¿Qué es lo mejor de desarrollar en Cardano?"
+          },
+          {
+            "prompt": "¿Qué es lo más frustrante de desarrollar en Cardano?"
+          },
+          {
+            "prompt": "¿Qué lenguajes has usado para código on-chain en los últimos 12 meses?",
+            "options": [
+              "Aiken",
+              "Helios",
+              "JuLC",
+              "Marlowe",
+              "OpShin",
+              "Pebble",
+              "Plinth (Plutus-Tx)",
+              "Plu-ts",
+              "Plutarch",
+              "Scalus",
+              "Otro"
+            ],
+            "noneLabel": "Ninguno"
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "¿Qué bibliotecas on-chain has usado en los últimos 12 meses? Sin contar las bibliotecas estándar.",
+            "options": [
+              "Aicone, con Sundae multisig (Aiken)",
+              "ak-381 (Aiken)",
+              "Assist (Aiken)",
+              "Design Patterns (Aiken)",
+              "Fuzz (Aiken)",
+              "Merkle Patricia Forestry (Aiken)",
+              "Oakshield (Aiken)",
+              "Vodka (Aiken)",
+              "ZeroJ (JuLC)",
+              "plutus-script-utils (Plinth)",
+              "Plutus Simple Model (Plinth)",
+              "catalyst-onchain-libs (Plutarch)",
+              "Liqwid libs (Plutarch)",
+              "Ply (Plutarch)",
+              "Design Patterns (Scalus)",
+              "Otro"
+            ],
+            "noneLabel": "Ninguna"
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "¿Qué bibliotecas off-chain has usado en los últimos 12 meses?",
+            "options": [
+              "Chrysalis (.NET)",
+              "elm-cardano (Elm)",
+              "Apollo (Go)",
+              "gOuroboros (Go)",
+              "Atlas (Haskell)",
+              "cardano-api (Haskell)",
+              "sc-tools (Haskell)",
+              "cardano-client-lib (Java)",
+              "Yaci (Java)",
+              "cardano-transaction-lib (PureScript)",
+              "PyCardano (Python)",
+              "Pallas (Rust)",
+              "CML, cardano-multiplatform-lib (Rust, JS)",
+              "CSL, cardano-serialization-lib (Rust, JS)",
+              "Scalus (Scala)",
+              "Tx3",
+              "Blaze (TypeScript)",
+              "Cardano JS SDK (TypeScript)",
+              "Cometa (TypeScript)",
+              "Dexter (TypeScript)",
+              "Evolution SDK (TypeScript)",
+              "Lucid (TypeScript)",
+              "Mesh (TypeScript)",
+              "Otro"
+            ],
+            "noneLabel": "Ninguna"
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "¿Cuáles de estos has ejecutado por tu cuenta en los últimos 12 meses, en local o en tus propios servidores?",
+            "options": [
+              "Adder",
+              "Amaru",
+              "Blockfrost",
+              "cardano-db-sync",
+              "cardano-graphql",
+              "cardano-node",
+              "cardano-wallet",
+              "Dingo",
+              "Dolos",
+              "Gummiworm",
+              "Hydra",
+              "Kupo",
+              "Mithril",
+              "Ogmios",
+              "Oura",
+              "Scrolls",
+              "Yaci DevKit",
+              "Yaci Store",
+              "Otro"
+            ],
+            "noneLabel": "Ninguno"
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "¿Qué herramientas de desarrollo has usado en los últimos 12 meses? Incluidas las herramientas para stake pools.",
+            "options": [
+              "bech32",
+              "Cardano Dev Wallet",
+              "cardano-addresses",
+              "cardano-cli",
+              "cardano-hw-cli",
+              "cardano-signer",
+              "cardano-up",
+              "cncli",
+              "Cquisitor",
+              "CShell",
+              "Gastronomy",
+              "Lace Anatomy",
+              "nview",
+              "offchain-metadata-tools",
+              "Sorbet",
+              "Scripts para SPO (gitmachtl)",
+              "txtop",
+              "Otro"
+            ],
+            "noneLabel": "Ninguna"
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "¿Qué servicios de API alojados has usado en los últimos 12 meses?",
+            "options": [
+              "AdaStat",
+              "Blockfrost",
+              "Cardanoscan",
+              "Cexplorer",
+              "Charli3",
+              "Demeter",
+              "Dune",
+              "IAG Insight",
+              "Koios",
+              "Maestro",
+              "Nexus",
+              "NMKR",
+              "Orcfax",
+              "Pyth",
+              "SteelSwap",
+              "TapTools",
+              "Token registry",
+              "Otro"
+            ],
+            "noneLabel": "Ninguno"
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "¿Cómo has probado tu código Cardano en los últimos 12 meses?",
+            "options": [
+              "Pruebas unitarias",
+              "Pruebas basadas en propiedades o fuzzing",
+              "Emulador, sin nodo (Lucid Evolution, Scalus, sc-tools…)",
+              "Devnet local (Yaci DevKit, cardano-testnet…)",
+              "Testnet pública (Preview, Preprod)",
+              "Mainnet, con cantidades pequeñas",
+              "A mano, con una wallet o desde la línea de comandos",
+              "Verificación formal",
+              "Auditoría por otro equipo",
+              "Otro"
+            ],
+            "noneLabel": "De ninguna forma"
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "En el último mes, ¿con qué frecuencia usaste herramientas de IA para programar en Cardano?",
+            "options": [
+              "A diario o casi",
+              "Cada semana o casi",
+              "Con menos frecuencia",
+              "Nunca"
+            ]
+          },
+          {
+            "prompt": "¿Qué lenguaje, biblioteca o herramienta de Cardano maneja peor la IA, y qué es lo que falla?"
+          },
+          {
+            "prompt": "¿Hasta qué punto supone un problema para ti cada uno de estos aspectos?",
+            "options": [
+              "Saber qué herramientas y bibliotecas elegir",
+              "Encontrar documentación actualizada",
+              "Encontrar ejemplos que funcionen",
+              "Conseguir ayuda cuando me atasco",
+              "Diseñar para eUTxO (estado, concurrencia)",
+              "Componer con otros protocolos (DEX, oráculos…)",
+              "Límites de presupuesto de ejecución y de tamaño de transacción",
+              "El mínimo de ada en cada output (micropagos, airdrops)",
+              "Construir transacciones",
+              "Conectar con wallets (problemas con CIP-30, wallets móviles)",
+              "Probar validadores",
+              "Depurar validadores",
+              "Bibliotecas incompletas o sin mantenimiento",
+              "Cambios incompatibles en herramientas y bibliotecas",
+              "Obtener datos de la cadena (indexadores, API)",
+              "Límites y precios de las API alojadas",
+              "Operar infraestructura (nodo, indexador)",
+              "Obtener buenos resultados de las herramientas de IA con código Cardano",
+              "Conseguir que una primera aplicación funcione de principio a fin"
+            ],
+            "ratingLabels": [
+              "Gran problema",
+              "Podría mejorar",
+              "Todo bien",
+              "No aplica"
+            ]
+          },
+          {
+            "prompt": "¿Dónde encuentras respuestas a tus preguntas técnicas sobre Cardano? Elige hasta 5, las fuentes en las que más confías.",
+            "options": [
+              "Asistentes de IA",
+              "Blogs y artículos",
+              "Cardano Blueprint",
+              "Documentación de Cardano (docs.cardano.org)",
+              "Cardano Forum",
+              "CIP, artículos de investigación y especificaciones",
+              "Colegas y amistades",
+              "Portal de desarrolladores (developers.cardano.org)",
+              "Discord",
+              "Issues y discusiones de GitHub",
+              "Documentación de los proyectos",
+              "Reddit",
+              "Código fuente",
+              "Stack Exchange",
+              "Telegram",
+              "Videos y cursos",
+              "X (Twitter)",
+              "Otro"
+            ]
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "¿Cuánto ayudaría cada uno de estos puntos a lo que estás desarrollando?",
+            "options": [
+              "Mayor throughput",
+              "Finalidad más rápida",
+              "Comisiones de transacción más bajas",
+              "Bridges a otras cadenas",
+              "Verificación on-chain de pruebas zero-knowledge",
+              "Transacciones anidadas",
+              "Pagar comisiones con otros tokens",
+              "Tokens programables",
+              "Estado global con actualizaciones concurrentes (como en las cadenas EVM)",
+              "Clientes ligeros",
+              "Nodos alternativos",
+              "Verificación formal de smart contracts"
+            ],
+            "ratingLabels": [
+              "Me desbloquearía",
+              "Ayudaría",
+              "No lo necesito",
+              "¿Qué es eso?"
+            ]
+          },
+          {
+            "prompt": "Más allá de la tecnología, ¿qué es lo que más frena tu proyecto? Elige hasta 3.",
+            "options": [
+              "Costo y disponibilidad de auditorías",
+              "Encontrar usuarios",
+              "Financiación",
+              "Darse a conocer (visibilidad, marketing)",
+              "Contratar desarrolladores con experiencia",
+              "Integraciones (exchanges, wallets, custodios)",
+              "Falta de tiempo",
+              "Incertidumbre legal y regulatoria",
+              "Liquidez on-chain",
+              "Otro"
+            ],
+            "noneLabel": "Nada significativo"
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "¿Por qué desarrollas en Cardano? Elige hasta 3.",
+            "options": [
+              "Curiosidad, aprendizaje",
+              "Descentralización y valores",
+              "Financiación (Catalyst, tesorería, subvenciones)",
+              "Lenguajes y herramientas",
+              "Oportunidad de mercado",
+              "Lo eligió mi empleador o mi cliente",
+              "Enfoque basado en la investigación",
+              "Seguridad y fiabilidad de la cadena",
+              "La comunidad",
+              "El modelo eUTxO y las transacciones deterministas",
+              "Otro"
+            ]
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "¿Qué probabilidad hay de que sigas desarrollando en Cardano dentro de un año?",
+            "options": [
+              "Muy probable",
+              "Probable",
+              "No lo sé",
+              "Poco probable",
+              "Muy poco probable"
+            ]
+          },
+          {
+            "prompt": "Como operador de stake pool, ¿qué tal te funciona cada uno de estos puntos?",
+            "options": [
+              "Enterarme a tiempo de las nuevas versiones del nodo",
+              "Entender qué cambia en cada versión",
+              "Probar una versión antes de mainnet",
+              "Que me escuchen antes de los hard forks y los cambios de parámetros"
+            ],
+            "ratingLabels": [
+              "Bien",
+              "Podría mejorar",
+              "Mal"
+            ]
+          },
+          {
+            "prompt": "¿Qué herramienta, biblioteca o funcionalidad que aún no existe te ayudaría más?"
+          },
+          {
+            "prompt": "¿Cuáles de estos describen tu rol? Las últimas preguntas son sobre ti: omite las que prefieras no responder.",
+            "options": [
+              "Arquitectura o liderazgo técnico",
+              "Ciencia o análisis de datos",
+              "DevOps o administración de sistemas",
+              "Docencia o formación",
+              "Creación o dirección de empresa",
+              "Gestión de producto o de proyectos",
+              "Investigación",
+              "Ingeniería de software",
+              "Estudiante",
+              "Otro"
+            ]
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "¿En qué otros ecosistemas blockchain has desarrollado?",
+            "options": [
+              "Algorand",
+              "Avalanche",
+              "Bitcoin (incluido Lightning)",
+              "BNB",
+              "Ergo",
+              "Ethereum",
+              "L2 de Ethereum y otras cadenas EVM",
+              "Midnight",
+              "Solana",
+              "Sui",
+              "Otro"
+            ],
+            "noneLabel": "Ninguno"
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "¿Cómo se financia tu trabajo en Cardano? Elige hasta 3, las fuentes principales.",
+            "options": [
+              "Sin financiación (mi propio tiempo)",
+              "Salario de una entidad fundadora (IOG, EMURGO, CF)",
+              "Salario de otra empresa",
+              "Ingresos de mi propio producto o servicio",
+              "Trabajo para clientes o consultoría",
+              "Catalyst",
+              "Tesorería (presupuesto de Intersect, acción de gobernanza)",
+              "Otras subvenciones",
+              "Inversores o venta de tokens",
+              "Otro"
+            ]
+          },
+          {
+            "prompt": "Otro (especifique)"
+          },
+          {
+            "prompt": "¿Dónde vives?",
+            "options": [
+              "África",
+              "América del Norte (EE. UU., Canadá)",
+              "América Latina y el Caribe (incluido México)",
+              "Asia Oriental (China, Japón, Corea)",
+              "Sudeste Asiático (Indonesia, Filipinas, Singapur, Vietnam)",
+              "Asia del Sur (India, Pakistán, Bangladés)",
+              "Oriente Medio y Asia Central",
+              "Europa",
+              "Oceanía"
+            ]
+          },
+          {
+            "prompt": "¿Cuántas dApps de Cardano, aparte de las tuyas, has usado en los últimos 12 meses?",
+            "options": [
+              "Ninguna",
+              "1 o 2",
+              "De 3 a 9",
+              "10 o más"
+            ]
+          },
+          {
+            "prompt": "¿Cuáles de estas actividades realizaste en los últimos 12 meses?",
+            "options": [
+              "Leí o usé una CIP",
+              "Comenté o revisé una CIP",
+              "Escribí o coescribí una CIP",
+              "Contribuí a un proyecto open source de Cardano que no es mío",
+              "Voté en una acción de gobernanza (como DRep o SPO)",
+              "Operé un stake pool",
+              "Solicité financiación (Catalyst, tesorería, subvenciones)",
+              "Participé en un comité o grupo de trabajo de Intersect",
+              "Asistí a un evento o hackathon para desarrolladores de Cardano",
+              "Escribí un tutorial, di clases o hice mentoría"
+            ],
+            "noneLabel": "Ninguna de estas"
+          }
+        ]
+      },
       "fr": {
         "title": "Enquête 2026 auprès des développeurs Cardano",
         "description": "Environ 15 minutes. Les résultats montrent aux créateurs d'outils, aux auteurs de documentation et aux financeurs sur quoi travailler en priorité.",
@@ -851,6 +1975,2816 @@
             "noneLabel": "Aucune de ces actions"
           }
         ]
+      },
+      "it": {
+        "title": "Sondaggio 2026 tra gli sviluppatori Cardano",
+        "description": "Circa 15 minuti. I risultati indicano a chi crea strumenti, scrive documentazione o finanzia progetti su cosa lavorare per primo.",
+        "questions": [
+          {
+            "prompt": "Da quanto tempo scrivi o fai il deploy di software?",
+            "options": [
+              "Meno di 2 anni",
+              "Da 2 a 4 anni",
+              "Da 5 a 9 anni",
+              "10 anni o più"
+            ]
+          },
+          {
+            "prompt": "Sviluppi su Cardano oggi?",
+            "options": [
+              "Sì (anche solo per imparare o sperimentare)",
+              "L'ho fatto, ma ho smesso",
+              "Ci ho pensato, ma non ho mai iniziato"
+            ]
+          },
+          {
+            "prompt": "Cosa ti ha fatto smettere di sviluppare su Cardano?"
+          },
+          {
+            "prompt": "Cosa ti ha trattenuto dallo sviluppare su Cardano?"
+          },
+          {
+            "prompt": "Di cosa ti occupi?",
+            "options": [
+              "Audit e sicurezza",
+              "Protocollo di base (nodo, ledger, consenso)",
+              "Strumenti e librerie per sviluppatori",
+              "Economia e incentivi (tokenomics, commissioni, ricompense)",
+              "Front end e integrazione dei wallet",
+              "Infrastruttura (nodi, indexer, API)",
+              "App mobili",
+              "Codice off-chain e back end",
+              "Ricerca",
+              "Smart contract (codice on-chain)",
+              "Gestione di uno stake pool",
+              "Formazione, documentazione e community",
+              "Altro"
+            ]
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "Che tipo di applicazioni stai sviluppando? Scegline fino a 4.",
+            "options": [
+              "Contabilità e rendicontazione finanziaria",
+              "Agenti IA",
+              "Bridge e interoperabilità",
+              "DeFi",
+              "Gaming",
+              "Strumenti di governance",
+              "Identità",
+              "Layer 2",
+              "NFT",
+              "Oracoli e dati",
+              "Pagamenti e stablecoin",
+              "Privacy e zero-knowledge",
+              "Asset del mondo reale",
+              "Supply chain e tracciabilità",
+              "Wallet",
+              "Altro"
+            ]
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "A che punto è il tuo progetto Cardano principale?",
+            "options": [
+              "Apprendimento o sperimentazione",
+              "In sviluppo (testnet)",
+              "Rilasciato (mainnet, o strumento pubblicato)",
+              "Rilasciato, con utenti regolari"
+            ]
+          },
+          {
+            "prompt": "Dove possiamo trovare questo progetto (link al sito web o al repository)? Questo link è pubblico e collega tutte le tue risposte a questo progetto."
+          },
+          {
+            "prompt": "Quando hai iniziato a sviluppare su Cardano?",
+            "options": [
+              "2026",
+              "2025",
+              "2023–2024",
+              "2021–2022",
+              "2020 o prima"
+            ]
+          },
+          {
+            "prompt": "In una settimana tipica, quanto tempo dedichi allo sviluppo su Cardano?",
+            "options": [
+              "Meno di 5 ore",
+              "Da 5 a 19 ore",
+              "Da 20 a 34 ore",
+              "35 ore o più"
+            ]
+          },
+          {
+            "prompt": "Nel complesso, come valuti la tua esperienza di sviluppo su Cardano?",
+            "options": [
+              "Molto soddisfacente",
+              "Soddisfacente",
+              "Né soddisfacente né insoddisfacente",
+              "Insoddisfacente",
+              "Molto insoddisfacente"
+            ]
+          },
+          {
+            "prompt": "Rispetto a un anno fa, sviluppare su Cardano è:",
+            "options": [
+              "Molto più facile",
+              "Un po' più facile",
+              "Più o meno uguale",
+              "Un po' più difficile",
+              "Molto più difficile",
+              "Un anno fa non sviluppavo su Cardano"
+            ]
+          },
+          {
+            "prompt": "Qual è la cosa migliore dello sviluppare su Cardano?"
+          },
+          {
+            "prompt": "Qual è la cosa più frustrante dello sviluppare su Cardano?"
+          },
+          {
+            "prompt": "Quali linguaggi hai usato per il codice on-chain negli ultimi 12 mesi?",
+            "options": [
+              "Aiken",
+              "Helios",
+              "JuLC",
+              "Marlowe",
+              "OpShin",
+              "Pebble",
+              "Plinth (Plutus-Tx)",
+              "Plu-ts",
+              "Plutarch",
+              "Scalus",
+              "Altro"
+            ],
+            "noneLabel": "Nessuno"
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "Quali librerie on-chain hai usato negli ultimi 12 mesi? Escluse le librerie standard.",
+            "options": [
+              "Aicone, con Sundae multisig (Aiken)",
+              "ak-381 (Aiken)",
+              "Assist (Aiken)",
+              "Design Patterns (Aiken)",
+              "Fuzz (Aiken)",
+              "Merkle Patricia Forestry (Aiken)",
+              "Oakshield (Aiken)",
+              "Vodka (Aiken)",
+              "ZeroJ (JuLC)",
+              "plutus-script-utils (Plinth)",
+              "Plutus Simple Model (Plinth)",
+              "catalyst-onchain-libs (Plutarch)",
+              "Liqwid libs (Plutarch)",
+              "Ply (Plutarch)",
+              "Design Patterns (Scalus)",
+              "Altro"
+            ],
+            "noneLabel": "Nessuna"
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "Quali librerie off-chain hai usato negli ultimi 12 mesi?",
+            "options": [
+              "Chrysalis (.NET)",
+              "elm-cardano (Elm)",
+              "Apollo (Go)",
+              "gOuroboros (Go)",
+              "Atlas (Haskell)",
+              "cardano-api (Haskell)",
+              "sc-tools (Haskell)",
+              "cardano-client-lib (Java)",
+              "Yaci (Java)",
+              "cardano-transaction-lib (PureScript)",
+              "PyCardano (Python)",
+              "Pallas (Rust)",
+              "CML, cardano-multiplatform-lib (Rust, JS)",
+              "CSL, cardano-serialization-lib (Rust, JS)",
+              "Scalus (Scala)",
+              "Tx3",
+              "Blaze (TypeScript)",
+              "Cardano JS SDK (TypeScript)",
+              "Cometa (TypeScript)",
+              "Dexter (TypeScript)",
+              "Evolution SDK (TypeScript)",
+              "Lucid (TypeScript)",
+              "Mesh (TypeScript)",
+              "Altro"
+            ],
+            "noneLabel": "Nessuna"
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "Quali di questi hai fatto girare in prima persona negli ultimi 12 mesi, in locale o sui tuoi server?",
+            "options": [
+              "Adder",
+              "Amaru",
+              "Blockfrost",
+              "cardano-db-sync",
+              "cardano-graphql",
+              "cardano-node",
+              "cardano-wallet",
+              "Dingo",
+              "Dolos",
+              "Gummiworm",
+              "Hydra",
+              "Kupo",
+              "Mithril",
+              "Ogmios",
+              "Oura",
+              "Scrolls",
+              "Yaci DevKit",
+              "Yaci Store",
+              "Altro"
+            ],
+            "noneLabel": "Nessuno"
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "Quali strumenti per sviluppatori hai usato negli ultimi 12 mesi? Compresi gli strumenti per stake pool.",
+            "options": [
+              "bech32",
+              "Cardano Dev Wallet",
+              "cardano-addresses",
+              "cardano-cli",
+              "cardano-hw-cli",
+              "cardano-signer",
+              "cardano-up",
+              "cncli",
+              "Cquisitor",
+              "CShell",
+              "Gastronomy",
+              "Lace Anatomy",
+              "nview",
+              "offchain-metadata-tools",
+              "Sorbet",
+              "Script SPO (gitmachtl)",
+              "txtop",
+              "Altro"
+            ],
+            "noneLabel": "Nessuno"
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "Quali servizi API in hosting hai usato negli ultimi 12 mesi?",
+            "options": [
+              "AdaStat",
+              "Blockfrost",
+              "Cardanoscan",
+              "Cexplorer",
+              "Charli3",
+              "Demeter",
+              "Dune",
+              "IAG Insight",
+              "Koios",
+              "Maestro",
+              "Nexus",
+              "NMKR",
+              "Orcfax",
+              "Pyth",
+              "SteelSwap",
+              "TapTools",
+              "Token registry",
+              "Altro"
+            ],
+            "noneLabel": "Nessuno"
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "Come hai testato il tuo codice Cardano negli ultimi 12 mesi?",
+            "options": [
+              "Test unitari",
+              "Test property-based o fuzzing",
+              "Emulatore, senza nodo (Lucid Evolution, Scalus, sc-tools…)",
+              "Devnet locale (Yaci DevKit, cardano-testnet…)",
+              "Testnet pubblica (Preview, Preprod)",
+              "Mainnet, con piccoli importi",
+              "A mano, con un wallet o da riga di comando",
+              "Verifica formale",
+              "Audit da parte di un altro team",
+              "Altro"
+            ],
+            "noneLabel": "In nessun modo"
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "Nell'ultimo mese, con che frequenza hai usato strumenti di IA per programmare su Cardano?",
+            "options": [
+              "Ogni giorno o quasi",
+              "Ogni settimana o quasi",
+              "Meno spesso",
+              "Mai"
+            ]
+          },
+          {
+            "prompt": "Quale linguaggio, libreria o strumento Cardano l'IA gestisce peggio, e cosa va storto?"
+          },
+          {
+            "prompt": "Quanto è un problema per te ciascuno di questi punti?",
+            "options": [
+              "Sapere quali strumenti e librerie scegliere",
+              "Trovare documentazione aggiornata",
+              "Trovare esempi funzionanti",
+              "Ricevere aiuto quando mi blocco",
+              "Progettare per eUTxO (stato, concorrenza)",
+              "Comporre con altri protocolli (DEX, oracoli…)",
+              "Limiti di budget di esecuzione e di dimensione delle transazioni",
+              "Il minimo di ada per output (micropagamenti, airdrop)",
+              "Costruire transazioni",
+              "Connettersi ai wallet (problemi CIP-30, wallet mobili)",
+              "Testare i validator",
+              "Fare il debug dei validator",
+              "Librerie incomplete o non mantenute",
+              "Breaking change in strumenti e librerie",
+              "Ottenere dati dalla chain (indexer, API)",
+              "Limiti e prezzi delle API in hosting",
+              "Gestire l'infrastruttura (nodo, indexer)",
+              "Ottenere buoni risultati dagli strumenti di IA sul codice Cardano",
+              "Far funzionare una prima applicazione end-to-end"
+            ],
+            "ratingLabels": [
+              "Grosso problema",
+              "Potrebbe andare meglio",
+              "Tutto bene",
+              "Non mi riguarda"
+            ]
+          },
+          {
+            "prompt": "Dove trovi le risposte alle domande tecniche su Cardano? Scegline fino a 5, quelle su cui conti di più.",
+            "options": [
+              "Assistenti IA",
+              "Blog e articoli",
+              "Cardano Blueprint",
+              "Documentazione Cardano (docs.cardano.org)",
+              "Cardano Forum",
+              "CIP, paper e specifiche",
+              "Colleghi e amici",
+              "Portale per sviluppatori (developers.cardano.org)",
+              "Discord",
+              "Issue e discussioni su GitHub",
+              "Documentazione dei progetti",
+              "Reddit",
+              "Codice sorgente",
+              "Stack Exchange",
+              "Telegram",
+              "Video e corsi",
+              "X (Twitter)",
+              "Altro"
+            ]
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "Quanto aiuterebbe ciascuno di questi punti ciò che stai sviluppando?",
+            "options": [
+              "Throughput più alto",
+              "Finalità più rapida",
+              "Commissioni di transazione più basse",
+              "Bridge verso altre chain",
+              "Verifica on-chain di prove zero-knowledge",
+              "Transazioni annidate",
+              "Pagare le commissioni con altri token",
+              "Token programmabili",
+              "Stato globale con aggiornamenti concorrenti (come sulle chain EVM)",
+              "Light client",
+              "Nodi alternativi",
+              "Verifica formale degli smart contract"
+            ],
+            "ratingLabels": [
+              "Mi sbloccherebbe",
+              "Aiuterebbe",
+              "Non serve",
+              "Cos'è?"
+            ]
+          },
+          {
+            "prompt": "Oltre alla tecnologia, cosa frena di più il tuo progetto? Scegline fino a 3.",
+            "options": [
+              "Costo e disponibilità degli audit",
+              "Trovare utenti",
+              "Finanziamenti",
+              "Farsi notare (visibilità, marketing)",
+              "Assumere sviluppatori esperti",
+              "Integrazioni (exchange, wallet, custodi)",
+              "Mancanza di tempo",
+              "Incertezza legale e normativa",
+              "Liquidità on-chain",
+              "Altro"
+            ],
+            "noneLabel": "Niente di rilevante"
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "Perché sviluppi su Cardano? Scegline fino a 3.",
+            "options": [
+              "Curiosità, apprendimento",
+              "Decentralizzazione e valori",
+              "Finanziamenti (Catalyst, tesoreria, grant)",
+              "Linguaggi e strumenti",
+              "Opportunità di mercato",
+              "L'ha scelto il mio datore di lavoro o il mio cliente",
+              "Approccio basato sulla ricerca",
+              "Sicurezza e affidabilità della chain",
+              "La community",
+              "Il modello eUTxO e le transazioni deterministiche",
+              "Altro"
+            ]
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "Quanto è probabile che tu stia ancora sviluppando su Cardano tra un anno?",
+            "options": [
+              "Molto probabile",
+              "Probabile",
+              "Non so",
+              "Poco probabile",
+              "Molto poco probabile"
+            ]
+          },
+          {
+            "prompt": "Come stake pool operator, quanto bene funziona per te ciascuno di questi punti?",
+            "options": [
+              "Venire a sapere in tempo delle nuove release del nodo",
+              "Capire cosa cambia in una release",
+              "Testare una release prima della mainnet",
+              "Essere ascoltati prima di hard fork e modifiche ai parametri"
+            ],
+            "ratingLabels": [
+              "Bene",
+              "Potrebbe andare meglio",
+              "Male"
+            ]
+          },
+          {
+            "prompt": "Quale strumento, libreria o funzionalità che ancora non esiste ti aiuterebbe di più?"
+          },
+          {
+            "prompt": "Quali di questi ruoli ti descrivono? Le ultime domande riguardano te: salta quelle a cui preferisci non rispondere.",
+            "options": [
+              "Architettura o direzione tecnica",
+              "Data science o analisi dati",
+              "DevOps o amministrazione di sistema",
+              "Formazione o insegnamento",
+              "Founder o dirigente",
+              "Product o project management",
+              "Ricerca",
+              "Sviluppo software",
+              "Studente o studentessa",
+              "Altro"
+            ]
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "Su quali altri ecosistemi blockchain hai sviluppato?",
+            "options": [
+              "Algorand",
+              "Avalanche",
+              "Bitcoin (incl. Lightning)",
+              "BNB",
+              "Ergo",
+              "Ethereum",
+              "L2 di Ethereum e altre chain EVM",
+              "Midnight",
+              "Solana",
+              "Sui",
+              "Altro"
+            ],
+            "noneLabel": "Nessuno"
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "Come è finanziato il tuo lavoro su Cardano? Scegline fino a 3, le fonti principali.",
+            "options": [
+              "Non finanziato (tempo personale)",
+              "Stipendio da un'entità fondatrice (IOG, EMURGO, CF)",
+              "Stipendio da un'altra azienda",
+              "Ricavi del mio prodotto o servizio",
+              "Lavoro per clienti o consulenza",
+              "Catalyst",
+              "Tesoreria (budget Intersect, azione di governance)",
+              "Altri grant",
+              "Investitori o vendita di token",
+              "Altro"
+            ]
+          },
+          {
+            "prompt": "Altro (specificare)"
+          },
+          {
+            "prompt": "Dove vivi?",
+            "options": [
+              "Africa",
+              "America del Nord (USA, Canada)",
+              "America Latina e Caraibi (incl. Messico)",
+              "Asia orientale (Cina, Giappone, Corea)",
+              "Sud-est asiatico (Indonesia, Filippine, Singapore, Vietnam)",
+              "Asia meridionale (India, Pakistan, Bangladesh)",
+              "Medio Oriente e Asia centrale",
+              "Europa",
+              "Oceania"
+            ]
+          },
+          {
+            "prompt": "Quante dApp Cardano, oltre alle tue, hai usato negli ultimi 12 mesi?",
+            "options": [
+              "Nessuna",
+              "1 o 2",
+              "Da 3 a 9",
+              "10 o più"
+            ]
+          },
+          {
+            "prompt": "Quali di queste cose hai fatto negli ultimi 12 mesi?",
+            "options": [
+              "Letto o usato una CIP",
+              "Commentato o revisionato una CIP",
+              "Scritto o co-scritto una CIP",
+              "Contribuito a un progetto Cardano open source non mio",
+              "Votato su un'azione di governance (come DRep o SPO)",
+              "Gestito uno stake pool",
+              "Richiesto finanziamenti (Catalyst, tesoreria, grant)",
+              "Partecipato a un comitato o gruppo di lavoro di Intersect",
+              "Partecipato a un evento o hackathon per sviluppatori Cardano",
+              "Scritto un tutorial, insegnato o fatto da mentor"
+            ],
+            "noneLabel": "Nessuna di queste"
+          }
+        ]
+      },
+      "ja": {
+        "title": "Cardano開発者アンケート 2026",
+        "description": "所要時間は約15分です。結果は、ツール開発者、ドキュメント執筆者、資金提供者が何に優先して取り組むべきかを示します。",
+        "questions": [
+          {
+            "prompt": "ソフトウェアを書いたりデプロイしたりするようになって、どのくらい経ちますか？",
+            "options": [
+              "2年未満",
+              "2〜4年",
+              "5〜9年",
+              "10年以上"
+            ]
+          },
+          {
+            "prompt": "現在、Cardano上で開発していますか？",
+            "options": [
+              "はい（学習や実験も含む）",
+              "以前はしていたが、やめた",
+              "検討したが、開発には至っていない"
+            ]
+          },
+          {
+            "prompt": "Cardano上での開発をやめた理由は何ですか？"
+          },
+          {
+            "prompt": "Cardano上での開発に踏み出せなかった理由は何ですか？"
+          },
+          {
+            "prompt": "どのような分野に取り組んでいますか？",
+            "options": [
+              "監査とセキュリティ",
+              "コアプロトコル（ノード、レジャー、コンセンサス）",
+              "開発者ツールとライブラリ",
+              "経済・インセンティブ設計（トークノミクス、手数料、報酬）",
+              "フロントエンドとウォレット連携",
+              "インフラ（ノード、インデクサー、API）",
+              "モバイルアプリ",
+              "オフチェーンコードとバックエンド",
+              "研究",
+              "スマートコントラクト（オンチェーンコード）",
+              "ステークプール運営",
+              "教育、ドキュメント、コミュニティ",
+              "その他"
+            ]
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "どのような種類のアプリケーションを開発していますか？ 4つまで選択できます。",
+            "options": [
+              "会計・財務報告",
+              "AIエージェント",
+              "ブリッジと相互運用性",
+              "DeFi",
+              "ゲーム",
+              "ガバナンスツール",
+              "アイデンティティ",
+              "レイヤー2",
+              "NFT",
+              "オラクルとデータ",
+              "決済とステーブルコイン",
+              "プライバシーとゼロ知識証明",
+              "現実資産（RWA）",
+              "サプライチェーンとトレーサビリティ",
+              "ウォレット",
+              "その他"
+            ]
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "主なCardanoプロジェクトはどの段階にありますか？",
+            "options": [
+              "学習・実験中",
+              "開発中（テストネット）",
+              "リリース済み（メインネット、または公開済みのツール）",
+              "リリース済みで、継続的に利用されている"
+            ]
+          },
+          {
+            "prompt": "このプロジェクトはどこで見られますか（ウェブサイトまたはリポジトリのリンク）？ このリンクは公開され、あなたのすべての回答をこのプロジェクトに結び付けます。"
+          },
+          {
+            "prompt": "Cardano上での開発を始めたのはいつですか？",
+            "options": [
+              "2026",
+              "2025",
+              "2023–2024",
+              "2021–2022",
+              "2020年以前"
+            ]
+          },
+          {
+            "prompt": "典型的な1週間で、Cardano上での開発にどのくらいの時間を使っていますか？",
+            "options": [
+              "5時間未満",
+              "5〜19時間",
+              "20〜34時間",
+              "35時間以上"
+            ]
+          },
+          {
+            "prompt": "全体として、Cardano上での開発にどの程度満足していますか？",
+            "options": [
+              "とても満足",
+              "満足",
+              "どちらともいえない",
+              "不満",
+              "とても不満"
+            ]
+          },
+          {
+            "prompt": "1年前と比べて、Cardano上での開発は：",
+            "options": [
+              "かなり簡単になった",
+              "やや簡単になった",
+              "ほぼ変わらない",
+              "やや難しくなった",
+              "かなり難しくなった",
+              "1年前はCardano上で開発していなかった"
+            ]
+          },
+          {
+            "prompt": "Cardano上で開発する上で、最も良い点は何ですか？"
+          },
+          {
+            "prompt": "Cardano上で開発する上で、最もつらい点は何ですか？"
+          },
+          {
+            "prompt": "過去12か月間に、オンチェーンコードにどの言語を使いましたか？",
+            "options": [
+              "Aiken",
+              "Helios",
+              "JuLC",
+              "Marlowe",
+              "OpShin",
+              "Pebble",
+              "Plinth (Plutus-Tx)",
+              "Plu-ts",
+              "Plutarch",
+              "Scalus",
+              "その他"
+            ],
+            "noneLabel": "なし"
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "過去12か月間に、どのオンチェーンライブラリを使いましたか？ 標準ライブラリは除きます。",
+            "options": [
+              "Aicone、Sundae multisig付き（Aiken）",
+              "ak-381 (Aiken)",
+              "Assist (Aiken)",
+              "Design Patterns (Aiken)",
+              "Fuzz (Aiken)",
+              "Merkle Patricia Forestry (Aiken)",
+              "Oakshield (Aiken)",
+              "Vodka (Aiken)",
+              "ZeroJ (JuLC)",
+              "plutus-script-utils (Plinth)",
+              "Plutus Simple Model (Plinth)",
+              "catalyst-onchain-libs (Plutarch)",
+              "Liqwid libs (Plutarch)",
+              "Ply (Plutarch)",
+              "Design Patterns (Scalus)",
+              "その他"
+            ],
+            "noneLabel": "なし"
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "過去12か月間に、どのオフチェーンライブラリを使いましたか？",
+            "options": [
+              "Chrysalis (.NET)",
+              "elm-cardano (Elm)",
+              "Apollo (Go)",
+              "gOuroboros (Go)",
+              "Atlas (Haskell)",
+              "cardano-api (Haskell)",
+              "sc-tools (Haskell)",
+              "cardano-client-lib (Java)",
+              "Yaci (Java)",
+              "cardano-transaction-lib (PureScript)",
+              "PyCardano (Python)",
+              "Pallas (Rust)",
+              "CML, cardano-multiplatform-lib (Rust, JS)",
+              "CSL, cardano-serialization-lib (Rust, JS)",
+              "Scalus (Scala)",
+              "Tx3",
+              "Blaze (TypeScript)",
+              "Cardano JS SDK (TypeScript)",
+              "Cometa (TypeScript)",
+              "Dexter (TypeScript)",
+              "Evolution SDK (TypeScript)",
+              "Lucid (TypeScript)",
+              "Mesh (TypeScript)",
+              "その他"
+            ],
+            "noneLabel": "なし"
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "過去12か月間に、次のうちどれをローカルや自分のサーバーで自ら動かしましたか？",
+            "options": [
+              "Adder",
+              "Amaru",
+              "Blockfrost",
+              "cardano-db-sync",
+              "cardano-graphql",
+              "cardano-node",
+              "cardano-wallet",
+              "Dingo",
+              "Dolos",
+              "Gummiworm",
+              "Hydra",
+              "Kupo",
+              "Mithril",
+              "Ogmios",
+              "Oura",
+              "Scrolls",
+              "Yaci DevKit",
+              "Yaci Store",
+              "その他"
+            ],
+            "noneLabel": "なし"
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "過去12か月間に、どの開発者ツールを使いましたか？ ステークプール向けツールも含みます。",
+            "options": [
+              "bech32",
+              "Cardano Dev Wallet",
+              "cardano-addresses",
+              "cardano-cli",
+              "cardano-hw-cli",
+              "cardano-signer",
+              "cardano-up",
+              "cncli",
+              "Cquisitor",
+              "CShell",
+              "Gastronomy",
+              "Lace Anatomy",
+              "nview",
+              "offchain-metadata-tools",
+              "Sorbet",
+              "SPOスクリプト（gitmachtl）",
+              "txtop",
+              "その他"
+            ],
+            "noneLabel": "なし"
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "過去12か月間に、どのホスト型APIサービスを使いましたか？",
+            "options": [
+              "AdaStat",
+              "Blockfrost",
+              "Cardanoscan",
+              "Cexplorer",
+              "Charli3",
+              "Demeter",
+              "Dune",
+              "IAG Insight",
+              "Koios",
+              "Maestro",
+              "Nexus",
+              "NMKR",
+              "Orcfax",
+              "Pyth",
+              "SteelSwap",
+              "TapTools",
+              "Token registry",
+              "その他"
+            ],
+            "noneLabel": "なし"
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "過去12か月間に、Cardanoのコードをどのようにテストしましたか？",
+            "options": [
+              "ユニットテスト",
+              "プロパティベーステストまたはファジング",
+              "エミュレーター、ノードなし（Lucid Evolution、Scalus、sc-tools…）",
+              "ローカルdevnet（Yaci DevKit、cardano-testnet…）",
+              "公開テストネット（Preview、Preprod）",
+              "メインネットで、少額を使って",
+              "手動で、ウォレットやコマンドラインを使って",
+              "形式検証",
+              "他チームによる監査",
+              "その他"
+            ],
+            "noneLabel": "なし"
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "この1か月間に、Cardano関連の作業でAIコーディングツールをどのくらいの頻度で使いましたか？",
+            "options": [
+              "ほぼ毎日",
+              "ほぼ毎週",
+              "それより少ない",
+              "使っていない"
+            ]
+          },
+          {
+            "prompt": "Cardanoの言語・ライブラリ・ツールのうち、AIが最も苦手とするものはどれですか？また、どのような問題が起きますか？"
+          },
+          {
+            "prompt": "次の各項目は、あなたにとってどの程度問題になっていますか？",
+            "options": [
+              "どのツールやライブラリを選ぶべきか分かること",
+              "最新のドキュメントを見つけること",
+              "動作する実例を見つけること",
+              "行き詰まったときに助けを得ること",
+              "eUTxO向けの設計（状態、並行性）",
+              "他のプロトコルとの組み合わせ（DEX、オラクル…）",
+              "実行予算とトランザクションサイズの上限",
+              "各出力の最小ada（マイクロペイメント、エアドロップ）",
+              "トランザクションの構築",
+              "ウォレットへの接続（CIP-30の問題、モバイルウォレット）",
+              "バリデータのテスト",
+              "バリデータのデバッグ",
+              "不完全またはメンテナンスされていないライブラリ",
+              "ツールやライブラリの破壊的変更",
+              "チェーンデータの取得（インデクサー、API）",
+              "ホスト型APIの制限と料金",
+              "インフラの運用（ノード、インデクサー）",
+              "CardanoのコードでAIツールから良い結果を得ること",
+              "最初のアプリケーションを一通り動かすこと"
+            ],
+            "ratingLabels": [
+              "大きな問題",
+              "改善の余地あり",
+              "問題なし",
+              "該当しない"
+            ]
+          },
+          {
+            "prompt": "Cardanoに関する技術的な質問の答えをどこで得ていますか？ 最も頼りにしているものを5つまで選択してください。",
+            "options": [
+              "AIアシスタント",
+              "ブログや記事",
+              "Cardano Blueprint",
+              "Cardanoドキュメント（docs.cardano.org）",
+              "Cardano Forum",
+              "CIP、論文、仕様書",
+              "同僚や友人",
+              "開発者ポータル（developers.cardano.org）",
+              "Discord",
+              "GitHubのIssueやDiscussion",
+              "プロジェクトのドキュメント",
+              "Reddit",
+              "ソースコード",
+              "Stack Exchange",
+              "Telegram",
+              "動画や講座",
+              "X (Twitter)",
+              "その他"
+            ]
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "次の各項目は、あなたが開発しているものにどの程度役立ちますか？",
+            "options": [
+              "より高いスループット",
+              "より速いファイナリティ",
+              "より安いトランザクション手数料",
+              "他チェーンへのブリッジ",
+              "オンチェーンでのゼロ知識証明の検証",
+              "ネストされたトランザクション",
+              "他のトークンでの手数料支払い",
+              "プログラマブルトークン",
+              "並行更新できるグローバルステート（EVMチェーンのような）",
+              "ライトクライアント",
+              "代替ノード実装",
+              "スマートコントラクトの形式検証"
+            ],
+            "ratingLabels": [
+              "行き詰まりが解消される",
+              "役立つ",
+              "必要ない",
+              "知らない"
+            ]
+          },
+          {
+            "prompt": "技術面以外で、プロジェクトの最大の妨げになっているものは何ですか？ 3つまで選択できます。",
+            "options": [
+              "監査のコストと受けやすさ",
+              "ユーザーの獲得",
+              "資金調達",
+              "認知の獲得（知名度、マーケティング）",
+              "経験豊富な開発者の採用",
+              "連携（取引所、ウォレット、カストディアン）",
+              "時間不足",
+              "法規制の不確実性",
+              "オンチェーンの流動性",
+              "その他"
+            ],
+            "noneLabel": "特にない"
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "なぜCardano上で開発しているのですか？ 3つまで選択できます。",
+            "options": [
+              "好奇心、学習",
+              "分散化と価値観",
+              "資金（Catalyst、トレジャリー、助成金）",
+              "言語とツール",
+              "市場機会",
+              "雇用主またはクライアントの選択",
+              "研究に基づくアプローチ",
+              "チェーンのセキュリティと信頼性",
+              "コミュニティ",
+              "eUTxOモデルと決定論的なトランザクション",
+              "その他"
+            ]
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "1年後もCardano上で開発している可能性はどのくらいですか？",
+            "options": [
+              "とても高い",
+              "高い",
+              "分からない",
+              "低い",
+              "とても低い"
+            ]
+          },
+          {
+            "prompt": "ステークプールオペレーターとして、次の各項目はどの程度うまくいっていますか？",
+            "options": [
+              "ノードの新リリースを早めに知ること",
+              "リリースによる変更点を理解すること",
+              "メインネット前にリリースをテストすること",
+              "ハードフォークやパラメータ変更の前に意見を聞いてもらえること"
+            ],
+            "ratingLabels": [
+              "うまくいっている",
+              "改善の余地あり",
+              "うまくいっていない"
+            ]
+          },
+          {
+            "prompt": "まだ存在しないツール、ライブラリ、機能のうち、あなたに最も役立つものは何ですか？"
+          },
+          {
+            "prompt": "あなたの役割に当てはまるものはどれですか？ 最後の質問はあなた自身についてです。答えたくないものはスキップしてください。",
+            "options": [
+              "アーキテクトまたはテックリード",
+              "データサイエンティストまたはアナリスト",
+              "DevOpsまたはシステム管理者",
+              "教育者",
+              "創業者または経営者",
+              "プロダクトマネージャーまたはプロジェクトマネージャー",
+              "研究者",
+              "ソフトウェアエンジニア",
+              "学生",
+              "その他"
+            ]
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "他にどのブロックチェーンエコシステムで開発したことがありますか？",
+            "options": [
+              "Algorand",
+              "Avalanche",
+              "Bitcoin（Lightningを含む）",
+              "BNB",
+              "Ergo",
+              "Ethereum",
+              "EthereumのL2やその他のEVMチェーン",
+              "Midnight",
+              "Solana",
+              "Sui",
+              "その他"
+            ],
+            "noneLabel": "なし"
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "Cardanoでの活動資金はどのように賄われていますか？ 主なものを3つまで選択してください。",
+            "options": [
+              "資金提供なし（自分の時間で）",
+              "創設団体からの給与（IOG、EMURGO、CF）",
+              "他の企業からの給与",
+              "自分のプロダクトやサービスの収益",
+              "クライアントワークやコンサルティング",
+              "Catalyst",
+              "トレジャリー（Intersect予算、ガバナンスアクション）",
+              "その他の助成金",
+              "投資家またはトークンセール",
+              "その他"
+            ]
+          },
+          {
+            "prompt": "その他（具体的に記入してください）"
+          },
+          {
+            "prompt": "お住まいの地域はどこですか？",
+            "options": [
+              "アフリカ",
+              "北米（アメリカ、カナダ）",
+              "中南米・カリブ海諸国（メキシコを含む）",
+              "東アジア（中国、日本、韓国）",
+              "東南アジア（インドネシア、フィリピン、シンガポール、ベトナム）",
+              "南アジア（インド、パキスタン、バングラデシュ）",
+              "中東・中央アジア",
+              "ヨーロッパ",
+              "オセアニア"
+            ]
+          },
+          {
+            "prompt": "過去12か月間に、自分のもの以外のCardano dAppをいくつ使いましたか？",
+            "options": [
+              "なし",
+              "1〜2個",
+              "3〜9個",
+              "10個以上"
+            ]
+          },
+          {
+            "prompt": "過去12か月間に、次のうちどれをしましたか？",
+            "options": [
+              "CIPを読んだ、または使った",
+              "CIPにコメントした、またはレビューした",
+              "CIPを書いた、または共同で書いた",
+              "自分のものではないCardanoのオープンソースプロジェクトに貢献した",
+              "ガバナンスアクションに投票した（DRepまたはSPOとして）",
+              "ステークプールを運営した",
+              "資金を申請した（Catalyst、トレジャリー、助成金）",
+              "Intersectの委員会やワーキンググループに参加した",
+              "Cardano開発者イベントやハッカソンに参加した",
+              "チュートリアルを書いた、教えた、またはメンターをした"
+            ],
+            "noneLabel": "いずれもしていない"
+          }
+        ]
+      },
+      "pt": {
+        "title": "Pesquisa 2026 com Desenvolvedores Cardano",
+        "description": "Cerca de 15 minutos. Os resultados mostram a quem cria ferramentas, escreve documentação e financia projetos no que trabalhar primeiro.",
+        "questions": [
+          {
+            "prompt": "Há quanto tempo você escreve ou faz deploy de software?",
+            "options": [
+              "Menos de 2 anos",
+              "2 a 4 anos",
+              "5 a 9 anos",
+              "10 anos ou mais"
+            ]
+          },
+          {
+            "prompt": "Você desenvolve na Cardano hoje?",
+            "options": [
+              "Sim (inclusive para aprender ou experimentar)",
+              "Já desenvolvi, mas parei",
+              "Pensei nisso, mas não cheguei a desenvolver"
+            ]
+          },
+          {
+            "prompt": "O que fez você parar de desenvolver na Cardano?"
+          },
+          {
+            "prompt": "O que impediu você de desenvolver na Cardano?"
+          },
+          {
+            "prompt": "Em que você trabalha?",
+            "options": [
+              "Auditorias e segurança",
+              "Protocolo central (nó, ledger, consenso)",
+              "Ferramentas e bibliotecas para desenvolvedores",
+              "Economia e design de incentivos (tokenomics, taxas, recompensas)",
+              "Front-ends e integração com carteiras",
+              "Infraestrutura (nós, indexadores, APIs)",
+              "Aplicativos móveis",
+              "Código off-chain e back-ends",
+              "Pesquisa",
+              "Smart contracts (código on-chain)",
+              "Operação de stake pool",
+              "Ensino, documentação e comunidade",
+              "Outro"
+            ]
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "Que tipos de aplicações você está desenvolvendo? Escolha até 4.",
+            "options": [
+              "Contabilidade e relatórios financeiros",
+              "Agentes de IA",
+              "Bridges e interoperabilidade",
+              "DeFi",
+              "Jogos",
+              "Ferramentas de governança",
+              "Identidade",
+              "Layer 2",
+              "NFTs",
+              "Oráculos e dados",
+              "Pagamentos e stablecoins",
+              "Privacidade e zero-knowledge",
+              "Ativos do mundo real",
+              "Cadeia de suprimentos e rastreabilidade",
+              "Carteiras",
+              "Outro"
+            ]
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "Em que estágio está o seu principal projeto Cardano?",
+            "options": [
+              "Aprendendo ou experimentando",
+              "Em desenvolvimento (testnet)",
+              "Lançado (mainnet, ou ferramenta publicada)",
+              "Lançado, com usuários regulares"
+            ]
+          },
+          {
+            "prompt": "Onde podemos encontrar esse projeto (link do site ou do repositório)? Este link é público e associa todas as suas respostas a este projeto."
+          },
+          {
+            "prompt": "Quando você começou a desenvolver na Cardano?",
+            "options": [
+              "2026",
+              "2025",
+              "2023–2024",
+              "2021–2022",
+              "2020 ou antes"
+            ]
+          },
+          {
+            "prompt": "Em uma semana típica, quanto tempo você passa desenvolvendo na Cardano?",
+            "options": [
+              "Menos de 5 horas",
+              "5 a 19 horas",
+              "20 a 34 horas",
+              "35 horas ou mais"
+            ]
+          },
+          {
+            "prompt": "No geral, como você avalia sua experiência de desenvolvimento na Cardano?",
+            "options": [
+              "Muito satisfatória",
+              "Satisfatória",
+              "Nem satisfatória nem insatisfatória",
+              "Insatisfatória",
+              "Muito insatisfatória"
+            ]
+          },
+          {
+            "prompt": "Em comparação com um ano atrás, desenvolver na Cardano está:",
+            "options": [
+              "Muito mais fácil",
+              "Um pouco mais fácil",
+              "Mais ou menos igual",
+              "Um pouco mais difícil",
+              "Muito mais difícil",
+              "Eu não desenvolvia na Cardano há um ano"
+            ]
+          },
+          {
+            "prompt": "Qual é a melhor coisa de desenvolver na Cardano?"
+          },
+          {
+            "prompt": "Qual é a sua maior dor ao desenvolver na Cardano?"
+          },
+          {
+            "prompt": "Quais linguagens você usou para código on-chain nos últimos 12 meses?",
+            "options": [
+              "Aiken",
+              "Helios",
+              "JuLC",
+              "Marlowe",
+              "OpShin",
+              "Pebble",
+              "Plinth (Plutus-Tx)",
+              "Plu-ts",
+              "Plutarch",
+              "Scalus",
+              "Outro"
+            ],
+            "noneLabel": "Nenhuma"
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "Quais bibliotecas on-chain você usou nos últimos 12 meses? Sem contar as bibliotecas padrão.",
+            "options": [
+              "Aicone, com Sundae multisig (Aiken)",
+              "ak-381 (Aiken)",
+              "Assist (Aiken)",
+              "Design Patterns (Aiken)",
+              "Fuzz (Aiken)",
+              "Merkle Patricia Forestry (Aiken)",
+              "Oakshield (Aiken)",
+              "Vodka (Aiken)",
+              "ZeroJ (JuLC)",
+              "plutus-script-utils (Plinth)",
+              "Plutus Simple Model (Plinth)",
+              "catalyst-onchain-libs (Plutarch)",
+              "Liqwid libs (Plutarch)",
+              "Ply (Plutarch)",
+              "Design Patterns (Scalus)",
+              "Outro"
+            ],
+            "noneLabel": "Nenhuma"
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "Quais bibliotecas off-chain você usou nos últimos 12 meses?",
+            "options": [
+              "Chrysalis (.NET)",
+              "elm-cardano (Elm)",
+              "Apollo (Go)",
+              "gOuroboros (Go)",
+              "Atlas (Haskell)",
+              "cardano-api (Haskell)",
+              "sc-tools (Haskell)",
+              "cardano-client-lib (Java)",
+              "Yaci (Java)",
+              "cardano-transaction-lib (PureScript)",
+              "PyCardano (Python)",
+              "Pallas (Rust)",
+              "CML, cardano-multiplatform-lib (Rust, JS)",
+              "CSL, cardano-serialization-lib (Rust, JS)",
+              "Scalus (Scala)",
+              "Tx3",
+              "Blaze (TypeScript)",
+              "Cardano JS SDK (TypeScript)",
+              "Cometa (TypeScript)",
+              "Dexter (TypeScript)",
+              "Evolution SDK (TypeScript)",
+              "Lucid (TypeScript)",
+              "Mesh (TypeScript)",
+              "Outro"
+            ],
+            "noneLabel": "Nenhuma"
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "Quais destes você mesmo rodou nos últimos 12 meses, localmente ou nos seus servidores?",
+            "options": [
+              "Adder",
+              "Amaru",
+              "Blockfrost",
+              "cardano-db-sync",
+              "cardano-graphql",
+              "cardano-node",
+              "cardano-wallet",
+              "Dingo",
+              "Dolos",
+              "Gummiworm",
+              "Hydra",
+              "Kupo",
+              "Mithril",
+              "Ogmios",
+              "Oura",
+              "Scrolls",
+              "Yaci DevKit",
+              "Yaci Store",
+              "Outro"
+            ],
+            "noneLabel": "Nenhum"
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "Quais ferramentas de desenvolvimento você usou nos últimos 12 meses? Incluindo ferramentas para stake pools.",
+            "options": [
+              "bech32",
+              "Cardano Dev Wallet",
+              "cardano-addresses",
+              "cardano-cli",
+              "cardano-hw-cli",
+              "cardano-signer",
+              "cardano-up",
+              "cncli",
+              "Cquisitor",
+              "CShell",
+              "Gastronomy",
+              "Lace Anatomy",
+              "nview",
+              "offchain-metadata-tools",
+              "Sorbet",
+              "Scripts SPO (gitmachtl)",
+              "txtop",
+              "Outro"
+            ],
+            "noneLabel": "Nenhuma"
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "Quais serviços de API hospedados você usou nos últimos 12 meses?",
+            "options": [
+              "AdaStat",
+              "Blockfrost",
+              "Cardanoscan",
+              "Cexplorer",
+              "Charli3",
+              "Demeter",
+              "Dune",
+              "IAG Insight",
+              "Koios",
+              "Maestro",
+              "Nexus",
+              "NMKR",
+              "Orcfax",
+              "Pyth",
+              "SteelSwap",
+              "TapTools",
+              "Token registry",
+              "Outro"
+            ],
+            "noneLabel": "Nenhum"
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "Como você testou seu código Cardano nos últimos 12 meses?",
+            "options": [
+              "Testes unitários",
+              "Testes baseados em propriedades ou fuzzing",
+              "Emulador, sem nó (Lucid Evolution, Scalus, sc-tools…)",
+              "Devnet local (Yaci DevKit, cardano-testnet…)",
+              "Testnet pública (Preview, Preprod)",
+              "Mainnet, com valores pequenos",
+              "Manualmente, com uma carteira ou pela linha de comando",
+              "Verificação formal",
+              "Auditoria por outra equipe",
+              "Outro"
+            ],
+            "noneLabel": "Nenhum"
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "No último mês, com que frequência você usou ferramentas de IA para programar na Cardano?",
+            "options": [
+              "Todo dia ou quase",
+              "Toda semana ou quase",
+              "Com menos frequência",
+              "Nunca"
+            ]
+          },
+          {
+            "prompt": "Com qual linguagem, biblioteca ou ferramenta Cardano a IA se sai pior, e o que dá errado?"
+          },
+          {
+            "prompt": "Quanto cada um destes pontos é um problema para você?",
+            "options": [
+              "Saber quais ferramentas e bibliotecas escolher",
+              "Encontrar documentação atualizada",
+              "Encontrar exemplos que funcionam",
+              "Conseguir ajuda quando travo",
+              "Projetar para o eUTxO (estado, concorrência)",
+              "Compor com outros protocolos (DEXs, oráculos…)",
+              "Limites de orçamento de execução e de tamanho de transação",
+              "Mínimo de ada em cada output (micropagamentos, airdrops)",
+              "Construir transações",
+              "Conectar com carteiras (problemas com CIP-30, carteiras móveis)",
+              "Testar validadores",
+              "Depurar validadores",
+              "Bibliotecas incompletas ou sem manutenção",
+              "Breaking changes em ferramentas e bibliotecas",
+              "Obter dados da blockchain (indexadores, APIs)",
+              "Limites e preços das APIs hospedadas",
+              "Rodar infraestrutura (nó, indexador)",
+              "Obter bons resultados de ferramentas de IA em código Cardano",
+              "Fazer uma primeira aplicação funcionar de ponta a ponta"
+            ],
+            "ratingLabels": [
+              "Grande problema",
+              "Poderia ser melhor",
+              "Tudo bem",
+              "Não se aplica"
+            ]
+          },
+          {
+            "prompt": "Onde você encontra respostas para perguntas técnicas sobre a Cardano? Escolha até 5, as fontes que você mais usa.",
+            "options": [
+              "Assistentes de IA",
+              "Blogs e artigos",
+              "Cardano Blueprint",
+              "Documentação da Cardano (docs.cardano.org)",
+              "Cardano Forum",
+              "CIPs, papers e especificações",
+              "Colegas e amigos",
+              "Portal do desenvolvedor (developers.cardano.org)",
+              "Discord",
+              "Issues e discussões no GitHub",
+              "Documentação dos projetos",
+              "Reddit",
+              "Código-fonte",
+              "Stack Exchange",
+              "Telegram",
+              "Vídeos e cursos",
+              "X (Twitter)",
+              "Outro"
+            ]
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "Quanto cada um destes pontos ajudaria o que você está desenvolvendo?",
+            "options": [
+              "Maior throughput",
+              "Finalidade mais rápida",
+              "Taxas de transação mais baixas",
+              "Bridges para outras chains",
+              "Verificação de provas zero-knowledge on-chain",
+              "Transações aninhadas",
+              "Pagar taxas com outros tokens",
+              "Tokens programáveis",
+              "Estado global com atualizações concorrentes (como nas chains EVM)",
+              "Clientes leves (light clients)",
+              "Nós alternativos",
+              "Verificação formal de smart contracts"
+            ],
+            "ratingLabels": [
+              "Me desbloquearia",
+              "Ajudaria",
+              "Não preciso",
+              "O que é isso?"
+            ]
+          },
+          {
+            "prompt": "Além da tecnologia, o que mais freia o seu projeto? Escolha até 3.",
+            "options": [
+              "Custo e disponibilidade de auditorias",
+              "Encontrar usuários",
+              "Financiamento",
+              "Ganhar visibilidade (divulgação, marketing)",
+              "Contratar desenvolvedores experientes",
+              "Integrações (exchanges, carteiras, custodiantes)",
+              "Falta de tempo",
+              "Incerteza jurídica e regulatória",
+              "Liquidez on-chain",
+              "Outro"
+            ],
+            "noneLabel": "Nada significativo"
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "Por que você desenvolve na Cardano? Escolha até 3.",
+            "options": [
+              "Curiosidade, aprendizado",
+              "Descentralização e valores",
+              "Financiamento (Catalyst, tesouro, grants)",
+              "Linguagens e ferramentas",
+              "Oportunidade de mercado",
+              "Meu empregador ou cliente escolheu",
+              "Abordagem baseada em pesquisa",
+              "Segurança e confiabilidade da chain",
+              "A comunidade",
+              "O modelo eUTxO e as transações determinísticas",
+              "Outro"
+            ]
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "Qual é a probabilidade de você ainda estar desenvolvendo na Cardano daqui a um ano?",
+            "options": [
+              "Muito provável",
+              "Provável",
+              "Não sei",
+              "Improvável",
+              "Muito improvável"
+            ]
+          },
+          {
+            "prompt": "Como operador de stake pool, como cada um destes pontos funciona para você?",
+            "options": [
+              "Ficar sabendo a tempo das novas versões do nó",
+              "Entender o que muda em uma versão",
+              "Testar uma versão antes da mainnet",
+              "Ser ouvido antes de hard forks e mudanças de parâmetros"
+            ],
+            "ratingLabels": [
+              "Funciona bem",
+              "Poderia ser melhor",
+              "Mal"
+            ]
+          },
+          {
+            "prompt": "Qual ferramenta, biblioteca ou funcionalidade que ainda não existe ajudaria mais você?"
+          },
+          {
+            "prompt": "Quais destes descrevem o seu papel? As últimas perguntas são sobre você: pule as que preferir não responder.",
+            "options": [
+              "Arquitetura ou liderança técnica",
+              "Ciência ou análise de dados",
+              "DevOps ou administração de sistemas",
+              "Ensino ou formação",
+              "Fundação ou direção de empresa",
+              "Gestão de produto ou de projeto",
+              "Pesquisa",
+              "Engenharia de software",
+              "Estudante",
+              "Outro"
+            ]
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "Em quais outros ecossistemas blockchain você já desenvolveu?",
+            "options": [
+              "Algorand",
+              "Avalanche",
+              "Bitcoin (incl. Lightning)",
+              "BNB",
+              "Ergo",
+              "Ethereum",
+              "L2s da Ethereum e outras chains EVM",
+              "Midnight",
+              "Solana",
+              "Sui",
+              "Outro"
+            ],
+            "noneLabel": "Nenhum"
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "Como o seu trabalho na Cardano é financiado? Escolha até 3, as principais fontes.",
+            "options": [
+              "Não é financiado (meu próprio tempo)",
+              "Salário de uma entidade fundadora (IOG, EMURGO, CF)",
+              "Salário de outra empresa",
+              "Receita do meu próprio produto ou serviço",
+              "Trabalho para clientes ou consultoria",
+              "Catalyst",
+              "Tesouro (orçamento da Intersect, ação de governança)",
+              "Outros grants",
+              "Investidores ou venda de tokens",
+              "Outro"
+            ]
+          },
+          {
+            "prompt": "Outro (especifique)"
+          },
+          {
+            "prompt": "Onde você mora?",
+            "options": [
+              "África",
+              "América do Norte (EUA, Canadá)",
+              "América Latina e Caribe (incl. México)",
+              "Leste Asiático (China, Japão, Coreia)",
+              "Sudeste Asiático (Indonésia, Filipinas, Singapura, Vietnã)",
+              "Sul da Ásia (Índia, Paquistão, Bangladesh)",
+              "Oriente Médio e Ásia Central",
+              "Europa",
+              "Oceania"
+            ]
+          },
+          {
+            "prompt": "Quantos dApps da Cardano, além dos seus, você usou nos últimos 12 meses?",
+            "options": [
+              "Nenhum",
+              "1 ou 2",
+              "3 a 9",
+              "10 ou mais"
+            ]
+          },
+          {
+            "prompt": "Quais destas coisas você fez nos últimos 12 meses?",
+            "options": [
+              "Li ou usei uma CIP",
+              "Comentei ou revisei uma CIP",
+              "Escrevi ou coescrevi uma CIP",
+              "Contribuí para um projeto Cardano open source que não é meu",
+              "Votei em uma ação de governança (como DRep ou SPO)",
+              "Operei um stake pool",
+              "Pedi financiamento (Catalyst, tesouro, grants)",
+              "Participei de um comitê ou grupo de trabalho da Intersect",
+              "Participei de um evento ou hackathon para desenvolvedores Cardano",
+              "Escrevi um tutorial, ensinei ou fiz mentoria"
+            ],
+            "noneLabel": "Nenhuma destas"
+          }
+        ]
+      },
+      "vi": {
+        "title": "Khảo sát lập trình viên Cardano 2026",
+        "description": "Khoảng 15 phút. Kết quả cho những người xây dựng công cụ, viết tài liệu và cấp vốn biết nên ưu tiên làm gì trước.",
+        "questions": [
+          {
+            "prompt": "Bạn đã viết hoặc triển khai phần mềm được bao lâu?",
+            "options": [
+              "Dưới 2 năm",
+              "2 đến 4 năm",
+              "5 đến 9 năm",
+              "10 năm trở lên"
+            ]
+          },
+          {
+            "prompt": "Hiện nay bạn có phát triển trên Cardano không?",
+            "options": [
+              "Có (kể cả học hoặc thử nghiệm)",
+              "Đã từng, nhưng tôi đã dừng",
+              "Đã cân nhắc, nhưng chưa phát triển trên đó"
+            ]
+          },
+          {
+            "prompt": "Điều gì khiến bạn dừng phát triển trên Cardano?"
+          },
+          {
+            "prompt": "Điều gì đã cản bạn phát triển trên Cardano?"
+          },
+          {
+            "prompt": "Bạn làm việc trong mảng nào?",
+            "options": [
+              "Audit và bảo mật",
+              "Giao thức lõi (node, ledger, đồng thuận)",
+              "Công cụ và thư viện cho lập trình viên",
+              "Kinh tế và thiết kế khuyến khích (tokenomics, phí, phần thưởng)",
+              "Front-end và tích hợp ví",
+              "Hạ tầng (node, indexer, API)",
+              "Ứng dụng di động",
+              "Code off-chain và back-end",
+              "Nghiên cứu",
+              "Smart contract (code on-chain)",
+              "Vận hành stake pool",
+              "Giảng dạy, tài liệu và cộng đồng",
+              "Khác"
+            ]
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Bạn đang xây dựng những loại ứng dụng nào? Chọn tối đa 4.",
+            "options": [
+              "Kế toán và báo cáo tài chính",
+              "Tác tử AI",
+              "Bridge và khả năng tương tác",
+              "DeFi",
+              "Game",
+              "Công cụ quản trị",
+              "Định danh",
+              "Layer 2",
+              "NFT",
+              "Oracle và dữ liệu",
+              "Thanh toán và stablecoin",
+              "Quyền riêng tư và zero-knowledge",
+              "Tài sản thế giới thực",
+              "Chuỗi cung ứng và truy xuất nguồn gốc",
+              "Ví",
+              "Khác"
+            ]
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Dự án Cardano chính của bạn đang ở giai đoạn nào?",
+            "options": [
+              "Đang học hoặc thử nghiệm",
+              "Đang phát triển (testnet)",
+              "Đã phát hành (mainnet, hoặc công cụ đã công bố)",
+              "Đã phát hành, có người dùng thường xuyên"
+            ]
+          },
+          {
+            "prompt": "Chúng tôi có thể tìm thấy dự án này ở đâu (liên kết đến website hoặc repository)? Liên kết này công khai và gắn toàn bộ câu trả lời của bạn với dự án này."
+          },
+          {
+            "prompt": "Bạn bắt đầu phát triển trên Cardano từ khi nào?",
+            "options": [
+              "2026",
+              "2025",
+              "2023–2024",
+              "2021–2022",
+              "2020 hoặc trước đó"
+            ]
+          },
+          {
+            "prompt": "Trong một tuần thông thường, bạn dành bao nhiêu thời gian để phát triển trên Cardano?",
+            "options": [
+              "Dưới 5 giờ",
+              "5 đến 19 giờ",
+              "20 đến 34 giờ",
+              "35 giờ trở lên"
+            ]
+          },
+          {
+            "prompt": "Nhìn chung, bạn hài lòng đến mức nào với việc phát triển trên Cardano?",
+            "options": [
+              "Rất hài lòng",
+              "Hài lòng",
+              "Bình thường",
+              "Không hài lòng",
+              "Rất không hài lòng"
+            ]
+          },
+          {
+            "prompt": "So với một năm trước, việc phát triển trên Cardano giờ:",
+            "options": [
+              "Dễ hơn nhiều",
+              "Dễ hơn một chút",
+              "Gần như không đổi",
+              "Khó hơn một chút",
+              "Khó hơn nhiều",
+              "Một năm trước tôi chưa phát triển trên Cardano"
+            ]
+          },
+          {
+            "prompt": "Điều tuyệt nhất khi phát triển trên Cardano là gì?"
+          },
+          {
+            "prompt": "Điều khó chịu nhất khi phát triển trên Cardano là gì?"
+          },
+          {
+            "prompt": "Trong 12 tháng qua, bạn đã dùng những ngôn ngữ nào để viết code on-chain?",
+            "options": [
+              "Aiken",
+              "Helios",
+              "JuLC",
+              "Marlowe",
+              "OpShin",
+              "Pebble",
+              "Plinth (Plutus-Tx)",
+              "Plu-ts",
+              "Plutarch",
+              "Scalus",
+              "Khác"
+            ],
+            "noneLabel": "Không có"
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Trong 12 tháng qua, bạn đã dùng những thư viện on-chain nào? Không tính các thư viện chuẩn.",
+            "options": [
+              "Aicone, với Sundae multisig (Aiken)",
+              "ak-381 (Aiken)",
+              "Assist (Aiken)",
+              "Design Patterns (Aiken)",
+              "Fuzz (Aiken)",
+              "Merkle Patricia Forestry (Aiken)",
+              "Oakshield (Aiken)",
+              "Vodka (Aiken)",
+              "ZeroJ (JuLC)",
+              "plutus-script-utils (Plinth)",
+              "Plutus Simple Model (Plinth)",
+              "catalyst-onchain-libs (Plutarch)",
+              "Liqwid libs (Plutarch)",
+              "Ply (Plutarch)",
+              "Design Patterns (Scalus)",
+              "Khác"
+            ],
+            "noneLabel": "Không có"
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Trong 12 tháng qua, bạn đã dùng những thư viện off-chain nào?",
+            "options": [
+              "Chrysalis (.NET)",
+              "elm-cardano (Elm)",
+              "Apollo (Go)",
+              "gOuroboros (Go)",
+              "Atlas (Haskell)",
+              "cardano-api (Haskell)",
+              "sc-tools (Haskell)",
+              "cardano-client-lib (Java)",
+              "Yaci (Java)",
+              "cardano-transaction-lib (PureScript)",
+              "PyCardano (Python)",
+              "Pallas (Rust)",
+              "CML, cardano-multiplatform-lib (Rust, JS)",
+              "CSL, cardano-serialization-lib (Rust, JS)",
+              "Scalus (Scala)",
+              "Tx3",
+              "Blaze (TypeScript)",
+              "Cardano JS SDK (TypeScript)",
+              "Cometa (TypeScript)",
+              "Dexter (TypeScript)",
+              "Evolution SDK (TypeScript)",
+              "Lucid (TypeScript)",
+              "Mesh (TypeScript)",
+              "Khác"
+            ],
+            "noneLabel": "Không có"
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Trong 12 tháng qua, bạn đã tự chạy những phần mềm nào sau đây, trên máy cá nhân hoặc trên máy chủ của bạn?",
+            "options": [
+              "Adder",
+              "Amaru",
+              "Blockfrost",
+              "cardano-db-sync",
+              "cardano-graphql",
+              "cardano-node",
+              "cardano-wallet",
+              "Dingo",
+              "Dolos",
+              "Gummiworm",
+              "Hydra",
+              "Kupo",
+              "Mithril",
+              "Ogmios",
+              "Oura",
+              "Scrolls",
+              "Yaci DevKit",
+              "Yaci Store",
+              "Khác"
+            ],
+            "noneLabel": "Không có"
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Trong 12 tháng qua, bạn đã dùng những công cụ lập trình nào? Kể cả các công cụ cho stake pool.",
+            "options": [
+              "bech32",
+              "Cardano Dev Wallet",
+              "cardano-addresses",
+              "cardano-cli",
+              "cardano-hw-cli",
+              "cardano-signer",
+              "cardano-up",
+              "cncli",
+              "Cquisitor",
+              "CShell",
+              "Gastronomy",
+              "Lace Anatomy",
+              "nview",
+              "offchain-metadata-tools",
+              "Sorbet",
+              "Script SPO (gitmachtl)",
+              "txtop",
+              "Khác"
+            ],
+            "noneLabel": "Không có"
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Trong 12 tháng qua, bạn đã dùng những dịch vụ API nào?",
+            "options": [
+              "AdaStat",
+              "Blockfrost",
+              "Cardanoscan",
+              "Cexplorer",
+              "Charli3",
+              "Demeter",
+              "Dune",
+              "IAG Insight",
+              "Koios",
+              "Maestro",
+              "Nexus",
+              "NMKR",
+              "Orcfax",
+              "Pyth",
+              "SteelSwap",
+              "TapTools",
+              "Token registry",
+              "Khác"
+            ],
+            "noneLabel": "Không có"
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Trong 12 tháng qua, bạn đã kiểm thử code Cardano của mình bằng cách nào?",
+            "options": [
+              "Unit test",
+              "Property-based test hoặc fuzzing",
+              "Emulator, không cần node (Lucid Evolution, Scalus, sc-tools…)",
+              "Devnet cục bộ (Yaci DevKit, cardano-testnet…)",
+              "Testnet công khai (Preview, Preprod)",
+              "Mainnet, với số tiền nhỏ",
+              "Thủ công, bằng ví hoặc dòng lệnh",
+              "Kiểm chứng hình thức",
+              "Audit bởi một đội khác",
+              "Khác"
+            ],
+            "noneLabel": "Không có"
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Trong tháng vừa qua, bạn dùng công cụ AI hỗ trợ lập trình cho công việc Cardano thường xuyên đến mức nào?",
+            "options": [
+              "Hằng ngày hoặc gần như vậy",
+              "Hằng tuần hoặc gần như vậy",
+              "Ít hơn",
+              "Không bao giờ"
+            ]
+          },
+          {
+            "prompt": "AI xử lý kém nhất ngôn ngữ, thư viện hay công cụ Cardano nào, và nó sai ở đâu?"
+          },
+          {
+            "prompt": "Mỗi điểm sau đây gây khó khăn cho bạn đến mức nào?",
+            "options": [
+              "Biết nên chọn công cụ và thư viện nào",
+              "Tìm tài liệu cập nhật",
+              "Tìm ví dụ chạy được",
+              "Được trợ giúp khi bị kẹt",
+              "Thiết kế cho eUTxO (trạng thái, xử lý đồng thời)",
+              "Kết hợp với các giao thức khác (DEX, oracle…)",
+              "Giới hạn ngân sách thực thi và kích thước giao dịch",
+              "Lượng ada tối thiểu trong mỗi output (thanh toán vi mô, airdrop)",
+              "Xây dựng giao dịch",
+              "Kết nối với ví (vấn đề CIP-30, ví di động)",
+              "Kiểm thử validator",
+              "Gỡ lỗi validator",
+              "Thư viện chưa hoàn thiện hoặc không được bảo trì",
+              "Thay đổi gây mất tương thích trong công cụ và thư viện",
+              "Lấy dữ liệu chuỗi (indexer, API)",
+              "Giới hạn và giá của các dịch vụ API",
+              "Vận hành hạ tầng (node, indexer)",
+              "Đạt kết quả tốt từ công cụ AI với code Cardano",
+              "Làm một ứng dụng đầu tiên chạy được từ đầu đến cuối"
+            ],
+            "ratingLabels": [
+              "Vấn đề lớn",
+              "Có thể tốt hơn",
+              "Ổn cả",
+              "Không liên quan"
+            ]
+          },
+          {
+            "prompt": "Bạn tìm câu trả lời cho các câu hỏi kỹ thuật về Cardano ở đâu? Chọn tối đa 5, những nguồn bạn dựa vào nhiều nhất.",
+            "options": [
+              "Trợ lý AI",
+              "Blog và bài viết",
+              "Cardano Blueprint",
+              "Tài liệu Cardano (docs.cardano.org)",
+              "Cardano Forum",
+              "CIP, bài báo khoa học và đặc tả",
+              "Đồng nghiệp và bạn bè",
+              "Cổng lập trình viên (developers.cardano.org)",
+              "Discord",
+              "Issue và thảo luận trên GitHub",
+              "Tài liệu của dự án",
+              "Reddit",
+              "Mã nguồn",
+              "Stack Exchange",
+              "Telegram",
+              "Video và khóa học",
+              "X (Twitter)",
+              "Khác"
+            ]
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Mỗi điểm sau đây sẽ giúp ích đến mức nào cho thứ bạn đang xây dựng?",
+            "options": [
+              "Thông lượng cao hơn",
+              "Finality nhanh hơn",
+              "Phí giao dịch thấp hơn",
+              "Bridge sang các chuỗi khác",
+              "Xác minh bằng chứng zero-knowledge on-chain",
+              "Giao dịch lồng nhau",
+              "Trả phí bằng token khác",
+              "Token lập trình được",
+              "Trạng thái toàn cục với cập nhật đồng thời (như các chuỗi EVM)",
+              "Light client",
+              "Các node thay thế",
+              "Kiểm chứng hình thức cho smart contract"
+            ],
+            "ratingLabels": [
+              "Gỡ kẹt cho tôi",
+              "Có ích",
+              "Không cần",
+              "Đó là gì?"
+            ]
+          },
+          {
+            "prompt": "Ngoài công nghệ, điều gì kìm hãm dự án của bạn nhiều nhất? Chọn tối đa 3.",
+            "options": [
+              "Chi phí và khả năng tìm được audit",
+              "Tìm người dùng",
+              "Vốn",
+              "Được biết đến (độ nhận diện, marketing)",
+              "Tuyển lập trình viên có kinh nghiệm",
+              "Tích hợp (sàn giao dịch, ví, bên lưu ký)",
+              "Thiếu thời gian",
+              "Bất định về pháp lý và quy định",
+              "Thanh khoản on-chain",
+              "Khác"
+            ],
+            "noneLabel": "Không có gì đáng kể"
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Vì sao bạn phát triển trên Cardano? Chọn tối đa 3.",
+            "options": [
+              "Tò mò, học hỏi",
+              "Phi tập trung và giá trị",
+              "Vốn (Catalyst, ngân khố, tài trợ)",
+              "Ngôn ngữ và công cụ",
+              "Cơ hội thị trường",
+              "Công ty hoặc khách hàng của tôi chọn",
+              "Cách tiếp cận dựa trên nghiên cứu",
+              "Tính bảo mật và độ tin cậy của chuỗi",
+              "Cộng đồng",
+              "Mô hình eUTxO và giao dịch tất định",
+              "Khác"
+            ]
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Khả năng bạn vẫn phát triển trên Cardano sau một năm nữa là bao nhiêu?",
+            "options": [
+              "Rất có khả năng",
+              "Có khả năng",
+              "Không chắc",
+              "Ít khả năng",
+              "Rất ít khả năng"
+            ]
+          },
+          {
+            "prompt": "Với tư cách nhà điều hành stake pool, mỗi việc sau đây diễn ra với bạn thế nào?",
+            "options": [
+              "Biết kịp thời về các bản phát hành node",
+              "Hiểu một bản phát hành thay đổi những gì",
+              "Thử một bản phát hành trước khi lên mainnet",
+              "Được lắng nghe trước các hard fork và thay đổi tham số"
+            ],
+            "ratingLabels": [
+              "Tốt",
+              "Có thể tốt hơn",
+              "Kém"
+            ]
+          },
+          {
+            "prompt": "Công cụ, thư viện hoặc tính năng nào chưa tồn tại sẽ giúp bạn nhiều nhất?"
+          },
+          {
+            "prompt": "Những vai trò nào sau đây mô tả đúng bạn? Các câu hỏi cuối cùng là về bạn: hãy bỏ qua câu nào bạn không muốn trả lời.",
+            "options": [
+              "Kiến trúc sư hoặc trưởng nhóm kỹ thuật",
+              "Nhà khoa học hoặc chuyên viên phân tích dữ liệu",
+              "DevOps hoặc quản trị hệ thống",
+              "Giảng viên hoặc người đào tạo",
+              "Nhà sáng lập hoặc lãnh đạo",
+              "Quản lý sản phẩm hoặc dự án",
+              "Nhà nghiên cứu",
+              "Kỹ sư phần mềm",
+              "Sinh viên",
+              "Khác"
+            ]
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Bạn đã từng phát triển trên những hệ sinh thái blockchain nào khác?",
+            "options": [
+              "Algorand",
+              "Avalanche",
+              "Bitcoin (kể cả Lightning)",
+              "BNB",
+              "Ergo",
+              "Ethereum",
+              "Các L2 của Ethereum và chuỗi EVM khác",
+              "Midnight",
+              "Solana",
+              "Sui",
+              "Khác"
+            ],
+            "noneLabel": "Không có"
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Công việc Cardano của bạn được cấp vốn như thế nào? Chọn tối đa 3, những nguồn chính.",
+            "options": [
+              "Không có vốn (thời gian của riêng tôi)",
+              "Lương từ một tổ chức sáng lập (IOG, EMURGO, CF)",
+              "Lương từ một công ty khác",
+              "Doanh thu từ sản phẩm hoặc dịch vụ của riêng tôi",
+              "Làm cho khách hàng hoặc tư vấn",
+              "Catalyst",
+              "Ngân khố (ngân sách Intersect, hành động quản trị)",
+              "Tài trợ khác",
+              "Nhà đầu tư hoặc bán token",
+              "Khác"
+            ]
+          },
+          {
+            "prompt": "Khác (vui lòng ghi rõ)"
+          },
+          {
+            "prompt": "Bạn đang ở đâu?",
+            "options": [
+              "Châu Phi",
+              "Bắc Mỹ (Hoa Kỳ, Canada)",
+              "Mỹ Latinh và Caribe (kể cả Mexico)",
+              "Đông Á (Trung Quốc, Nhật Bản, Hàn Quốc)",
+              "Đông Nam Á (Indonesia, Philippines, Singapore, Việt Nam)",
+              "Nam Á (Ấn Độ, Pakistan, Bangladesh)",
+              "Trung Đông và Trung Á",
+              "Châu Âu",
+              "Châu Đại Dương"
+            ]
+          },
+          {
+            "prompt": "Trong 12 tháng qua, bạn đã dùng bao nhiêu dApp Cardano, không tính của chính bạn?",
+            "options": [
+              "Không có",
+              "1 hoặc 2",
+              "3 đến 9",
+              "10 trở lên"
+            ]
+          },
+          {
+            "prompt": "Trong 12 tháng qua, bạn đã làm những việc nào sau đây?",
+            "options": [
+              "Đọc hoặc dùng một CIP",
+              "Bình luận hoặc review một CIP",
+              "Viết hoặc đồng viết một CIP",
+              "Đóng góp cho một dự án Cardano mã nguồn mở không phải của tôi",
+              "Bỏ phiếu cho một hành động quản trị (với tư cách DRep hoặc SPO)",
+              "Vận hành một stake pool",
+              "Xin cấp vốn (Catalyst, ngân khố, tài trợ)",
+              "Tham gia một ủy ban hoặc nhóm làm việc của Intersect",
+              "Tham dự một sự kiện lập trình viên Cardano hoặc hackathon",
+              "Viết hướng dẫn, giảng dạy hoặc cố vấn"
+            ],
+            "noneLabel": "Không việc nào trong số này"
+          }
+        ]
+      },
+      "zh": {
+        "title": "2026 年 Cardano 开发者调查",
+        "description": "大约需要 15 分钟。调查结果会告诉工具开发者、文档作者和资助方应该优先做什么。",
+        "questions": [
+          {
+            "prompt": "你编写或部署软件有多长时间了？",
+            "options": [
+              "不到 2 年",
+              "2 到 4 年",
+              "5 到 9 年",
+              "10 年或以上"
+            ]
+          },
+          {
+            "prompt": "你目前在 Cardano 上进行开发吗？",
+            "options": [
+              "是（包括学习或试验）",
+              "以前有，但已经停止了",
+              "考虑过，但还没有动手"
+            ]
+          },
+          {
+            "prompt": "是什么让你停止在 Cardano 上开发？"
+          },
+          {
+            "prompt": "是什么让你一直没有在 Cardano 上开发？"
+          },
+          {
+            "prompt": "你从事哪些方面的工作？",
+            "options": [
+              "审计与安全",
+              "核心协议（节点、账本、共识）",
+              "开发者工具与库",
+              "经济与激励设计（代币经济、手续费、奖励）",
+              "前端与钱包集成",
+              "基础设施（节点、索引器、API）",
+              "移动应用",
+              "链下代码与后端",
+              "研究",
+              "智能合约（链上代码）",
+              "质押池运营",
+              "教学、文档与社区",
+              "其他"
+            ]
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "你正在构建哪些类型的应用？ 最多选 4 项。",
+            "options": [
+              "会计与财务报告",
+              "AI 智能体",
+              "跨链桥与互操作性",
+              "DeFi",
+              "游戏",
+              "治理工具",
+              "身份",
+              "Layer 2",
+              "NFT",
+              "预言机与数据",
+              "支付与稳定币",
+              "隐私与零知识证明",
+              "现实世界资产",
+              "供应链与溯源",
+              "钱包",
+              "其他"
+            ]
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "你的主要 Cardano 项目进展到哪一步了？",
+            "options": [
+              "学习或试验中",
+              "开发中（测试网）",
+              "已发布（主网，或已发布的工具）",
+              "已发布，并有固定用户"
+            ]
+          },
+          {
+            "prompt": "我们可以在哪里找到这个项目（网站或代码仓库链接）？ 此链接是公开的，并会把你的所有回答与这个项目关联起来。"
+          },
+          {
+            "prompt": "你是什么时候开始在 Cardano 上开发的？",
+            "options": [
+              "2026",
+              "2025",
+              "2023–2024",
+              "2021–2022",
+              "2020 年或更早"
+            ]
+          },
+          {
+            "prompt": "在通常的一周里，你花多少时间在 Cardano 上开发？",
+            "options": [
+              "不到 5 小时",
+              "5 到 19 小时",
+              "20 到 34 小时",
+              "35 小时或以上"
+            ]
+          },
+          {
+            "prompt": "总体而言，你对在 Cardano 上开发的满意度如何？",
+            "options": [
+              "非常满意",
+              "满意",
+              "一般",
+              "不满意",
+              "非常不满意"
+            ]
+          },
+          {
+            "prompt": "与一年前相比，在 Cardano 上开发变得：",
+            "options": [
+              "容易多了",
+              "容易了一些",
+              "差不多",
+              "难了一些",
+              "难多了",
+              "一年前我还没有在 Cardano 上开发"
+            ]
+          },
+          {
+            "prompt": "在 Cardano 上开发，最好的一点是什么？"
+          },
+          {
+            "prompt": "在 Cardano 上开发，最痛苦的一点是什么？"
+          },
+          {
+            "prompt": "过去 12 个月里，你用过哪些语言编写链上代码？",
+            "options": [
+              "Aiken",
+              "Helios",
+              "JuLC",
+              "Marlowe",
+              "OpShin",
+              "Pebble",
+              "Plinth (Plutus-Tx)",
+              "Plu-ts",
+              "Plutarch",
+              "Scalus",
+              "其他"
+            ],
+            "noneLabel": "没有"
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "过去 12 个月里，你用过哪些链上库？ 不包括标准库。",
+            "options": [
+              "Aicone，含 Sundae multisig（Aiken）",
+              "ak-381 (Aiken)",
+              "Assist (Aiken)",
+              "Design Patterns (Aiken)",
+              "Fuzz (Aiken)",
+              "Merkle Patricia Forestry (Aiken)",
+              "Oakshield (Aiken)",
+              "Vodka (Aiken)",
+              "ZeroJ (JuLC)",
+              "plutus-script-utils (Plinth)",
+              "Plutus Simple Model (Plinth)",
+              "catalyst-onchain-libs (Plutarch)",
+              "Liqwid libs (Plutarch)",
+              "Ply (Plutarch)",
+              "Design Patterns (Scalus)",
+              "其他"
+            ],
+            "noneLabel": "没有"
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "过去 12 个月里，你用过哪些链下库？",
+            "options": [
+              "Chrysalis (.NET)",
+              "elm-cardano (Elm)",
+              "Apollo (Go)",
+              "gOuroboros (Go)",
+              "Atlas (Haskell)",
+              "cardano-api (Haskell)",
+              "sc-tools (Haskell)",
+              "cardano-client-lib (Java)",
+              "Yaci (Java)",
+              "cardano-transaction-lib (PureScript)",
+              "PyCardano (Python)",
+              "Pallas (Rust)",
+              "CML, cardano-multiplatform-lib (Rust, JS)",
+              "CSL, cardano-serialization-lib (Rust, JS)",
+              "Scalus (Scala)",
+              "Tx3",
+              "Blaze (TypeScript)",
+              "Cardano JS SDK (TypeScript)",
+              "Cometa (TypeScript)",
+              "Dexter (TypeScript)",
+              "Evolution SDK (TypeScript)",
+              "Lucid (TypeScript)",
+              "Mesh (TypeScript)",
+              "其他"
+            ],
+            "noneLabel": "没有"
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "过去 12 个月里，你自己在本地或自己的服务器上运行过以下哪些软件？",
+            "options": [
+              "Adder",
+              "Amaru",
+              "Blockfrost",
+              "cardano-db-sync",
+              "cardano-graphql",
+              "cardano-node",
+              "cardano-wallet",
+              "Dingo",
+              "Dolos",
+              "Gummiworm",
+              "Hydra",
+              "Kupo",
+              "Mithril",
+              "Ogmios",
+              "Oura",
+              "Scrolls",
+              "Yaci DevKit",
+              "Yaci Store",
+              "其他"
+            ],
+            "noneLabel": "没有"
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "过去 12 个月里，你用过哪些开发者工具？ 包括质押池工具。",
+            "options": [
+              "bech32",
+              "Cardano Dev Wallet",
+              "cardano-addresses",
+              "cardano-cli",
+              "cardano-hw-cli",
+              "cardano-signer",
+              "cardano-up",
+              "cncli",
+              "Cquisitor",
+              "CShell",
+              "Gastronomy",
+              "Lace Anatomy",
+              "nview",
+              "offchain-metadata-tools",
+              "Sorbet",
+              "SPO 脚本（gitmachtl）",
+              "txtop",
+              "其他"
+            ],
+            "noneLabel": "没有"
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "过去 12 个月里，你用过哪些托管 API 服务？",
+            "options": [
+              "AdaStat",
+              "Blockfrost",
+              "Cardanoscan",
+              "Cexplorer",
+              "Charli3",
+              "Demeter",
+              "Dune",
+              "IAG Insight",
+              "Koios",
+              "Maestro",
+              "Nexus",
+              "NMKR",
+              "Orcfax",
+              "Pyth",
+              "SteelSwap",
+              "TapTools",
+              "Token registry",
+              "其他"
+            ],
+            "noneLabel": "没有"
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "过去 12 个月里，你是如何测试 Cardano 代码的？",
+            "options": [
+              "单元测试",
+              "基于属性的测试或模糊测试",
+              "模拟器，不用节点（Lucid Evolution、Scalus、sc-tools…）",
+              "本地 devnet（Yaci DevKit、cardano-testnet…）",
+              "公共测试网（Preview、Preprod）",
+              "主网，用小额资金",
+              "手动，用钱包或命令行",
+              "形式化验证",
+              "由其他团队审计",
+              "其他"
+            ],
+            "noneLabel": "没有"
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "过去一个月里，你在 Cardano 相关工作中使用 AI 编程工具的频率如何？",
+            "options": [
+              "每天或几乎每天",
+              "每周或几乎每周",
+              "更少",
+              "从不"
+            ]
+          },
+          {
+            "prompt": "AI 处理得最差的 Cardano 语言、库或工具是哪个？具体哪里出了问题？"
+          },
+          {
+            "prompt": "以下每一项对你来说问题有多大？",
+            "options": [
+              "知道该选哪些工具和库",
+              "找到最新的文档",
+              "找到能用的示例",
+              "卡住时获得帮助",
+              "面向 eUTxO 的设计（状态、并发）",
+              "与其他协议组合（DEX、预言机…）",
+              "执行预算与交易大小限制",
+              "每个输出的最低 ada 数量（小额支付、空投）",
+              "构建交易",
+              "连接钱包（CIP-30 问题、移动端钱包）",
+              "测试验证器",
+              "调试验证器",
+              "不完整或无人维护的库",
+              "工具和库的破坏性变更",
+              "获取链上数据（索引器、API）",
+              "托管 API 的限制与价格",
+              "运行基础设施（节点、索引器）",
+              "让 AI 工具在 Cardano 代码上给出好结果",
+              "让第一个应用端到端跑起来"
+            ],
+            "ratingLabels": [
+              "大问题",
+              "有待改进",
+              "没问题",
+              "不相关"
+            ]
+          },
+          {
+            "prompt": "你在哪里获得 Cardano 技术问题的解答？ 最多选 5 项，选你最依赖的。",
+            "options": [
+              "AI 助手",
+              "博客与文章",
+              "Cardano Blueprint",
+              "Cardano 文档（docs.cardano.org）",
+              "Cardano Forum",
+              "CIP、论文与规范",
+              "同事与朋友",
+              "开发者门户（developers.cardano.org）",
+              "Discord",
+              "GitHub issue 与讨论",
+              "项目文档",
+              "Reddit",
+              "源代码",
+              "Stack Exchange",
+              "Telegram",
+              "视频与课程",
+              "X (Twitter)",
+              "其他"
+            ]
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "以下每一项对你正在构建的东西会有多大帮助？",
+            "options": [
+              "更高的吞吐量",
+              "更快的最终性",
+              "更低的交易手续费",
+              "通往其他链的跨链桥",
+              "链上零知识证明验证",
+              "嵌套交易",
+              "用其他代币支付手续费",
+              "可编程代币",
+              "支持并发更新的全局状态（像 EVM 链那样）",
+              "轻客户端",
+              "替代节点实现",
+              "智能合约的形式化验证"
+            ],
+            "ratingLabels": [
+              "能解除阻碍",
+              "有帮助",
+              "不需要",
+              "这是什么？"
+            ]
+          },
+          {
+            "prompt": "除了技术之外，什么最拖累你的项目？ 最多选 3 项。",
+            "options": [
+              "审计的成本与可用性",
+              "找到用户",
+              "资金",
+              "获得关注（曝光、营销）",
+              "招聘有经验的开发者",
+              "集成（交易所、钱包、托管机构）",
+              "缺少时间",
+              "法律与监管的不确定性",
+              "链上流动性",
+              "其他"
+            ],
+            "noneLabel": "没有明显的阻碍"
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "你为什么在 Cardano 上开发？ 最多选 3 项。",
+            "options": [
+              "好奇、学习",
+              "去中心化与价值观",
+              "资金（Catalyst、国库、资助）",
+              "语言与工具链",
+              "市场机会",
+              "雇主或客户的选择",
+              "研究驱动的方法",
+              "链的安全性与可靠性",
+              "社区",
+              "eUTxO 模型与确定性交易",
+              "其他"
+            ]
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "一年后你还在 Cardano 上开发的可能性有多大？",
+            "options": [
+              "非常可能",
+              "可能",
+              "不确定",
+              "不太可能",
+              "非常不可能"
+            ]
+          },
+          {
+            "prompt": "作为质押池运营者，以下每一项对你来说运作得如何？",
+            "options": [
+              "及时得知节点新版本的发布",
+              "了解一个版本改了什么",
+              "在上主网前测试新版本",
+              "在硬分叉和参数变更前被征求意见"
+            ],
+            "ratingLabels": [
+              "良好",
+              "有待改进",
+              "糟糕"
+            ]
+          },
+          {
+            "prompt": "哪个尚不存在的工具、库或功能对你帮助最大？"
+          },
+          {
+            "prompt": "以下哪些描述符合你的角色？ 最后几个问题是关于你自己的：不想回答的可以跳过。",
+            "options": [
+              "架构师或技术负责人",
+              "数据科学家或分析师",
+              "DevOps 或系统管理员",
+              "教育工作者",
+              "创始人或高管",
+              "产品或项目经理",
+              "研究员",
+              "软件工程师",
+              "学生",
+              "其他"
+            ]
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "你还在哪些其他区块链生态上开发过？",
+            "options": [
+              "Algorand",
+              "Avalanche",
+              "Bitcoin（含 Lightning）",
+              "BNB",
+              "Ergo",
+              "Ethereum",
+              "Ethereum L2 与其他 EVM 链",
+              "Midnight",
+              "Solana",
+              "Sui",
+              "其他"
+            ],
+            "noneLabel": "没有"
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "你的 Cardano 工作的资金来源是什么？ 最多选 3 项，主要来源。",
+            "options": [
+              "没有资金（自己的时间）",
+              "创始实体的薪水（IOG、EMURGO、CF）",
+              "其他公司的薪水",
+              "我自己的产品或服务收入",
+              "客户项目或咨询",
+              "Catalyst",
+              "国库（Intersect 预算、治理行动）",
+              "其他资助",
+              "投资者或代币销售",
+              "其他"
+            ]
+          },
+          {
+            "prompt": "其他（请说明）"
+          },
+          {
+            "prompt": "你在哪个地区？",
+            "options": [
+              "非洲",
+              "北美（美国、加拿大）",
+              "拉丁美洲与加勒比地区（含墨西哥）",
+              "东亚（中国、日本、韩国）",
+              "东南亚（印度尼西亚、菲律宾、新加坡、越南）",
+              "南亚（印度、巴基斯坦、孟加拉国）",
+              "中东与中亚",
+              "欧洲",
+              "大洋洲"
+            ]
+          },
+          {
+            "prompt": "过去 12 个月里，除了你自己的以外，你用过多少个 Cardano dApp？",
+            "options": [
+              "没有",
+              "1 或 2 个",
+              "3 到 9 个",
+              "10 个或以上"
+            ]
+          },
+          {
+            "prompt": "过去 12 个月里，你做过以下哪些事？",
+            "options": [
+              "阅读或使用过 CIP",
+              "评论或评审过 CIP",
+              "撰写或合著过 CIP",
+              "为不属于我的 Cardano 开源项目做过贡献",
+              "对治理行动投过票（作为 DRep 或 SPO）",
+              "运营过质押池",
+              "申请过资金（Catalyst、国库、资助）",
+              "参加过 Intersect 的委员会或工作组",
+              "参加过 Cardano 开发者活动或黑客松",
+              "写过教程、教过课或做过导师"
+            ],
+            "noneLabel": "都没有"
+          }
+        ]
       }
     }
   },
@@ -876,7 +4810,14 @@
       "labels": [
         {
           "en": "I don't write or deploy software",
-          "fr": "Je n'écris ni ne déploie de logiciels"
+          "fr": "Je n'écris ni ne déploie de logiciels",
+          "es": "No escribo ni despliego software",
+          "pt": "Não escrevo nem faço deploy de software",
+          "it": "Non scrivo né faccio il deploy di software",
+          "de": "Ich schreibe und deploye keine Software",
+          "ja": "ソフトウェアを書いたりデプロイしたりはしない",
+          "vi": "Tôi không viết hay triển khai phần mềm",
+          "zh": "我不编写也不部署软件"
         }
       ]
     }
