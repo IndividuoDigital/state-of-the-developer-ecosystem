@@ -153,9 +153,30 @@ Answer the survey on the site and publish: the last screen links to the transact
 yarn wrangler pages deployment tail --project-name state-of-cardano-developer-survey-2026
 ```
 
+### Update the deployed site
+
+What to do depends on what changed:
+
+- **The page only**: `site/`, its texts in `site/texts/`, the terms. Step 4.
+- **The survey, but not its definition**: the translations, display conditions and None labels, which are only in `widget.json`. Rebuild with the published survey's owner and end epoch (`yarn site` prints the end epoch), then check that the definition is unchanged:
+
+  ```
+  yarn cip179 --owner <key hash> --end-epoch <epoch> --out cip179/draft
+  git diff cip179/draft/definition.metadata.json
+  ```
+
+  No difference: step 4. A difference: the next case.
+- **The definition**: the English texts, the questions and their options, their order and limits, the end epoch. This is a new survey:
+  1. Step 1: pick the end epoch, write the files, publish, and set `SPONSOR_SURVEY`.
+  2. Step 4.
+  3. Cancel the previous survey with the owner's wallet, in Tessera, so that other CIP-179 tools show it closed.
+
+  The sponsor needs nothing else: it forgets the previous survey's sponsorships, and keeps its coins. Browsers start afresh, since they keep the respondent's key and answers per survey. Responses to the previous survey stay on chain and don't count for the new one, so on Mainnet, don't replace a survey that already has responses.
+
+A display condition changed while the survey is open also changes the export: it drops the answers to questions the new conditions hide.
+
 ### Later
 
-- **Redeploy** after a change: step 4.
 - **`migrations/` changed**: `yarn db:migrate --remote`.
 - **Cap the spending**: set `SPONSOR_DAILY_CAP`, in lovelace per 24 hours, in the `vars` of `wrangler.jsonc`, then redeploy.
 - **Close early**: cancel the survey with the owner's wallet, in Tessera. The sponsor stops within 10 minutes.
