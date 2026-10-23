@@ -35,7 +35,7 @@ export default {
 
   screened: {
     title: "Gracias",
-    body: "Esta encuesta es para personas que escriben o desarrollan software, así que no hay nada más que responder.",
+    body: "Esta encuesta es para personas que escriben o despliegan software, así que no hay nada más que responder.",
     invite: "Si conoces a desarrolladores de Cardano, compártela con ellos: cada respuesta cuenta.",
     share: "Compartir la encuesta",
     copied: "Enlace copiado",
